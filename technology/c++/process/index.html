@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>进程 | 个人知识库</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/">
+    <meta name="description" content="Just playing around">
+    <link rel="preload" href="/assets/css/0.styles.cdff4760.css" as="style"><link rel="preload" href="/assets/js/app.2df33bbd.js" as="script"><link rel="preload" href="/assets/js/2.f873f4a5.js" as="script"><link rel="preload" href="/assets/js/46.d97670c4.js" as="script"><link rel="prefetch" href="/assets/js/10.fce11a4f.js"><link rel="prefetch" href="/assets/js/100.93d57fe5.js"><link rel="prefetch" href="/assets/js/101.cb59cb7c.js"><link rel="prefetch" href="/assets/js/102.9bda773f.js"><link rel="prefetch" href="/assets/js/103.90765133.js"><link rel="prefetch" href="/assets/js/104.3198dcb0.js"><link rel="prefetch" href="/assets/js/105.56ce9ed9.js"><link rel="prefetch" href="/assets/js/106.53664c48.js"><link rel="prefetch" href="/assets/js/107.5cda28a1.js"><link rel="prefetch" href="/assets/js/108.6f6019c3.js"><link rel="prefetch" href="/assets/js/109.a7740201.js"><link rel="prefetch" href="/assets/js/11.49901c43.js"><link rel="prefetch" href="/assets/js/110.632b525e.js"><link rel="prefetch" href="/assets/js/111.274b06dc.js"><link rel="prefetch" href="/assets/js/112.d0e88d20.js"><link rel="prefetch" href="/assets/js/113.486e4fc8.js"><link rel="prefetch" href="/assets/js/114.c69339e6.js"><link rel="prefetch" href="/assets/js/115.204c5dbb.js"><link rel="prefetch" href="/assets/js/116.3765742a.js"><link rel="prefetch" href="/assets/js/117.8d1b805e.js"><link rel="prefetch" href="/assets/js/118.ef246e62.js"><link rel="prefetch" href="/assets/js/119.b9f20cb0.js"><link rel="prefetch" href="/assets/js/12.9581203a.js"><link rel="prefetch" href="/assets/js/120.8cd8657c.js"><link rel="prefetch" href="/assets/js/121.72f63b4e.js"><link rel="prefetch" href="/assets/js/122.8928e827.js"><link rel="prefetch" href="/assets/js/123.67594cad.js"><link rel="prefetch" href="/assets/js/124.eb1ef9b0.js"><link rel="prefetch" href="/assets/js/125.1a2cee51.js"><link rel="prefetch" href="/assets/js/126.d1e6cc77.js"><link rel="prefetch" href="/assets/js/13.175440db.js"><link rel="prefetch" href="/assets/js/14.dd1b88c1.js"><link rel="prefetch" href="/assets/js/15.c0d81c5c.js"><link rel="prefetch" href="/assets/js/16.af59b3be.js"><link rel="prefetch" href="/assets/js/17.a8b4125e.js"><link rel="prefetch" href="/assets/js/18.1b6202ac.js"><link rel="prefetch" href="/assets/js/19.eba09d42.js"><link rel="prefetch" href="/assets/js/20.781c5235.js"><link rel="prefetch" href="/assets/js/21.0d0dcb08.js"><link rel="prefetch" href="/assets/js/22.29dad8ec.js"><link rel="prefetch" href="/assets/js/23.1d26584e.js"><link rel="prefetch" href="/assets/js/24.c3f593b2.js"><link rel="prefetch" href="/assets/js/25.e67dbcb2.js"><link rel="prefetch" href="/assets/js/26.9bee3ad2.js"><link rel="prefetch" href="/assets/js/27.584f8aa6.js"><link rel="prefetch" href="/assets/js/28.139d901b.js"><link rel="prefetch" href="/assets/js/29.95eb557b.js"><link rel="prefetch" href="/assets/js/3.37ac9c63.js"><link rel="prefetch" href="/assets/js/30.94baf8dd.js"><link rel="prefetch" href="/assets/js/31.c834f849.js"><link rel="prefetch" href="/assets/js/32.87c1eecf.js"><link rel="prefetch" href="/assets/js/33.1688c66e.js"><link rel="prefetch" href="/assets/js/34.ed32a02c.js"><link rel="prefetch" href="/assets/js/35.df4f1018.js"><link rel="prefetch" href="/assets/js/36.527e96b0.js"><link rel="prefetch" href="/assets/js/37.7c5e9b9c.js"><link rel="prefetch" href="/assets/js/38.a3f4dc09.js"><link rel="prefetch" href="/assets/js/39.9a9e7eea.js"><link rel="prefetch" href="/assets/js/4.0b4366d3.js"><link rel="prefetch" href="/assets/js/40.bbf5aca3.js"><link rel="prefetch" href="/assets/js/41.20271d2a.js"><link rel="prefetch" href="/assets/js/42.044ea8ca.js"><link rel="prefetch" href="/assets/js/43.e2de2e27.js"><link rel="prefetch" href="/assets/js/44.816538c7.js"><link rel="prefetch" href="/assets/js/45.423e2f6b.js"><link rel="prefetch" href="/assets/js/47.6fcd8eed.js"><link rel="prefetch" href="/assets/js/48.145fd2d1.js"><link rel="prefetch" href="/assets/js/49.7ef5a6f8.js"><link rel="prefetch" href="/assets/js/5.d7192128.js"><link rel="prefetch" href="/assets/js/50.63ebea49.js"><link rel="prefetch" href="/assets/js/51.cd1b6979.js"><link rel="prefetch" href="/assets/js/52.65e83723.js"><link rel="prefetch" href="/assets/js/53.482bb8f0.js"><link rel="prefetch" href="/assets/js/54.8d211ee5.js"><link rel="prefetch" href="/assets/js/55.6d0279ca.js"><link rel="prefetch" href="/assets/js/56.0d7dabe8.js"><link rel="prefetch" href="/assets/js/57.d174b462.js"><link rel="prefetch" href="/assets/js/58.10d297e6.js"><link rel="prefetch" href="/assets/js/59.8994ec9e.js"><link rel="prefetch" href="/assets/js/6.cbfd5b89.js"><link rel="prefetch" href="/assets/js/60.af139070.js"><link rel="prefetch" href="/assets/js/61.d3577fc0.js"><link rel="prefetch" href="/assets/js/62.e17d1882.js"><link rel="prefetch" href="/assets/js/63.e4036107.js"><link rel="prefetch" href="/assets/js/64.49321f56.js"><link rel="prefetch" href="/assets/js/65.3d22da24.js"><link rel="prefetch" href="/assets/js/66.77f21329.js"><link rel="prefetch" href="/assets/js/67.fde317d6.js"><link rel="prefetch" href="/assets/js/68.be19352b.js"><link rel="prefetch" href="/assets/js/69.4d3394b6.js"><link rel="prefetch" href="/assets/js/7.72adfabd.js"><link rel="prefetch" href="/assets/js/70.8fb36dbf.js"><link rel="prefetch" href="/assets/js/71.ac4e90a2.js"><link rel="prefetch" href="/assets/js/72.d098537d.js"><link rel="prefetch" href="/assets/js/73.95e18118.js"><link rel="prefetch" href="/assets/js/74.6fcf2855.js"><link rel="prefetch" href="/assets/js/75.87ad266a.js"><link rel="prefetch" href="/assets/js/76.28b55be0.js"><link rel="prefetch" href="/assets/js/77.6cb37bb4.js"><link rel="prefetch" href="/assets/js/78.79aefebb.js"><link rel="prefetch" href="/assets/js/79.6ed9e466.js"><link rel="prefetch" href="/assets/js/8.33b24897.js"><link rel="prefetch" href="/assets/js/80.671e3b50.js"><link rel="prefetch" href="/assets/js/81.f62a79b7.js"><link rel="prefetch" href="/assets/js/82.f3617058.js"><link rel="prefetch" href="/assets/js/83.18d0b631.js"><link rel="prefetch" href="/assets/js/84.fa6dee80.js"><link rel="prefetch" href="/assets/js/85.5f503b09.js"><link rel="prefetch" href="/assets/js/86.ad4607a2.js"><link rel="prefetch" href="/assets/js/87.f138000c.js"><link rel="prefetch" href="/assets/js/88.4b42282c.js"><link rel="prefetch" href="/assets/js/89.12e2a728.js"><link rel="prefetch" href="/assets/js/9.58fc3c18.js"><link rel="prefetch" href="/assets/js/90.ab27811b.js"><link rel="prefetch" href="/assets/js/91.97ac4e80.js"><link rel="prefetch" href="/assets/js/92.05c95c03.js"><link rel="prefetch" href="/assets/js/93.2df35e20.js"><link rel="prefetch" href="/assets/js/94.95c2bb02.js"><link rel="prefetch" href="/assets/js/95.6f61d80f.js"><link rel="prefetch" href="/assets/js/96.4ad62f06.js"><link rel="prefetch" href="/assets/js/97.b2963771.js"><link rel="prefetch" href="/assets/js/98.aec26723.js"><link rel="prefetch" href="/assets/js/99.15dceb59.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cdff4760.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/image/logo.png" alt="个人知识库" class="logo"> <span class="site-name can-hide">个人知识库</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/pages/about/me/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程技术" class="dropdown-title"><a href="/technology/" class="link-title router-link-active">编程技术</a> <span class="title" style="display:none;">编程技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/technology/c/array/" class="nav-link">C语言</a></li><li class="dropdown-item"><!----> <a href="/technology/c++/vs-setting/" class="nav-link">CPlusPlus</a></li><li class="dropdown-item"><!----> <a href="/technology/linux/basic/" class="nav-link">Linux</a></li><li class="dropdown-item"><!----> <a href="/technology/php/" class="nav-link">PHP</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="应用框架" class="dropdown-title"><a href="/framework/" class="link-title">应用框架</a> <span class="title" style="display:none;">应用框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/framework/nginx/install/" class="nav-link">Nginx</a></li><li class="dropdown-item"><!----> <a href="/framework/mysql/c_api/" class="nav-link">MySQL</a></li><li class="dropdown-item"><!----> <a href="/framework/redis/basic/" class="nav-link">Redis</a></li><li class="dropdown-item"><!----> <a href="/framework/docker/basic/" class="nav-link">Docker</a></li><li class="dropdown-item"><!----> <a href="/framework/kubernetes/basic/" class="nav-link">Kubernetes</a></li><li class="dropdown-item"><!----> <a href="/framework/srs/basic/" class="nav-link">SRS</a></li></ul></div></div><div class="nav-item"><a href="/read/soul/Self-motivated/" class="nav-link">阅读</a></div><div class="nav-item"><a href="/tools/github/" class="nav-link">常用工具</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/tags/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/Agnes001/blog_vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="/image/1.jpg"> <div class="blogger-info"><h3>Agnes001</h3> <span>
+        坚持是一件很伟大的事业
+      </span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/pages/about/me/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程技术" class="dropdown-title"><a href="/technology/" class="link-title router-link-active">编程技术</a> <span class="title" style="display:none;">编程技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/technology/c/array/" class="nav-link">C语言</a></li><li class="dropdown-item"><!----> <a href="/technology/c++/vs-setting/" class="nav-link">CPlusPlus</a></li><li class="dropdown-item"><!----> <a href="/technology/linux/basic/" class="nav-link">Linux</a></li><li class="dropdown-item"><!----> <a href="/technology/php/" class="nav-link">PHP</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="应用框架" class="dropdown-title"><a href="/framework/" class="link-title">应用框架</a> <span class="title" style="display:none;">应用框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/framework/nginx/install/" class="nav-link">Nginx</a></li><li class="dropdown-item"><!----> <a href="/framework/mysql/c_api/" class="nav-link">MySQL</a></li><li class="dropdown-item"><!----> <a href="/framework/redis/basic/" class="nav-link">Redis</a></li><li class="dropdown-item"><!----> <a href="/framework/docker/basic/" class="nav-link">Docker</a></li><li class="dropdown-item"><!----> <a href="/framework/kubernetes/basic/" class="nav-link">Kubernetes</a></li><li class="dropdown-item"><!----> <a href="/framework/srs/basic/" class="nav-link">SRS</a></li></ul></div></div><div class="nav-item"><a href="/read/soul/Self-motivated/" class="nav-link">阅读</a></div><div class="nav-item"><a href="/tools/github/" class="nav-link">常用工具</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/tags/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/Agnes001/blog_vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>C语言</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>CPlusPlus</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>基础特性</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/technology/c++/basic/enmu/" class="sidebar-link">枚举</a></li><li><a href="/technology/c++/basic/char-pointer/" class="sidebar-link">字符指针</a></li></ul></section></li><li><a href="/technology/c++/vs-setting/" class="sidebar-link">vs2019设置</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>C++11特性</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>并发编程</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/technology/c++/reference/" class="sidebar-link">引用</a></li><li><a href="/technology/c++/class/" class="sidebar-link">类和对象</a></li><li><a href="/technology/c++/friend/" class="sidebar-link">友元和运算符重载</a></li><li><a href="/technology/c++/inheritance/" class="sidebar-link">继承</a></li><li><a href="/technology/c++/12/" class="sidebar-link">继承和多态</a></li><li><a href="/technology/c++/template/" class="sidebar-link">模板</a></li><li><a href="/technology/c++/basic-summary/" class="sidebar-link">C++基础总结</a></li><li><a href="/technology/c++/type_cast/" class="sidebar-link">类型转换</a></li><li><a href="/technology/c++/exception/" class="sidebar-link">异常</a></li><li><a href="/technology/c++/container/" class="sidebar-link">容器</a></li><li><a href="/technology/c++/algorithm/" class="sidebar-link">算法</a></li><li><a href="/technology/c++/OOD/" class="sidebar-link">C++程序设计</a></li><li><a href="/technology/c++/primer/" class="sidebar-link">C++ Primer总结</a></li><li><a href="/technology/c++/tec/" class="sidebar-link">编程技巧</a></li><li><a href="/technology/c++/STL/" class="sidebar-link">标准库体系结构与内核分析</a></li><li><a href="/technology/c++/设计模式/" class="sidebar-link">设计模式</a></li><li><a href="/technology/c++/cmake/" class="sidebar-link">cmake配置C++工程</a></li><li><a href="/technology/c++/libcurl/" class="sidebar-link">libcurl的使用总结</a></li><li><a href="/technology/c++/drogon/" class="sidebar-link">web开发框架--drogon</a></li><li><a href="/technology/c++/log4cplus/" class="sidebar-link">log4cplus使用</a></li><li><a href="/technology/c++/datatype/" class="sidebar-link">C++数据类型</a></li><li><a href="/technology/c++/function/" class="sidebar-link">函数</a></li><li><a href="/technology/c++/thread/" class="sidebar-link">线程</a></li><li><a href="/technology/c++/process/" aria-current="page" class="active sidebar-link">进程</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/c++/process/#进程的概念" class="sidebar-link">进程的概念</a></li><li class="sidebar-sub-header"><a href="/technology/c++/process/#创建进程-createprocess-函数" class="sidebar-link">创建进程 CreateProcess 函数</a></li><li class="sidebar-sub-header"><a href="/technology/c++/process/#进程间的通信方式" class="sidebar-link">进程间的通信方式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/c++/process/#剪切板" class="sidebar-link">剪切板</a></li><li class="sidebar-sub-header"><a href="/technology/c++/process/#wm-copydata" class="sidebar-link">WM_COPYDATA</a></li><li class="sidebar-sub-header"><a href="/technology/c++/process/#油槽" class="sidebar-link">油槽</a></li><li class="sidebar-sub-header"><a href="/technology/c++/process/#匿名管道" class="sidebar-link">匿名管道</a></li><li class="sidebar-sub-header"><a href="/technology/c++/process/#命名管道" class="sidebar-link">命名管道</a></li></ul></li></ul></li><li><a href="/technology/c++/FileOperation/" class="sidebar-link">文件操作</a></li><li><a href="/technology/c++/problem-record/" class="sidebar-link">日常问题记录</a></li><li><a href="/technology/c++/demo/" class="sidebar-link">Cpp案例程序</a></li><li><a href="/technology/c++/multi-thread/" class="sidebar-link">多线程</a></li><li><a href="/technology/c++/11-new feature/" class="sidebar-link">侯捷c++11新特性</a></li><li><a href="/technology/c++/jj-stl/" class="sidebar-link">侯捷stl</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Lua技术栈</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>edoyun</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>内存管理</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>网络编程</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Linux</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>池化技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>操作系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>python</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div><main class="page"> <div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-14888ed5><div class="articleInfo" data-v-14888ed5><ul class="breadcrumbs" data-v-14888ed5><li data-v-14888ed5><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-14888ed5></a></li> <li data-v-14888ed5><a href="/categories/?category=%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF" title="分类" data-v-14888ed5>编程技术</a></li> <li data-v-14888ed5><a href="/categories/?category=CPlusPlus" title="分类" data-v-14888ed5>CPlusPlus</a></li></ul> <div class="info" data-v-14888ed5><div title="作者" class="author iconfont icon-touxiang" data-v-14888ed5><a href="https://github.com/Agnes001" target="_blank" title="作者" class="beLink" data-v-14888ed5>Agnes001</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-14888ed5><a href="javascript:;" data-v-14888ed5>2021-01-25</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABKFJREFUSA3tVl1oFVcQnrMbrak3QUgkya1akpJYcrUtIqW1JvFBE9LiQ5v6JmJpolbMg32rVrhgoYK0QiMY6i9Y6EMaW5D+xFJaTYItIuK2Kr3+BJNwkxBj05sQY3b3nM6cs2dv9t7NT/vQJw/sndk5M/PNzJkzewGerP+pAmy+ON8lLzUJgA8ZYxYIYZmGYRnctDaWvJJAmTtfP1pvXsBCCPP8QFcCaRkZYACgDZFO4stNIcBCajEOlmmC9XpJ9bAGCaPaPmzPl32dvLSVu3BWCTQs0XQQ6g0DYgwLIoAZbBCdW/i+781o1VVlm/410mw4h06Y7bIPHNyWDyL4FHkX03Q8SrzNhZTZriieckWt7cL6MM85YcLpsi/7O9/iXFT6MswI0DmmpkSaJ0qLxFIm3+i1THHB3zmBH3PYx9CcykcLOeQVVa7QtdxTgQgEleX2AjHYfwA+2ddV77ruGoJUbhGDI09YSNXyMpUt5ylOzxgbUmtOp7NmbNt8v3arjTBfYELmLUV+M+nSawNNAUqpT3ClJWg5I3BLT+cGW/DXNGCa6tx1aakCGEigArTn4TDIPdrXXYKCZNrHLMCOEPvHBlLQ99s9eHB7EB6NTki73CVPQ2F5MSx/uRQixfmq7rK0wYD8w8E905bnPDfwoWs/rfv93NWN/ZfvwsLIU7A09gxECyISeGJkHAau98L97tuw7NXnoPyNF8FcYGLGKsOs0mN3OEyec9esGW/ZEl945dTP34wlR2FZVQWU1q0Cw8Tr7p+hgLLNL0FPxx/Q35mA8aEUrH6nCgwEl0tn7wUiZYJnNRh6DK4UH/k0lfyrsBKdPVv/AriGIQcEDQZ65LBAGe2Rzui9Ybjz7XUppz1/uKBbyVPGkN3ZAeC6hr0x7Nr38N5+EqkoOm17xpoqR9ohQF55ERSvr4Dkr3chNfC3DMzGJlNBElW8w9nsGQvhNGIzDkXzCg8cLK951xHsFBlTJspJNi3ZFIMF2AeDV3q8DNOB+YHi6QTrChDIWDBRi5U5f+ZMfJLu3ccrqxtdxk4SKH336LFxSmkqefwU5T8fhdSdQf9IVKD6aNiwI/hnmcAZ91isYMJIaCUCx9W098+LgruikeTqzqqxKPUwqJyCPJiyemVVZBOijDGjD38Os0jOiSPL1z3SPjXNANbiNPXAdzTfukjjuknNBbyz3nwgTd3AVFqUJ5hpHlq9MveLnWwttUfoygBmvVjuikxND3znrhsELnZk7k+OjIGxeNEkomyLVta0xxn+HZhjBc4YZ/AFjHjz9u3xRZl2BN4aq9nFwWh16IrQ1aHHEd3j1+4/dB9OtH4e29A2H1DyHQRmOSfQZ1Fy7MHBTGB6J/Djq6p3OxyO2cB+4Car7v/o3GXgfAkj23+x9ID1Teoamo/SXcbvSf2PX7Vc8DdCmE1vN9di+32P9/5YR3vLnhCVGUWBjEkr3yh4H8v9CzmsbdhzOKzsJKM90iFdaTMjRPhGVsakRvOaRidljo6H6G7j+ctrJpsP+4COhDIl0La2+FS4+5mlocBaXY5QnGZysIBYoeSsl5qQzrSj/cgNrfuEzlWBfwA+EjrZyWUvpAAAAABJRU5ErkJggg==">
+          进程
+        </h1> <div class="theme-vdoing-content content__default"><h2 id="进程的概念"><a href="#进程的概念" class="header-anchor">#</a> 进程的概念</h2> <p>进程是资源申请,高度和独立运行的单位,因此,它使用系统中的运行资源,而程序不能申请系统资源,不能被系统调度也不能作为独立运行的单位,因此它不占系统运行资源.<br>
+进程组成:<br>
+&lt;1&gt; 操作系统用来管理进行的内核对象<br>
+内核对象也是系统用来存放关于进程的统计信息的地方.内核对象是操作系统内部分配的一个内存块,该内存块是一种数据结构,其成员负责维护该对象的各种信息.<br>
+&lt;2&gt; 地址空间<br>
+它包含所有可执行模块或 DLL 模块的代码和数据.另外,它也包含动态内存分配的空间,例如线程的栈和堆分配空间<br>
+进程从来不执行任何东西,它只是纯种的容器,若要使进程完成某项操作,它必须拥有一个在它的环境中运行的纯种,此线程负责执行包含在进程的地址空间的中的代码.也就是,真正完成代码执行的是线程,而进程只是纯种的容器, 或者说是线程的执行环境。</p> <h2 id="创建进程-createprocess-函数"><a href="#创建进程-createprocess-函数" class="header-anchor">#</a> 创建进程 CreateProcess 函数</h2> <div class="language-c++ extra-class"><pre class="language-text"><code> CreateProcessW( 
+    _In_opt_ LPCWSTR lpApplicationName,// 该字符串可以指定要执行的模块的完整路径 和文件名 
+    _Inout_opt_ LPWSTR lpCommandLine, //命令行 
+    _In_opt_ LPSECURITY_ATTRIBUTES lpProcessAttributes, //该 结构确定子进程是否可以继承返回到新进程对象的句柄。如果 lpProcessAttributes为NULL，则不能继承该句柄 
+    _In_opt_ LPSECURITY_ATTRIBUTES lpThreadAttributes, //该 结构确定子进程是否可以继承返回到新线程对象的句柄。如果 lpThreadAttributes为NULL，则不能继承该句柄 
+    _In_ BOOL bInheritHandles, //如果此参数为TRUE，则新进程将继承调用进程中的每个可继承句柄。如果参数为FALSE，则不会继承句柄。请注意，继承的句柄与原始句柄具有相同的值和访问权限 
+    _In_ DWORD dwCreationFlags,// 控制优先级类别和流程创建的标志 CREATE_NEW_CONSOLE 
+    _In_opt_ LPVOID lpEnvironment,// 指向新进程的环境块的指针。如果此参数为NULL，则新进程将使用调用进程的环境 
+    _In_opt_ LPCWSTR lpCurrentDirectory,// 进程当前目录的完整路径 
+    _In_ LPSTARTUPINFOW lpStartupInfo, //设置扩展属性 
+    _Out_ LPPROCESS_INFORMATION lpProcessInformation // 该结构接收有关新进程的标识信息
+);
+</code></pre></div><div class="language-c++ extra-class"><pre class="language-text"><code>//创建一个用谷歌浏览器打开百度 
+#include &lt;windows.h&gt; 
+#include &lt;stdio.h&gt; 
+#include &lt;tchar.h&gt; 
+void RunExe() 
+{ 
+    STARTUPINFO strStartupInfo; 
+    memset(&amp;strStartupInfo, 0, sizeof(strStartupInfo)); 
+    strStartupInfo.cb = sizeof(strStartupInfo); 
+    PROCESS_INFORMATION szProcessInformation; 
+    memset(&amp;szProcessInformation, 0, sizeof(szProcessInformation)); 
+    TCHAR szCommandLine[] =_T(&quot;\&quot;D:\\Program Files (x86)\\ChromeCore\\ChromeCore.exe\&quot; http://www.baidu.com/&quot;); 
+    int iRet = CreateProcess( NULL, szCommandLine, NULL, NULL, false, CREATE_NEW_CONSOLE, NULL, NULL, &amp;strStartupInfo, &amp;szProcessInformation ); 
+    if (iRet) 
+    { 
+        //创建成功 
+        printf_s(&quot;Create Success iRet = %d\n&quot;, iRet); 
+        WaitForSingleObject(szProcessInformation.hProcess, 3000); 
+        //close进程计数减一，进程结束后，进程计数再减一
+        CloseHandle(szProcessInformation.hProcess); 
+        CloseHandle(szProcessInformation.hThread); 
+        szProcessInformation.dwProcessId = 0; 
+        szProcessInformation.dwThreadId = 0; 
+        szProcessInformation.hThread = NULL; 
+        szProcessInformation.hProcess = NULL; 
+    }
+    else 
+    { 
+        printf_s(&quot;Create Success iRet = %d\n&quot;, iRet); 
+        printf_s(&quot;errorcode = %d\n&quot;, GetLastError()); 
+    } 
+}
+int main() 
+{
+    printf(&quot;This is Bingo\n&quot;); 
+    RunExe(); 
+    system(&quot;pause&quot;); 
+    return 0; 
+}
+</code></pre></div><h2 id="进程间的通信方式"><a href="#进程间的通信方式" class="header-anchor">#</a> 进程间的通信方式</h2> <h3 id="剪切板"><a href="#剪切板" class="header-anchor">#</a> 剪切板</h3> <div class="language-c++ extra-class"><pre class="language-text"><code>void CClipboardDlg::OnBnClickedSendBtn() 
+{
+    // 1 打开剪切板 
+    if (OpenClipboard()) 
+    { 
+        //2 清空剪切板 
+        EmptyClipboard(); 
+        char* szSendBuf; 
+        //3 获取编辑框的内容 
+        CStringW strSendW; 
+        GetDlgItemText(IDC_EDIT_SEND, strSendW); 
+        CStringA strSend = (CStringA)strSendW; 
+        //4 分配一个内存对象，内存对象的句柄就是hClip 
+        HANDLE hClip = GlobalAlloc(GMEM_MOVEABLE, strSend.GetLength() + 1); 
+        //5 将剪切板句柄加锁 
+        szSendBuf = (char*)GlobalLock(hClip); 
+        strcpy(szSendBuf, strSend); 
+        TRACE(&quot;szSendBuf = %s&quot;, szSendBuf); 
+        GlobalUnlock(hClip); 
+        //6 将数据放入剪切板 
+        SetClipboardData(CF_TEXT, hClip); 
+        //7 关闭剪切板 
+        CloseClipboard(); 
+    } 
+}
+void CClipboardDlg::OnBnClickedRecvBtn() 
+{
+    if (OpenClipboard()) 
+    { 
+        //确认剪切板是否可用 
+        if (IsClipboardFormatAvailable(CF_TEXT)) 
+        { 
+            HANDLE hClip; 
+            char* pBuf; 
+            //向剪切板要数据 
+            hClip = GetClipboardData(CF_TEXT); 
+            pBuf = (char*)GlobalLock(hClip);
+            USES_CONVERSION; 
+            LPCWSTR strBuf = A2W(pBuf); 
+            GlobalUnlock(hClip); 
+            SetDlgItemText(IDC_EDIT_RECV, strBuf); 
+        }
+        CloseClipboard(); 
+    } 
+}
+</code></pre></div><h3 id="wm-copydata"><a href="#wm-copydata" class="header-anchor">#</a> WM_COPYDATA</h3> <p>WM_COPYDATA wParam传递数据的窗口的句柄。<br>
+指向 COPYDATASTRUCT 结构的指针，该结构包含要传递的数据。 如果接收方应用程序处理此消息，则应返回 TRUE；否则，应返回 FALSE。</p> <div class="language-c++ extra-class"><pre class="language-text"><code>//发送端 
+void CWMCOPYDATASENDDlg::OnBnClickedSend() 
+{ 
+    // 必须要知道标题 句柄 
+    CString strWindowTitle = _T(&quot;MFCRecv&quot;); 
+    CString strDataToSend = _T(&quot;Hello ,this is Bingo WM_COPYDATA&quot;); 
+    // 利用标题句柄 
+    HWND hRecvWnd = ::FindWindow(NULL, strWindowTitle.GetBuffer(0)); 
+    if (hRecvWnd != NULL &amp;&amp; ::IsWindow(hRecvWnd))
+    { 
+        //数据的封装 
+        COPYDATASTRUCT cpd; 
+        cpd.dwData = 0; 
+        cpd.cbData = strDataToSend.GetLength() * sizeof(TCHAR); 
+        cpd.lpData = (PVOID)strDataToSend.GetBuffer(0); ::SendMessage(hRecvWnd, WM_COPYDATA, (WPARAM)(AfxGetApp()- &gt;m_pMainWnd),(LPARAM)&amp;cpd); 
+    }
+    strDataToSend.ReleaseBuffer();
+}
+</code></pre></div><p>接收端，界面上右击，点击类向导，消息-WM_COPYDATA，双击，转到其消息响应的函数中</p> <div class="language-c++ extra-class"><pre class="language-text"><code>BOOL CWMCOPYDATADlg::OnCopyData(CWnd* pWnd, COPYDATASTRUCT* pCopyDataStruct) 
+{ 
+    //消息响应函数 
+    //解析数据 
+    LPCTSTR szText = (LPCTSTR)(pCopyDataStruct-&gt;lpData); 
+    DWORD dwLength = (DWORD)pCopyDataStruct-&gt;cbData; 
+    TCHAR szRecvText[1024] = { 0 }; 
+    memcpy(szRecvText, szText, dwLength); 
+    MessageBox(szRecvText, _T(&quot;Bingo&quot;), MB_OK); 
+    return CDialogEx::OnCopyData(pWnd, pCopyDataStruct); 
+}
+</code></pre></div><h3 id="油槽"><a href="#油槽" class="header-anchor">#</a> 油槽</h3> <p>使用邮槽通信的进程分为服务端和客户端。邮槽由服务端创建，在创建时需要指定邮槽名，创建后服务端得到邮槽的句柄。在邮槽创建后，客户端可以通过邮槽名打开邮槽， 在获得句柄后可以向邮槽写入消息。<br>
+邮槽通信是单向的，只有服务端才能从邮槽中读取消息，客户端只能写入消息。消息是先入先出的。客户端先写入的消息在服务端先被读取。<br>
+通过邮槽通信的数据可以是任意格式的，但是一条消息不能大于 424 字节。<br>
+邮槽除了在本机内进行进程间通信外，在主机间也可以通信。但是在主机间进行邮槽通信，数据通过网络传播时使用的是数据报协议(UDP)，所以是一种不可靠的通信。通过网络进行邮槽通信时，客户端必须知道服务端的主机名或域名。</p> <div class="language-c++ extra-class"><pre class="language-text"><code>// 服务端
+void CChildView::OnSlot() { 
+    // &quot;\\\\.\\mailslot\\Mymailslot \\.\mailslot\Mymailslot 
+    // 1 创建一个邮槽 
+    LPCTSTR szSlotName = TEXT(&quot;\\\\.\\mailslot\\Mymailslot&quot;);
+    HANDLE hSlot = CreateMailslot(szSlotName, 
+    0, // no maximum message size 
+    MAILSLOT_WAIT_FOREVER, // no time-out for operations NULL
+    ); // default security 
+    if (hSlot == INVALID_HANDLE_VALUE) 
+    {
+        TRACE(&quot;CreateMailslot failed with %d\n&quot;, GetLastError()); 
+        return ; 
+    }
+    // 2 读取数据 
+    char szBuf[100] = { 0 }; 
+    DWORD dwRead; 
+    TRACE(&quot;Begin ReadFile&quot;); 
+    if (!ReadFile(hSlot, szBuf, 100, &amp;dwRead, NULL)) 
+    { 
+        MessageBox(_T(&quot;读取数据失败&quot;)); 
+        CloseHandle(hSlot); 
+        return; 
+    }
+    TRACE(&quot;End ReadFile&quot;); 
+    MessageBox((CStringW)szBuf); 
+    CloseHandle(hSlot); 
+}
+</code></pre></div><div class="language-c++ extra-class"><pre class="language-text"><code>// 客户端
+void CChildView::OnSend() 
+{
+    // 创建一个文件句柄 
+    LPCTSTR szSlotName = TEXT(&quot;\\\\.\\mailslot\\Mymailslot&quot;); 
+    HANDLE hMailSlot = CreateFile(szSlotName, FILE_GENERIC_WRITE, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL,NULL 
+    ); 
+    if (hMailSlot == INVALID_HANDLE_VALUE) 
+    { 
+        TRACE(&quot;CreateFile failed with %d\n&quot;, GetLastError()); 
+        return; 
+    }
+    //写入数据 
+    char szBuf[] = &quot;Bingo is handsome&quot;; 
+    DWORD dwWrite; 
+    if (!WriteFile(hMailSlot, szBuf, strlen(szBuf) + 1, &amp;dwWrite, NULL)) 
+    { 
+        MessageBox(_T(&quot;写入数据失败&quot;)); C
+        loseHandle(hMailSlot);
+        return; 
+    }
+    CloseHandle(hMailSlot); 
+}
+</code></pre></div><h3 id="匿名管道"><a href="#匿名管道" class="header-anchor">#</a> 匿名管道</h3> <p>匿名管道是一个没有命名的单向管道，本质上就是一个共享的内存区域。通常用来在父进程和子进程之间通信。只能实现本地两个进程之间的通信。不能实现网络通信。</p> <div class="language-c++ extra-class"><pre class="language-text"><code>CreatePipe( 
+    
+    _Out_ PHANDLE hReadPipe, //该变量接收管道的读取句柄 
+    _Out_ PHANDLE hWritePipe,// 该变量接收管道的写句柄 
+    _In_opt_ LPSECURITY_ATTRIBUTES lpPipeAttributes,//NULL 
+    _In_ DWORD nSize //管道缓冲区的大小 0 :默认缓冲区大小 
+);
+</code></pre></div><div class="language-c++ extra-class"><pre class="language-text"><code>// 父进程
+HANDLE hReadPipe;
+HANDLE hWritePipe;
+// 创建子进程
+void CChildView::OnPipeCreate() 
+{ 
+    // TODO: 在此添加命令处理程序代码 
+    //创建匿名管道 
+    SECURITY_ATTRIBUTES sa; 
+    sa.bInheritHandle = TRUE; 
+    sa.lpSecurityDescriptor = NULL; 
+    sa.nLength = sizeof(SECURITY_ATTRIBUTES); 
+    if (!CreatePipe(&amp;hReadPipe, &amp;hWritePipe, &amp;sa, 0)) 
+    { 
+        MessageBox(_T(&quot;匿名管道创建失败&quot;)); 
+        return; 
+    }
+    //创建子进程 
+    STARTUPINFO strStartupInfo; //用来指定新进程窗口如何显示 
+    memset(&amp;strStartupInfo, 0, sizeof(strStartupInfo)); 
+    strStartupInfo.cb = sizeof(strStartupInfo); 
+    strStartupInfo.dwFlags = STARTF_USESTDHANDLES; 
+    strStartupInfo.hStdInput = hReadPipe; 
+    strStartupInfo.hStdOutput = hWritePipe; 
+    strStartupInfo.hStdError = GetStdHandle(STD_ERROR_HANDLE); 
+
+    PROCESS_INFORMATION szProcessInformation;
+    memset(&amp;szProcessInformation, 0, sizeof(szProcessInformation)); 
+    int iRet = CreateProcess( _T(&quot;MailSlotClient.exe&quot;), NULL, NULL, NULL, TRUE, 0,NULL, NULL, &amp;strStartupInfo, &amp;szProcessInformation );
+    if (iRet) 
+    { 
+        //创建成功 
+        CloseHandle(szProcessInformation.hProcess); 
+        CloseHandle(szProcessInformation.hThread); 
+        szProcessInformation.dwProcessId = 0; 
+        szProcessInformation.dwThreadId = 0; 
+        szProcessInformation.hThread = NULL; 
+        szProcessInformation.hProcess = NULL; 
+    }
+    else 
+    {
+        CloseHandle(hReadPipe); 
+        CloseHandle(hWritePipe); 
+        hReadPipe = NULL; 
+        hWritePipe = NULL; 
+        MessageBox(_T(&quot;创建子进程失败&quot;)); 
+        return; 
+    } 
+}
+
+void CChildView::OnPipeRead() 
+{ 
+    char szBuf[100] = { 0 }; 
+    DWORD dwRead; 
+    TRACE(&quot;Begin ReadFile&quot;); 
+    if (!ReadFile(hReadPipe, szBuf, 100, &amp;dwRead, NULL)) 
+    { 
+        MessageBox(_T(&quot;读取数据失败&quot;)); 
+        return; 
+    }
+    TRACE(&quot;End PipeReadFile&quot;); 
+    MessageBox((CStringW)szBuf);
+}
+void CChildView::OnPipeWrite() 
+{
+    //写入数据 
+    char szBuf[] = &quot;Bingo hen shuai&quot;; 
+    DWORD dwWrite; 
+    if (!WriteFile(hWritePipe, szBuf, strlen(szBuf) + 1, &amp;dwWrite, NULL)) 
+    { 
+        MessageBox(_T(&quot;写入数据失败&quot;)); 
+        return; 
+    } 
+}
+</code></pre></div><div class="language-c++ extra-class"><pre class="language-text"><code>// 子进程
+hReadCliPipe =GetStdHandle(STD_INPUT_HANDLE); 
+hWriteCliPipe = GetStdHandle(STD_OUTPUT_HANDLE); 
+void CChildView::OnCliPipeRead() 
+{ 
+    char szBuf[100] = { 0 }; 
+    DWORD dwRead; 
+    TRACE(&quot;Begin ReadFile&quot;); 
+    //查找所有引用shift + alt + F 
+    if (!ReadFile(hReadCliPipe, szBuf, 100, &amp;dwRead, NULL)) 
+    { 
+        MessageBox(_T(&quot;读取数据失败&quot;)); 
+        return; 
+    }
+    TRACE(&quot;End PipeReadFile&quot;); 
+    MessageBox((CStringW)szBuf);
+}
+
+void CChildView::OnCliPipeWrite() 
+{ 
+    char szBuf[] = &quot;Bingo Bingo&quot;; 
+    DWORD dwWrite; 
+    if (!WriteFile(hWriteCliPipe, szBuf, strlen(szBuf) + 1, &amp;dwWrite, NULL)) 
+    { 
+        MessageBox(_T(&quot;写入数据失败&quot;)); 
+        CloseHandle(hWriteCliPipe); 
+        return; 
+    }
+    CloseHandle(hWriteCliPipe); 
+}
+</code></pre></div><h3 id="命名管道"><a href="#命名管道" class="header-anchor">#</a> 命名管道</h3> <p>与Socket相似，支持网络之间不同进程的通信</p> <div class="language-c++ extra-class"><pre class="language-text"><code>CreateNamedPipe 
+HANDLE CreateNamedPipeA( 
+    LPCSTR lpName, // \.\pipe&lt;i&gt;pipename 
+    DWORD dwOpenMode, 
+    DWORD dwPipeMode, 
+    DWORD nMaxInstances, 
+    DWORD nOutBufferSize, 
+    DWORD nInBufferSize,
+    DWORD nDefaultTimeOut, 
+    LPSECURITY_ATTRIBUTES lpSecurityAttributes 
+);
+等待连接 
+BOOL ConnectNamedPipe( 
+    HANDLE hNamedPipe, 
+    LPOVERLAPPED lpOverlapped 
+);
+
+WaitNamedPipe(szNamedPipeName, NMPWAIT_WAIT_FOREVER)
+</code></pre></div><div class="language-c++ extra-class"><pre class="language-text"><code>HANDLE hNamedPipe;
+// 服务端
+void CChildView::OnCreateNamedPipe() 
+{ 
+    //1 创建一个命名管道 
+    LPCTSTR szPipeName = TEXT(&quot;\\\\.\\pipe\\mypipe&quot;); 
+    hNamedPipe = CreateNamedPipe(szPipeName,PIPE_ACCESS_DUPLEX | FILE_FLAG_OVERLAPPED, PIPE_TYPE_BYTE, 1, 1024, 1024, 0, NULL); 
+    if (hNamedPipe == INVALID_HANDLE_VALUE) 
+    { 
+        TRACE(&quot;CreateNamedhPipe failed with %d\n&quot;, GetLastError()); 
+        MessageBox(_T(&quot;创建命名管道失败&quot;)); 
+        return; 
+    }
+    // 2 等待客户端的连接 
+    HANDLE hEvent = CreateEvent(NULL, TRUE, FALSE, NULL); 
+    if (NULL == hEvent) 
+    { 
+        MessageBox(_T(&quot;创建事件失败&quot;)); 
+        CloseHandle(hNamedPipe); hNamedPipe = NULL; 
+        return; 
+    }
+    OVERLAPPED ovlap; 
+    ZeroMemory(&amp;ovlap, sizeof(OVERLAPPED)); 
+    ovlap.hEvent = hEvent; 
+    //等待连接 
+    if (!ConnectNamedPipe(hNamedPipe, &amp;ovlap)) 
+    { 
+        if (ERROR_IO_PENDING != GetLastError()) 
+        { 
+            MessageBox(_T(&quot;等待客户端连接失败&quot;)); 
+            CloseHandle(hNamedPipe); 
+            CloseHandle(hEvent); 
+            hNamedPipe = NULL; 
+            hEvent = NULL; 
+            return; 
+        } 
+    }
+    if (WaitForSingleObject(hEvent,INFINITE) == WAIT_FAILED) 
+    { 
+        MessageBox(_T(&quot;等待对象失败&quot;)); 
+        CloseHandle(hNamedPipe); 
+        CloseHandle(hEvent); 
+        hNamedPipe = NULL; 
+        hEvent = NULL; return; 
+    }
+}
+
+void CChildView::OnSreadNamedPipe() 
+{ 
+    char szBuf[100] = { 0 }; 
+    DWORD dwRead; 
+    if (!ReadFile(hNamedPipe, szBuf, 100, &amp;dwRead, NULL)) 
+    { 
+        MessageBox(_T(&quot;读取数据失败&quot;)); 
+        return; 
+    }
+    MessageBox((CStringW)szBuf); 
+}
+
+void CChildView::OnSwriteNamedpipe() 
+{ 
+    //写入数据 
+    char szBuf[] = &quot;OnNamedPipe Server&quot;; 
+    DWORD dwWrite; 
+    if (!WriteFile(hNamedPipe, szBuf, strlen(szBuf) + 1, &amp;dwWrite, NULL)) 
+    { 
+        MessageBox(_T(&quot;写入数据失败&quot;)); 
+        return; 
+    }
+}
+</code></pre></div><div class="language-c++ extra-class"><pre class="language-text"><code>// 客户端 连接命名管道
+void CChildView::OnConnectNamedPipe() 
+{ 
+    LPCTSTR szNamedPipeName = TEXT(&quot;\\\\.\\pipe\\mypipe&quot;); 
+    if (0 == WaitNamedPipe(szNamedPipeName, NMPWAIT_WAIT_FOREVER)) 
+    { 
+        MessageBox(_T(&quot;当前没有可以利用的管道&quot;)); 
+        return; 
+    }
+    hNamedPipe = CreateFile(szNamedPipeName, GENERIC_READ | GENERIC_WRITE, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL); 
+    if (hNamedPipe == INVALID_HANDLE_VALUE) 
+    { 
+        TRACE(&quot;CreateFile failed with %d\n&quot;,
+        GetLastError()); 
+        MessageBox(_T(&quot;打开命名管道失败！&quot;)); 
+        hNamedPipe = NULL; 
+        return; 
+    } 
+}
+
+void CChildView::OnReadNamedPipe() 
+{ 
+    char szBuf[100] = { 0 }; 
+    DWORD dwRead; 
+    if (!ReadFile(hNamedPipe, szBuf, 100, &amp;dwRead, NULL)) 
+    { 
+        MessageBox(_T(&quot;读取数据失败&quot;)); 
+        return; 
+    }
+    MessageBox((CStringW)szBuf); 
+}
+
+void CChildView::OnWriteNamedPipe() 
+{ 
+    char szBuf[] = &quot;NAMEDPIPE CLIENT&quot;; 
+    DWORD dwWrite; 
+    if (!WriteFile(hNamedPipe, szBuf, strlen(szBuf) + 1, &amp;dwWrite, NULL)) 
+    { 
+        MessageBox(_T(&quot;写入数据失败&quot;)); 
+        CloseHandle(hWriteCliPipe); 
+        return; 
+    }
+    CloseHandle(hWriteCliPipe); 
+}
+</code></pre></div></div></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/Agnes001/blog_vuepress/edit/master/docs/30.编程技术/10.CPlusPlus/301.进程.md" target="_blank" rel="noopener noreferrer">编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="tags"><a href="/tags/?tag=Cpp" title="标签">
+      #Cpp
+    </a><a href="/tags/?tag=process" title="标签">
+      #process
+    </a></div> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/technology/c++/thread/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">
+        线程
+      </div></a> <a href="/technology/c++/FileOperation/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">
+        文件操作
+      </div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/technology/c++/thread/" class="prev">线程</a></span> <span class="next"><a href="/technology/c++/FileOperation/">文件操作</a>
+        →
+      </span></p></div></div></div> <!----> </main></div> <div class="footer"><div class="icons"><a href="mailto:17125131@bjtu.edu.cn" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/Agnes001" title="GitHub" target="_blank" class="iconfont icon-github"></a></div> 
+  Theme by <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> <!----></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2df33bbd.js" defer></script><script src="/assets/js/2.f873f4a5.js" defer></script><script src="/assets/js/46.d97670c4.js" defer></script>
+  </body>
+</html>

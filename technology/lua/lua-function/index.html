@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Cpp与Lua联合编程 | 个人知识库</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/">
+    <meta name="description" content="Just playing around">
+    <link rel="preload" href="/assets/css/0.styles.cdff4760.css" as="style"><link rel="preload" href="/assets/js/app.2df33bbd.js" as="script"><link rel="preload" href="/assets/js/2.f873f4a5.js" as="script"><link rel="preload" href="/assets/js/62.e17d1882.js" as="script"><link rel="prefetch" href="/assets/js/10.fce11a4f.js"><link rel="prefetch" href="/assets/js/100.93d57fe5.js"><link rel="prefetch" href="/assets/js/101.cb59cb7c.js"><link rel="prefetch" href="/assets/js/102.9bda773f.js"><link rel="prefetch" href="/assets/js/103.90765133.js"><link rel="prefetch" href="/assets/js/104.3198dcb0.js"><link rel="prefetch" href="/assets/js/105.56ce9ed9.js"><link rel="prefetch" href="/assets/js/106.53664c48.js"><link rel="prefetch" href="/assets/js/107.5cda28a1.js"><link rel="prefetch" href="/assets/js/108.6f6019c3.js"><link rel="prefetch" href="/assets/js/109.a7740201.js"><link rel="prefetch" href="/assets/js/11.49901c43.js"><link rel="prefetch" href="/assets/js/110.632b525e.js"><link rel="prefetch" href="/assets/js/111.274b06dc.js"><link rel="prefetch" href="/assets/js/112.d0e88d20.js"><link rel="prefetch" href="/assets/js/113.486e4fc8.js"><link rel="prefetch" href="/assets/js/114.c69339e6.js"><link rel="prefetch" href="/assets/js/115.204c5dbb.js"><link rel="prefetch" href="/assets/js/116.3765742a.js"><link rel="prefetch" href="/assets/js/117.8d1b805e.js"><link rel="prefetch" href="/assets/js/118.ef246e62.js"><link rel="prefetch" href="/assets/js/119.b9f20cb0.js"><link rel="prefetch" href="/assets/js/12.9581203a.js"><link rel="prefetch" href="/assets/js/120.8cd8657c.js"><link rel="prefetch" href="/assets/js/121.72f63b4e.js"><link rel="prefetch" href="/assets/js/122.8928e827.js"><link rel="prefetch" href="/assets/js/123.67594cad.js"><link rel="prefetch" href="/assets/js/124.eb1ef9b0.js"><link rel="prefetch" href="/assets/js/125.1a2cee51.js"><link rel="prefetch" href="/assets/js/126.d1e6cc77.js"><link rel="prefetch" href="/assets/js/13.175440db.js"><link rel="prefetch" href="/assets/js/14.dd1b88c1.js"><link rel="prefetch" href="/assets/js/15.c0d81c5c.js"><link rel="prefetch" href="/assets/js/16.af59b3be.js"><link rel="prefetch" href="/assets/js/17.a8b4125e.js"><link rel="prefetch" href="/assets/js/18.1b6202ac.js"><link rel="prefetch" href="/assets/js/19.eba09d42.js"><link rel="prefetch" href="/assets/js/20.781c5235.js"><link rel="prefetch" href="/assets/js/21.0d0dcb08.js"><link rel="prefetch" href="/assets/js/22.29dad8ec.js"><link rel="prefetch" href="/assets/js/23.1d26584e.js"><link rel="prefetch" href="/assets/js/24.c3f593b2.js"><link rel="prefetch" href="/assets/js/25.e67dbcb2.js"><link rel="prefetch" href="/assets/js/26.9bee3ad2.js"><link rel="prefetch" href="/assets/js/27.584f8aa6.js"><link rel="prefetch" href="/assets/js/28.139d901b.js"><link rel="prefetch" href="/assets/js/29.95eb557b.js"><link rel="prefetch" href="/assets/js/3.37ac9c63.js"><link rel="prefetch" href="/assets/js/30.94baf8dd.js"><link rel="prefetch" href="/assets/js/31.c834f849.js"><link rel="prefetch" href="/assets/js/32.87c1eecf.js"><link rel="prefetch" href="/assets/js/33.1688c66e.js"><link rel="prefetch" href="/assets/js/34.ed32a02c.js"><link rel="prefetch" href="/assets/js/35.df4f1018.js"><link rel="prefetch" href="/assets/js/36.527e96b0.js"><link rel="prefetch" href="/assets/js/37.7c5e9b9c.js"><link rel="prefetch" href="/assets/js/38.a3f4dc09.js"><link rel="prefetch" href="/assets/js/39.9a9e7eea.js"><link rel="prefetch" href="/assets/js/4.0b4366d3.js"><link rel="prefetch" href="/assets/js/40.bbf5aca3.js"><link rel="prefetch" href="/assets/js/41.20271d2a.js"><link rel="prefetch" href="/assets/js/42.044ea8ca.js"><link rel="prefetch" href="/assets/js/43.e2de2e27.js"><link rel="prefetch" href="/assets/js/44.816538c7.js"><link rel="prefetch" href="/assets/js/45.423e2f6b.js"><link rel="prefetch" href="/assets/js/46.d97670c4.js"><link rel="prefetch" href="/assets/js/47.6fcd8eed.js"><link rel="prefetch" href="/assets/js/48.145fd2d1.js"><link rel="prefetch" href="/assets/js/49.7ef5a6f8.js"><link rel="prefetch" href="/assets/js/5.d7192128.js"><link rel="prefetch" href="/assets/js/50.63ebea49.js"><link rel="prefetch" href="/assets/js/51.cd1b6979.js"><link rel="prefetch" href="/assets/js/52.65e83723.js"><link rel="prefetch" href="/assets/js/53.482bb8f0.js"><link rel="prefetch" href="/assets/js/54.8d211ee5.js"><link rel="prefetch" href="/assets/js/55.6d0279ca.js"><link rel="prefetch" href="/assets/js/56.0d7dabe8.js"><link rel="prefetch" href="/assets/js/57.d174b462.js"><link rel="prefetch" href="/assets/js/58.10d297e6.js"><link rel="prefetch" href="/assets/js/59.8994ec9e.js"><link rel="prefetch" href="/assets/js/6.cbfd5b89.js"><link rel="prefetch" href="/assets/js/60.af139070.js"><link rel="prefetch" href="/assets/js/61.d3577fc0.js"><link rel="prefetch" href="/assets/js/63.e4036107.js"><link rel="prefetch" href="/assets/js/64.49321f56.js"><link rel="prefetch" href="/assets/js/65.3d22da24.js"><link rel="prefetch" href="/assets/js/66.77f21329.js"><link rel="prefetch" href="/assets/js/67.fde317d6.js"><link rel="prefetch" href="/assets/js/68.be19352b.js"><link rel="prefetch" href="/assets/js/69.4d3394b6.js"><link rel="prefetch" href="/assets/js/7.72adfabd.js"><link rel="prefetch" href="/assets/js/70.8fb36dbf.js"><link rel="prefetch" href="/assets/js/71.ac4e90a2.js"><link rel="prefetch" href="/assets/js/72.d098537d.js"><link rel="prefetch" href="/assets/js/73.95e18118.js"><link rel="prefetch" href="/assets/js/74.6fcf2855.js"><link rel="prefetch" href="/assets/js/75.87ad266a.js"><link rel="prefetch" href="/assets/js/76.28b55be0.js"><link rel="prefetch" href="/assets/js/77.6cb37bb4.js"><link rel="prefetch" href="/assets/js/78.79aefebb.js"><link rel="prefetch" href="/assets/js/79.6ed9e466.js"><link rel="prefetch" href="/assets/js/8.33b24897.js"><link rel="prefetch" href="/assets/js/80.671e3b50.js"><link rel="prefetch" href="/assets/js/81.f62a79b7.js"><link rel="prefetch" href="/assets/js/82.f3617058.js"><link rel="prefetch" href="/assets/js/83.18d0b631.js"><link rel="prefetch" href="/assets/js/84.fa6dee80.js"><link rel="prefetch" href="/assets/js/85.5f503b09.js"><link rel="prefetch" href="/assets/js/86.ad4607a2.js"><link rel="prefetch" href="/assets/js/87.f138000c.js"><link rel="prefetch" href="/assets/js/88.4b42282c.js"><link rel="prefetch" href="/assets/js/89.12e2a728.js"><link rel="prefetch" href="/assets/js/9.58fc3c18.js"><link rel="prefetch" href="/assets/js/90.ab27811b.js"><link rel="prefetch" href="/assets/js/91.97ac4e80.js"><link rel="prefetch" href="/assets/js/92.05c95c03.js"><link rel="prefetch" href="/assets/js/93.2df35e20.js"><link rel="prefetch" href="/assets/js/94.95c2bb02.js"><link rel="prefetch" href="/assets/js/95.6f61d80f.js"><link rel="prefetch" href="/assets/js/96.4ad62f06.js"><link rel="prefetch" href="/assets/js/97.b2963771.js"><link rel="prefetch" href="/assets/js/98.aec26723.js"><link rel="prefetch" href="/assets/js/99.15dceb59.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cdff4760.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/image/logo.png" alt="个人知识库" class="logo"> <span class="site-name can-hide">个人知识库</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/pages/about/me/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程技术" class="dropdown-title"><a href="/technology/" class="link-title router-link-active">编程技术</a> <span class="title" style="display:none;">编程技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/technology/c/array/" class="nav-link">C语言</a></li><li class="dropdown-item"><!----> <a href="/technology/c++/vs-setting/" class="nav-link">CPlusPlus</a></li><li class="dropdown-item"><!----> <a href="/technology/linux/basic/" class="nav-link">Linux</a></li><li class="dropdown-item"><!----> <a href="/technology/php/" class="nav-link">PHP</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="应用框架" class="dropdown-title"><a href="/framework/" class="link-title">应用框架</a> <span class="title" style="display:none;">应用框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/framework/nginx/install/" class="nav-link">Nginx</a></li><li class="dropdown-item"><!----> <a href="/framework/mysql/c_api/" class="nav-link">MySQL</a></li><li class="dropdown-item"><!----> <a href="/framework/redis/basic/" class="nav-link">Redis</a></li><li class="dropdown-item"><!----> <a href="/framework/docker/basic/" class="nav-link">Docker</a></li><li class="dropdown-item"><!----> <a href="/framework/kubernetes/basic/" class="nav-link">Kubernetes</a></li><li class="dropdown-item"><!----> <a href="/framework/srs/basic/" class="nav-link">SRS</a></li></ul></div></div><div class="nav-item"><a href="/read/soul/Self-motivated/" class="nav-link">阅读</a></div><div class="nav-item"><a href="/tools/github/" class="nav-link">常用工具</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/tags/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/Agnes001/blog_vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="/image/1.jpg"> <div class="blogger-info"><h3>Agnes001</h3> <span>
+        坚持是一件很伟大的事业
+      </span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/pages/about/me/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程技术" class="dropdown-title"><a href="/technology/" class="link-title router-link-active">编程技术</a> <span class="title" style="display:none;">编程技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/technology/c/array/" class="nav-link">C语言</a></li><li class="dropdown-item"><!----> <a href="/technology/c++/vs-setting/" class="nav-link">CPlusPlus</a></li><li class="dropdown-item"><!----> <a href="/technology/linux/basic/" class="nav-link">Linux</a></li><li class="dropdown-item"><!----> <a href="/technology/php/" class="nav-link">PHP</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="应用框架" class="dropdown-title"><a href="/framework/" class="link-title">应用框架</a> <span class="title" style="display:none;">应用框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/framework/nginx/install/" class="nav-link">Nginx</a></li><li class="dropdown-item"><!----> <a href="/framework/mysql/c_api/" class="nav-link">MySQL</a></li><li class="dropdown-item"><!----> <a href="/framework/redis/basic/" class="nav-link">Redis</a></li><li class="dropdown-item"><!----> <a href="/framework/docker/basic/" class="nav-link">Docker</a></li><li class="dropdown-item"><!----> <a href="/framework/kubernetes/basic/" class="nav-link">Kubernetes</a></li><li class="dropdown-item"><!----> <a href="/framework/srs/basic/" class="nav-link">SRS</a></li></ul></div></div><div class="nav-item"><a href="/read/soul/Self-motivated/" class="nav-link">阅读</a></div><div class="nav-item"><a href="/tools/github/" class="nav-link">常用工具</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/tags/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/Agnes001/blog_vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>C语言</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CPlusPlus</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Lua技术栈</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/technology/lua/basic-grammer/" class="sidebar-link">Lua基础语法</a></li><li><a href="/technology/lua/lua-function/" aria-current="page" class="active sidebar-link">Cpp与Lua联合</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/lua/lua-function/#c-c-应用场景" class="sidebar-link">C/C++应用场景</a></li><li class="sidebar-sub-header"><a href="/technology/lua/lua-function/#为什么要-lua-c-c" class="sidebar-link">为什么要 Lua+C/C++</a></li><li class="sidebar-sub-header"><a href="/technology/lua/lua-function/#根据lua源代码生成" class="sidebar-link">根据lua源代码生成</a></li><li class="sidebar-sub-header"><a href="/technology/lua/lua-function/#使用" class="sidebar-link">使用</a></li><li class="sidebar-sub-header"><a href="/technology/lua/lua-function/#c与lua的交互机制" class="sidebar-link">C与Lua的交互机制</a></li><li class="sidebar-sub-header"><a href="/technology/lua/lua-function/#lua-api函数总结" class="sidebar-link">lua API函数总结</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/lua/lua-function/#将lua脚本里的变量压入栈中" class="sidebar-link">将Lua脚本里的变量压入栈中</a></li><li class="sidebar-sub-header"><a href="/technology/lua/lua-function/#将c变量压入栈中" class="sidebar-link">将C变量压入栈中</a></li><li class="sidebar-sub-header"><a href="/technology/lua/lua-function/#将栈中某个位置的元素提取成c变量" class="sidebar-link">将栈中某个位置的元素提取成C变量</a></li><li class="sidebar-sub-header"><a href="/technology/lua/lua-function/#利用栈调用lua函数" class="sidebar-link">利用栈调用lua函数</a></li><li class="sidebar-sub-header"><a href="/technology/lua/lua-function/#以下函数用于判断栈内某处值的类型" class="sidebar-link">以下函数用于判断栈内某处值的类型</a></li><li class="sidebar-sub-header"><a href="/technology/lua/lua-function/#以下函数往栈顶压入一个c值" class="sidebar-link">以下函数往栈顶压入一个C值</a></li></ul></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>edoyun</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>内存管理</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>网络编程</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Linux</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>池化技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>操作系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>python</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div><main class="page"> <div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-14888ed5><div class="articleInfo" data-v-14888ed5><ul class="breadcrumbs" data-v-14888ed5><li data-v-14888ed5><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-14888ed5></a></li> <li data-v-14888ed5><a href="/categories/?category=%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF" title="分类" data-v-14888ed5>编程技术</a></li> <li data-v-14888ed5><a href="/categories/?category=Lua%E6%8A%80%E6%9C%AF%E6%A0%88" title="分类" data-v-14888ed5>Lua技术栈</a></li></ul> <div class="info" data-v-14888ed5><div title="作者" class="author iconfont icon-touxiang" data-v-14888ed5><a href="https://github.com/Agnes001" target="_blank" title="作者" class="beLink" data-v-14888ed5>Agnes001</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-14888ed5><a href="javascript:;" data-v-14888ed5>2021-01-17</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABGpJREFUSA3tVVtoXFUU3fvOI53UlmCaKIFmwEhsE7QK0ipFEdHEKpXaZGrp15SINsXUWvBDpBgQRKi0+KKoFeJHfZA+ED9KKoIU2gYD9UejTW4rVIzm0VSTziPzuNu1z507dibTTjL4U/DAzLn3nL3X2o91ziX6f9wMFdh6Jvbm9nNSV0msViVO6tN1Rm7NMu2OpeJ9lWBUTDxrJbYTS0hInuwciu9eLHlFxCLCZEk3MegsJmZ5K/JD6t7FkFdEvGUo1g7qJoG3MHImqRIn8/nzY1K9UPKKiJmtnUqHVE3Gbuay6vJE/N2FEmuxFjW2nUuE0yQXRRxLiTUAzs36zhZvOXJPdX850EVnnLZkB8prodQoM5JGj7Xk2mvC7JB8tG04Ef5PiXtG0UtxupRQSfTnBoCy554x18yJHI6I+G5Eru4LHmPJZEQsrvPUbMiA8G/WgMK7w7I+ez7++o2ANfbrjvaOl1tFMs+htG3IrZH9/hDX1Pr8Tc0UvH8tcX29KzAgIGcEkINyW5BF9x891hw6VYqgJHEk0huccS7vh3C6gTiODL+26huuBtbct8eZnqLML8PkxGYpuPZBqtqwkSjgc4mB5gbgig5i+y0UDK35LMxXisn9xQtK+nd26gTIHsHe/oblK/b29fUmN/8Y+9jAQrnBp56m1LcDlDp9irKTExSKduXJVWSqdBMA08pEJnEIOB3FPPMybu/oeV8zFeYN3xx576Q6RH+VmplE4ncQV5v+5rzSoyOU7PuEAg8g803PwBJ0CExno/jcMbN8tONYeOmHiuUNryvm3fRUy4tMPVLdAGkUhNWuggGrJcXPv+ouCjz0MKUHz1J2/E8IC9nqTabcxgaBYM0hPhD5Y65FsbxRQKxCQrDjDctW7PUM3HuZunFyifSAqEfuzCp48Il24luWUWZoyJCaPR82jE0+kFA643wRFVni4RYSq3ohJO2pZ7B5dO4xkDWbEpossJPLSrPjYID8rS2UHTlvyNxqIGsg674XJJ7vnh5L7PNwC4hh2sjCI96mzszOTpxLF0T7l88Yz7lAuK6OnL8gXLOnTvpzSb22YG8W7us3jSebFHeeqnXRG1vt+MoUM84LQIBmMsCTAcOauTh0T0l0neQK7m2bLMt2mGxU3HYssS0J2cdv5wljlPsrIuZLAG/2DOZIXgCYT8uMGZN+e2kSirfxZOPCsC0f24nTZzspnVn9VePS1Z5vubmAGGXG8ZFno9Hel0yfA5ZPhF7Dh972BQJ2qCpgH67lmWtBYbvk6sz02wjky2vXyz0XErP/kFB619js1BtwfOV4OPRqOQBjy3Qbk18vigUPPSD5ceHnwck7W9bhAqZdd7SuG7w4/P2F/GaJh8c7e9qgow+Q7cGBo+98WsLkuktFqiZabtXuQTu/Y5ETbR0v7tNSFnvrmu6pjdoan2KjMu8q/Hmj1EfCO2ZGfEIbIXKUlw8qaX9/b2oeSJmFksSeT/Fn0V3nSypChh4Gjh74ybO9aeZ/AN2dwciu2/MhAAAAAElFTkSuQmCC">
+          Cpp与Lua联合编程
+        </h1> <div class="theme-vdoing-content content__default"><h2 id="c-c-应用场景"><a href="#c-c-应用场景" class="header-anchor">#</a> C/C++应用场景</h2> <ul><li>嵌入式系统（物联网）</li> <li>网络游戏</li> <li>防火墙、杀毒软件</li> <li>人工智能</li> <li>工业级应用</li> <li>手机APP（高性能、高节能要求）</li> <li>云计算</li></ul> <h2 id="为什么要-lua-c-c"><a href="#为什么要-lua-c-c" class="header-anchor">#</a> 为什么要 Lua+C/C++</h2> <ol><li>C++的缺点:编译慢，调试难，学习难度大</li> <li>Lua优点:
+<ul><li>最快的脚本语言</li> <li>可以编译调试</li> <li>与C/C++结合容易</li> <li>Lua是对性能有要求的必备脚本</li></ul></li></ol> <h2 id="根据lua源代码生成"><a href="#根据lua源代码生成" class="header-anchor">#</a> 根据lua源代码生成</h2> <p>动态库 预处理器</p> <div class="language- extra-class"><pre class="language-text"><code>WIN32
+_DEBUG
+LUA53_EXPORTS
+_WINDOWS
+_USRDLL
+
+系统 _WINDOWS
+</code></pre></div><p>可执行程序</p> <div class="language- extra-class"><pre class="language-text"><code>WIN32
+_DEBUG
+_CONSOLE
+
+系统 _CONSOLE
+</code></pre></div><p>创建DLL项目，选择Release模式。</p> <p>将解压后的src文件夹下所有.h和.c文件（lua.c,luac.c和其他格式文件都不要）拖进项目，</p> <p>预处理器定义（宏定义）加上LUA_BUILD_AS_DLL</p> <h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <div class="language-c++ extra-class"><pre class="language-text"><code>#pragma comment(lib, &quot;lua.lib&quot;)  
+extern &quot;C&quot;  
+{  
+#include &lt;lua.h&gt;  
+#include &lt;lualib.h&gt;  
+#include &lt;lauxlib.h&gt;  
+};
+
+void TestLua();
+ 
+int main()
+{
+    TestLua();
+    return 0;
+}
+ 
+void TestLua()
+{
+    lua_State *L = luaL_newstate();
+    luaopen_base(L); //
+    luaopen_table(L); //
+    luaopen_package(L); //
+    luaopen_io(L); //
+    luaopen_string(L); //
+ 
+    luaL_openlibs(L); //打开以上所有的lib
+ 
+    string str; 
+ 
+    while (true)
+    {
+        cout &lt;&lt; &quot;请输入Lua代码:&quot; &lt;&lt; endl;
+        getline(cin, str, '\n');
+        if (luaL_loadstring(L, str.c_str())
+            || lua_pcall(L, 0, 0, 0) )
+        {
+            const char * error = lua_tostring(L, -1) ;
+            cout &lt;&lt; string(error) &lt;&lt; endl;
+        }
+    }
+ 
+    lua_close(L);
+}
+
+// 在C++中，每个嵌入的lua的生命周期与各自的lua_State对象一一对应。通过luaL_newstate()方法，我们便创建了一个lua解释器。随后的几个luaopen_*方法，都是获取相应lua库的使用权，最后通过luaL_openlibs打开所拥有使用权的lua标准库。
+// 通过luaL_loadstring，将所有代码读入lua，并且检查代码是否有语法错误。然后通过lua_pcall，运行代码，将所有的全局变量保存在L中。通过读取、运行这两步，我们就建立起一个自己的lua解释器了。
+// 将lua作为配置文件，从文件读取lua代码，流程与之前的示例一样，仅是将luaL_loadstring()换成luaL_loadfile()即可。
+
+
+</code></pre></div><h2 id="c与lua的交互机制"><a href="#c与lua的交互机制" class="header-anchor">#</a> C与Lua的交互机制</h2> <p>正数索引和负数索引，从而使-1总是代表栈顶元素的索引，1总是代表栈底元素的索引</p> <p>交互基本原理：</p> <p>当C要调用Lua数据时，Lua把值压入栈中，C再从栈中取值；</p> <p>当Lua调用C数据时，C要将数据压入栈中，让Lua从栈中取值。</p> <p>交互值时大部分可以按上面的互相传输，但是交互函数稍微更复杂：</p> <p>当C要调用Lua函数时，Lua先将Lua函数压入栈中，C再将数据（作为参数）继续压入栈中，</p> <p>然后用API调用栈上的lua函数+参数，调用完后，Lua函数和参数都会出栈，而函数计算后的返还值会压入栈中。</p> <p>当Lua要调用C函数时，需要通过API注册符合lua规范的C函数，来让Lua知道该C函数的定义。</p> <h2 id="lua-api函数总结"><a href="#lua-api函数总结" class="header-anchor">#</a> lua API函数总结</h2> <h3 id="将lua脚本里的变量压入栈中"><a href="#将lua脚本里的变量压入栈中" class="header-anchor">#</a> 将Lua脚本里的变量压入栈中</h3> <div class="language-c++ extra-class"><pre class="language-text"><code>// 根据name获取某个全局变量，压入栈顶
+int lua_getglobal(lua_State *L, const char *name);
+
+// 根据name获取index索引的table元素里的某个变量，压入栈顶
+int lua_getfield(lua_State *L, int index, const char *name);
+// 以k所在栈中的索引(idx)作为参数，取得k对应的值并压入栈顶
+void lua_getfield(lua_State *L, int idx, const char *k)
+// lua_getfield必须为字符串键
+// lua_getglobal(L, &quot;mytable&quot;) &lt;== push mytable
+// lua_getfield(L, -1, &quot;x&quot;)    &lt;== push mytable[&quot;x&quot;]，作用同下面两行调用
+// --lua_pushstring(L, &quot;x&quot;)    &lt;== push key &quot;x&quot;
+// --lua_gettable(L,-2)        &lt;== pop key &quot;x&quot;, push mytable[&quot;x&quot;]
+
+// 将t[k]的值压入栈。t是栈中位于参数index所指向的位置，k为栈顶的值。此函数调用后，将会把栈顶的k的值出栈，将返回的结果放入栈顶。在lua中，这个调用将会触发metamethod的“index”事件。
+// idx指向表在栈中的位置，弹出栈顶的key取得表中的值并压入栈顶,此函数与lua_rawget的区别在于此函数会调用metatable的方法
+void lua_gettable(lua_State *L, int idx);
+// lua_gettable简单理解
+// lua_getglobal(L, &quot;mytable&quot;) &lt;== push mytable
+// lua_pushnumber(L, 1)        &lt;== push key 1
+// lua_gettable(L, -2)         &lt;== pop key 1, push mytable[1]
+</code></pre></div><h3 id="将c变量压入栈中"><a href="#将c变量压入栈中" class="header-anchor">#</a> 将C变量压入栈中</h3> <div class="language-c++ extra-class"><pre class="language-text"><code>//将数字压入栈顶
+void lua_pushnumber(lua_State *L,double number);
+//将字符串压入栈顶
+const char *lua_pushstring(lua_State *L, const char *str);
+// lua_setglobal来用一个名字引用栈顶的值。
+</code></pre></div><h3 id="将栈中某个位置的元素提取成c变量"><a href="#将栈中某个位置的元素提取成c变量" class="header-anchor">#</a> 将栈中某个位置的元素提取成C变量</h3> <div class="language-c++ extra-class"><pre class="language-text"><code>//将index索引的元素以数字的形式提取
+double lua_tonumber(lua_State *L, int index);
+//将index索引的元素以字符串的形式提取，返还
+const char* lua_tostring(lua_State *L, int index);
+</code></pre></div><h3 id="利用栈调用lua函数"><a href="#利用栈调用lua函数" class="header-anchor">#</a> 利用栈调用lua函数</h3> <div class="language-c++ extra-class"><pre class="language-text"><code>// 调用lua函数，arguNum是参数的个数，returnNum是返还值的个数，errorHandleIndex是函数调用错误时会另外调用的错误处理函数的索引（0视为无）
+// 调用前要求：依次压入 lua函数元素，第1个参数元素，第2个参数元素....
+// 调用后：调用的lua函数元素和所有参数元素 会在栈里被清理掉，并且若干个返还值元素将压入栈顶
+// lua_pcall()内部调用的是lua_call()
+// void lua_call(lua_State *L, int nargs, int nresults)
+// 首先，被调用的函数要被压入栈，该函数的参数要按照直接的顺序压入栈。第一个参数要第一个入栈，以此类推。最终你调用lua_call。nargs参数表示你压入栈中的参数个数。该函数及其所有的参数在被调用的时候都会从栈中弹出。函数的返回值将会在函数返回的时候压入栈中。返回值的个数用nresults这个参数来调整，除非传入的是LUA_MULTRET（注：即-1）。在这种情况下，函数的全部返回值都会入栈。lua会处理栈的空间，以使所有的返回值都有充足的栈空间。所有的返回值是以直接入栈的顺序压栈的（即第一返回值先入，依次类推），所以经过调用后，最后一个返回值在栈顶。
+int lua_pcall(lua_State *L, int arguNum, int returnNum, int errorHandleIndex);
+
+</code></pre></div><h3 id="以下函数用于判断栈内某处值的类型"><a href="#以下函数用于判断栈内某处值的类型" class="header-anchor">#</a> 以下函数用于判断栈内某处值的类型</h3> <div class="language-c++ extra-class"><pre class="language-text"><code>// 判断是，返回0
+// 栈idx处的值是否是实数
+int (lua_isnumber) (lua_State *L, int idx)
+// 栈idx处的值是否是字符串      
+int (lua_isstring) (lua_State *L, int idx)
+// 栈idx处的值是否是函数       
+int (lua_iscfunction) (lua_State *L, int idx)
+// 栈idx处的值是否是二进制数据
+int (lua_isuserdata) (lua_State *L, int idx)
+// 取得栈idx处的值的类型       
+int (lua_type) (lua_State *L, int idx)
+// 将类型转换成C字符串
+const char *(lua_typename) (lua_State *L, int tp)
+// 栈内两个值是否相等，类型和值都需要相等才返回真       
+int (lua_equal) (lua_State *L, int idx1, int idx2)
+// 栈内两个对象是否相等，如果是对象时所指对象相同也算相等       
+int (lua_rawequal) (lua_State *L, int idx1, int idx2)
+// 栈内两个值的大小,idx1处的值是否小于idx2处的值     
+int (lua_lessthan) (lua_State *L, int idx1, int idx2)
+</code></pre></div><h3 id="以下函数往栈顶压入一个c值"><a href="#以下函数往栈顶压入一个c值" class="header-anchor">#</a> 以下函数往栈顶压入一个C值</h3> <div class="language-c++ extra-class"><pre class="language-text"><code>// 往栈顶压入一个NIL值
+void (lua_pushnil) (lua_State *L)
+// 往栈顶压入一个实数        
+void (lua_pushnumber) (lua_State *L, lua_Number n)
+// 往栈顶压入一个整数        
+void (lua_pushinteger) (lua_State *L, lua_Integer n)
+// 往栈顶压入一个二进制串        
+void (lua_pushlstring) (lua_State *L, const char *s, size_t l)
+// 往栈顶压入一个字符串        
+void (lua_pushstring) (lua_State *L, const char *s)
+// 往栈顶压入一个格式化串，不过argp是变参        
+const char *(lua_pushvfstring) (lua_State *L, const char *fmt, va_list argp)
+// 往栈顶压入一个格式化串        
+const char *(lua_pushfstring) (lua_State *L, const char *fmt, ...)
+// 压入一个函数        
+void (lua_pushcclosure) (lua_State *L, lua_CFunction fn, int n)
+// 往栈顶压入一个bool类型        
+void (lua_pushboolean) (lua_State *L, int b)
+// 往栈顶压入一个数组，数组的内存块指向p        
+void (lua_pushlightuserdata) (lua_State *L, void *p)
+// 将一个C函数入栈。这个函数接受一个C函数指针，将其压入作为一个Lua的function类型值压入栈，当这个值被调用时，Lua将调用该值对应的C函数。所有注册在Lua中的C函数必须遵守一个正确的协议来接受参数和返回返回值（查看lua_CFunction）。
+void lua_pushcfuntion(lua_State *L, luaCFunction f)
+// 为了正确的与Lua交互，必须遵守如下协议，该协议定义了参数和返回值的传递方式：一个C函数从Lua的栈中以直接（左边的参数先入栈）顺序来接收参数。因此，当该函数的调用开始时，lua_gettop(L) 得到用来调用该函数的参数个数（注：lua_gettop的作用是得到栈的栈顶元素的索引，即栈的长度）。第一个参数（如果有的话）的值索引为1，最后一个参数的值索引为lua_gettop(L)。为了将返回值返回给Lua，C函数将所有的返回值以直接的顺序（第一个返回值先入栈，以此类推）全部压入栈中，然后将返回值的个数作为值返回（注：此处的返回是return之意，不是传递到Lua中）。所有栈中其他的在返回值个数之下的索引对应的值会被Lua忽略掉，被Lua调用的C函数能传递多个值返回给Lua。
+</code></pre></div></div></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/Agnes001/blog_vuepress/edit/master/docs/30.编程技术/11.Lua技术栈/100.Cpp与Lua联合.md" target="_blank" rel="noopener noreferrer">编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="tags"><a href="/tags/?tag=Cpp" title="标签">
+      #Cpp
+    </a><a href="/tags/?tag=Lua" title="标签">
+      #Lua
+    </a></div> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/technology/lua/basic-grammer/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">
+        Lua基础语法
+      </div></a> <a href="/technology/edoyun/basic/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">
+        基础
+      </div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/technology/lua/basic-grammer/" class="prev">Lua基础语法</a></span> <span class="next"><a href="/technology/edoyun/basic/">基础</a>
+        →
+      </span></p></div></div></div> <!----> </main></div> <div class="footer"><div class="icons"><a href="mailto:17125131@bjtu.edu.cn" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/Agnes001" title="GitHub" target="_blank" class="iconfont icon-github"></a></div> 
+  Theme by <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> <!----></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2df33bbd.js" defer></script><script src="/assets/js/2.f873f4a5.js" defer></script><script src="/assets/js/62.e17d1882.js" defer></script>
+  </body>
+</html>

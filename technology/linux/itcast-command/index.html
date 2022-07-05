@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>linux-itcast-command | 个人知识库</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/">
+    <meta name="description" content="Just playing around">
+    <link rel="preload" href="/assets/css/0.styles.cdff4760.css" as="style"><link rel="preload" href="/assets/js/app.2df33bbd.js" as="script"><link rel="preload" href="/assets/js/2.f873f4a5.js" as="script"><link rel="preload" href="/assets/js/83.18d0b631.js" as="script"><link rel="prefetch" href="/assets/js/10.fce11a4f.js"><link rel="prefetch" href="/assets/js/100.93d57fe5.js"><link rel="prefetch" href="/assets/js/101.cb59cb7c.js"><link rel="prefetch" href="/assets/js/102.9bda773f.js"><link rel="prefetch" href="/assets/js/103.90765133.js"><link rel="prefetch" href="/assets/js/104.3198dcb0.js"><link rel="prefetch" href="/assets/js/105.56ce9ed9.js"><link rel="prefetch" href="/assets/js/106.53664c48.js"><link rel="prefetch" href="/assets/js/107.5cda28a1.js"><link rel="prefetch" href="/assets/js/108.6f6019c3.js"><link rel="prefetch" href="/assets/js/109.a7740201.js"><link rel="prefetch" href="/assets/js/11.49901c43.js"><link rel="prefetch" href="/assets/js/110.632b525e.js"><link rel="prefetch" href="/assets/js/111.274b06dc.js"><link rel="prefetch" href="/assets/js/112.d0e88d20.js"><link rel="prefetch" href="/assets/js/113.486e4fc8.js"><link rel="prefetch" href="/assets/js/114.c69339e6.js"><link rel="prefetch" href="/assets/js/115.204c5dbb.js"><link rel="prefetch" href="/assets/js/116.3765742a.js"><link rel="prefetch" href="/assets/js/117.8d1b805e.js"><link rel="prefetch" href="/assets/js/118.ef246e62.js"><link rel="prefetch" href="/assets/js/119.b9f20cb0.js"><link rel="prefetch" href="/assets/js/12.9581203a.js"><link rel="prefetch" href="/assets/js/120.8cd8657c.js"><link rel="prefetch" href="/assets/js/121.72f63b4e.js"><link rel="prefetch" href="/assets/js/122.8928e827.js"><link rel="prefetch" href="/assets/js/123.67594cad.js"><link rel="prefetch" href="/assets/js/124.eb1ef9b0.js"><link rel="prefetch" href="/assets/js/125.1a2cee51.js"><link rel="prefetch" href="/assets/js/126.d1e6cc77.js"><link rel="prefetch" href="/assets/js/13.175440db.js"><link rel="prefetch" href="/assets/js/14.dd1b88c1.js"><link rel="prefetch" href="/assets/js/15.c0d81c5c.js"><link rel="prefetch" href="/assets/js/16.af59b3be.js"><link rel="prefetch" href="/assets/js/17.a8b4125e.js"><link rel="prefetch" href="/assets/js/18.1b6202ac.js"><link rel="prefetch" href="/assets/js/19.eba09d42.js"><link rel="prefetch" href="/assets/js/20.781c5235.js"><link rel="prefetch" href="/assets/js/21.0d0dcb08.js"><link rel="prefetch" href="/assets/js/22.29dad8ec.js"><link rel="prefetch" href="/assets/js/23.1d26584e.js"><link rel="prefetch" href="/assets/js/24.c3f593b2.js"><link rel="prefetch" href="/assets/js/25.e67dbcb2.js"><link rel="prefetch" href="/assets/js/26.9bee3ad2.js"><link rel="prefetch" href="/assets/js/27.584f8aa6.js"><link rel="prefetch" href="/assets/js/28.139d901b.js"><link rel="prefetch" href="/assets/js/29.95eb557b.js"><link rel="prefetch" href="/assets/js/3.37ac9c63.js"><link rel="prefetch" href="/assets/js/30.94baf8dd.js"><link rel="prefetch" href="/assets/js/31.c834f849.js"><link rel="prefetch" href="/assets/js/32.87c1eecf.js"><link rel="prefetch" href="/assets/js/33.1688c66e.js"><link rel="prefetch" href="/assets/js/34.ed32a02c.js"><link rel="prefetch" href="/assets/js/35.df4f1018.js"><link rel="prefetch" href="/assets/js/36.527e96b0.js"><link rel="prefetch" href="/assets/js/37.7c5e9b9c.js"><link rel="prefetch" href="/assets/js/38.a3f4dc09.js"><link rel="prefetch" href="/assets/js/39.9a9e7eea.js"><link rel="prefetch" href="/assets/js/4.0b4366d3.js"><link rel="prefetch" href="/assets/js/40.bbf5aca3.js"><link rel="prefetch" href="/assets/js/41.20271d2a.js"><link rel="prefetch" href="/assets/js/42.044ea8ca.js"><link rel="prefetch" href="/assets/js/43.e2de2e27.js"><link rel="prefetch" href="/assets/js/44.816538c7.js"><link rel="prefetch" href="/assets/js/45.423e2f6b.js"><link rel="prefetch" href="/assets/js/46.d97670c4.js"><link rel="prefetch" href="/assets/js/47.6fcd8eed.js"><link rel="prefetch" href="/assets/js/48.145fd2d1.js"><link rel="prefetch" href="/assets/js/49.7ef5a6f8.js"><link rel="prefetch" href="/assets/js/5.d7192128.js"><link rel="prefetch" href="/assets/js/50.63ebea49.js"><link rel="prefetch" href="/assets/js/51.cd1b6979.js"><link rel="prefetch" href="/assets/js/52.65e83723.js"><link rel="prefetch" href="/assets/js/53.482bb8f0.js"><link rel="prefetch" href="/assets/js/54.8d211ee5.js"><link rel="prefetch" href="/assets/js/55.6d0279ca.js"><link rel="prefetch" href="/assets/js/56.0d7dabe8.js"><link rel="prefetch" href="/assets/js/57.d174b462.js"><link rel="prefetch" href="/assets/js/58.10d297e6.js"><link rel="prefetch" href="/assets/js/59.8994ec9e.js"><link rel="prefetch" href="/assets/js/6.cbfd5b89.js"><link rel="prefetch" href="/assets/js/60.af139070.js"><link rel="prefetch" href="/assets/js/61.d3577fc0.js"><link rel="prefetch" href="/assets/js/62.e17d1882.js"><link rel="prefetch" href="/assets/js/63.e4036107.js"><link rel="prefetch" href="/assets/js/64.49321f56.js"><link rel="prefetch" href="/assets/js/65.3d22da24.js"><link rel="prefetch" href="/assets/js/66.77f21329.js"><link rel="prefetch" href="/assets/js/67.fde317d6.js"><link rel="prefetch" href="/assets/js/68.be19352b.js"><link rel="prefetch" href="/assets/js/69.4d3394b6.js"><link rel="prefetch" href="/assets/js/7.72adfabd.js"><link rel="prefetch" href="/assets/js/70.8fb36dbf.js"><link rel="prefetch" href="/assets/js/71.ac4e90a2.js"><link rel="prefetch" href="/assets/js/72.d098537d.js"><link rel="prefetch" href="/assets/js/73.95e18118.js"><link rel="prefetch" href="/assets/js/74.6fcf2855.js"><link rel="prefetch" href="/assets/js/75.87ad266a.js"><link rel="prefetch" href="/assets/js/76.28b55be0.js"><link rel="prefetch" href="/assets/js/77.6cb37bb4.js"><link rel="prefetch" href="/assets/js/78.79aefebb.js"><link rel="prefetch" href="/assets/js/79.6ed9e466.js"><link rel="prefetch" href="/assets/js/8.33b24897.js"><link rel="prefetch" href="/assets/js/80.671e3b50.js"><link rel="prefetch" href="/assets/js/81.f62a79b7.js"><link rel="prefetch" href="/assets/js/82.f3617058.js"><link rel="prefetch" href="/assets/js/84.fa6dee80.js"><link rel="prefetch" href="/assets/js/85.5f503b09.js"><link rel="prefetch" href="/assets/js/86.ad4607a2.js"><link rel="prefetch" href="/assets/js/87.f138000c.js"><link rel="prefetch" href="/assets/js/88.4b42282c.js"><link rel="prefetch" href="/assets/js/89.12e2a728.js"><link rel="prefetch" href="/assets/js/9.58fc3c18.js"><link rel="prefetch" href="/assets/js/90.ab27811b.js"><link rel="prefetch" href="/assets/js/91.97ac4e80.js"><link rel="prefetch" href="/assets/js/92.05c95c03.js"><link rel="prefetch" href="/assets/js/93.2df35e20.js"><link rel="prefetch" href="/assets/js/94.95c2bb02.js"><link rel="prefetch" href="/assets/js/95.6f61d80f.js"><link rel="prefetch" href="/assets/js/96.4ad62f06.js"><link rel="prefetch" href="/assets/js/97.b2963771.js"><link rel="prefetch" href="/assets/js/98.aec26723.js"><link rel="prefetch" href="/assets/js/99.15dceb59.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cdff4760.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/image/logo.png" alt="个人知识库" class="logo"> <span class="site-name can-hide">个人知识库</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/pages/about/me/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程技术" class="dropdown-title"><a href="/technology/" class="link-title router-link-active">编程技术</a> <span class="title" style="display:none;">编程技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/technology/c/array/" class="nav-link">C语言</a></li><li class="dropdown-item"><!----> <a href="/technology/c++/vs-setting/" class="nav-link">CPlusPlus</a></li><li class="dropdown-item"><!----> <a href="/technology/linux/basic/" class="nav-link">Linux</a></li><li class="dropdown-item"><!----> <a href="/technology/php/" class="nav-link">PHP</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="应用框架" class="dropdown-title"><a href="/framework/" class="link-title">应用框架</a> <span class="title" style="display:none;">应用框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/framework/nginx/install/" class="nav-link">Nginx</a></li><li class="dropdown-item"><!----> <a href="/framework/mysql/c_api/" class="nav-link">MySQL</a></li><li class="dropdown-item"><!----> <a href="/framework/redis/basic/" class="nav-link">Redis</a></li><li class="dropdown-item"><!----> <a href="/framework/docker/basic/" class="nav-link">Docker</a></li><li class="dropdown-item"><!----> <a href="/framework/kubernetes/basic/" class="nav-link">Kubernetes</a></li><li class="dropdown-item"><!----> <a href="/framework/srs/basic/" class="nav-link">SRS</a></li></ul></div></div><div class="nav-item"><a href="/read/soul/Self-motivated/" class="nav-link">阅读</a></div><div class="nav-item"><a href="/tools/github/" class="nav-link">常用工具</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/tags/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/Agnes001/blog_vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="/image/1.jpg"> <div class="blogger-info"><h3>Agnes001</h3> <span>
+        坚持是一件很伟大的事业
+      </span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/pages/about/me/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程技术" class="dropdown-title"><a href="/technology/" class="link-title router-link-active">编程技术</a> <span class="title" style="display:none;">编程技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/technology/c/array/" class="nav-link">C语言</a></li><li class="dropdown-item"><!----> <a href="/technology/c++/vs-setting/" class="nav-link">CPlusPlus</a></li><li class="dropdown-item"><!----> <a href="/technology/linux/basic/" class="nav-link">Linux</a></li><li class="dropdown-item"><!----> <a href="/technology/php/" class="nav-link">PHP</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="应用框架" class="dropdown-title"><a href="/framework/" class="link-title">应用框架</a> <span class="title" style="display:none;">应用框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/framework/nginx/install/" class="nav-link">Nginx</a></li><li class="dropdown-item"><!----> <a href="/framework/mysql/c_api/" class="nav-link">MySQL</a></li><li class="dropdown-item"><!----> <a href="/framework/redis/basic/" class="nav-link">Redis</a></li><li class="dropdown-item"><!----> <a href="/framework/docker/basic/" class="nav-link">Docker</a></li><li class="dropdown-item"><!----> <a href="/framework/kubernetes/basic/" class="nav-link">Kubernetes</a></li><li class="dropdown-item"><!----> <a href="/framework/srs/basic/" class="nav-link">SRS</a></li></ul></div></div><div class="nav-item"><a href="/read/soul/Self-motivated/" class="nav-link">阅读</a></div><div class="nav-item"><a href="/tools/github/" class="nav-link">常用工具</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/tags/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/Agnes001/blog_vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>C语言</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CPlusPlus</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Lua技术栈</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>edoyun</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>内存管理</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>网络编程</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Linux</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/technology/linux/basic/" class="sidebar-link">Linux基础</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>系统编程</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/pages/d0e49a/" class="sidebar-link">基础命令</a></li><li><a href="/technology/linux/itcast-command/" aria-current="page" class="active sidebar-link">itcast</a></li><li><a href="/technology/linux/io/" class="sidebar-link">文件io</a></li><li><a href="/technology/linux/gdb/" class="sidebar-link">gdb</a></li><li><a href="/technology/linux/eclipse/" class="sidebar-link">Ubuntu安装eclipse</a></li><li><a href="/technology/linux/gcc-install/" class="sidebar-link">gcc安装</a></li><li><a href="/technology/linux/sys-programming/" class="sidebar-link">系统编程</a></li><li><a href="/technology/linux/multi-thread/" class="sidebar-link">linux内核多线程</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>池化技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>操作系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>python</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div><main class="page"> <div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-14888ed5><div class="articleInfo" data-v-14888ed5><ul class="breadcrumbs" data-v-14888ed5><li data-v-14888ed5><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-14888ed5></a></li> <li data-v-14888ed5><a href="/categories/?category=%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF" title="分类" data-v-14888ed5>编程技术</a></li> <li data-v-14888ed5><a href="/categories/?category=Linux" title="分类" data-v-14888ed5>Linux</a></li></ul> <div class="info" data-v-14888ed5><div title="作者" class="author iconfont icon-touxiang" data-v-14888ed5><a href="https://github.com/Agnes001" target="_blank" title="作者" class="beLink" data-v-14888ed5>Agnes001</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-14888ed5><a href="javascript:;" data-v-14888ed5>2022-01-18</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><!----> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABGpJREFUSA3tVVtoXFUU3fvOI53UlmCaKIFmwEhsE7QK0ipFEdHEKpXaZGrp15SINsXUWvBDpBgQRKi0+KKoFeJHfZA+ED9KKoIU2gYD9UejTW4rVIzm0VSTziPzuNu1z507dibTTjL4U/DAzLn3nL3X2o91ziX6f9wMFdh6Jvbm9nNSV0msViVO6tN1Rm7NMu2OpeJ9lWBUTDxrJbYTS0hInuwciu9eLHlFxCLCZEk3MegsJmZ5K/JD6t7FkFdEvGUo1g7qJoG3MHImqRIn8/nzY1K9UPKKiJmtnUqHVE3Gbuay6vJE/N2FEmuxFjW2nUuE0yQXRRxLiTUAzs36zhZvOXJPdX850EVnnLZkB8prodQoM5JGj7Xk2mvC7JB8tG04Ef5PiXtG0UtxupRQSfTnBoCy554x18yJHI6I+G5Eru4LHmPJZEQsrvPUbMiA8G/WgMK7w7I+ez7++o2ANfbrjvaOl1tFMs+htG3IrZH9/hDX1Pr8Tc0UvH8tcX29KzAgIGcEkINyW5BF9x891hw6VYqgJHEk0huccS7vh3C6gTiODL+26huuBtbct8eZnqLML8PkxGYpuPZBqtqwkSjgc4mB5gbgig5i+y0UDK35LMxXisn9xQtK+nd26gTIHsHe/oblK/b29fUmN/8Y+9jAQrnBp56m1LcDlDp9irKTExSKduXJVWSqdBMA08pEJnEIOB3FPPMybu/oeV8zFeYN3xx576Q6RH+VmplE4ncQV5v+5rzSoyOU7PuEAg8g803PwBJ0CExno/jcMbN8tONYeOmHiuUNryvm3fRUy4tMPVLdAGkUhNWuggGrJcXPv+ouCjz0MKUHz1J2/E8IC9nqTabcxgaBYM0hPhD5Y65FsbxRQKxCQrDjDctW7PUM3HuZunFyifSAqEfuzCp48Il24luWUWZoyJCaPR82jE0+kFA643wRFVni4RYSq3ohJO2pZ7B5dO4xkDWbEpossJPLSrPjYID8rS2UHTlvyNxqIGsg674XJJ7vnh5L7PNwC4hh2sjCI96mzszOTpxLF0T7l88Yz7lAuK6OnL8gXLOnTvpzSb22YG8W7us3jSebFHeeqnXRG1vt+MoUM84LQIBmMsCTAcOauTh0T0l0neQK7m2bLMt2mGxU3HYssS0J2cdv5wljlPsrIuZLAG/2DOZIXgCYT8uMGZN+e2kSirfxZOPCsC0f24nTZzspnVn9VePS1Z5vubmAGGXG8ZFno9Hel0yfA5ZPhF7Dh972BQJ2qCpgH67lmWtBYbvk6sz02wjky2vXyz0XErP/kFB619js1BtwfOV4OPRqOQBjy3Qbk18vigUPPSD5ceHnwck7W9bhAqZdd7SuG7w4/P2F/GaJh8c7e9qgow+Q7cGBo+98WsLkuktFqiZabtXuQTu/Y5ETbR0v7tNSFnvrmu6pjdoan2KjMu8q/Hmj1EfCO2ZGfEIbIXKUlw8qaX9/b2oeSJmFksSeT/Fn0V3nSypChh4Gjh74ybO9aeZ/AN2dwciu2/MhAAAAAElFTkSuQmCC">
+          linux-itcast-command
+        </h1> <div class="theme-vdoing-content content__default"><p>终端：(虚拟终端)  所有输入输出设备总称</p> <p>shell： 命令解析器</p> <p>bash： bore again shell 命令解析器。</p> <p>文件类型：</p> <ol><li><p>文件  “-”</p></li> <li><p>目录  “d”</p></li> <li><p>软连接 “l”  --快捷方式</p></li> <li><p>管道   “p”</p></li> <li><p>套接字 “s”</p></li> <li><p>字符设备 “c”</p></li> <li><p>块设备 “b”</p></li> <li><p>未知类型</p></li></ol> <p>.gz ---- gzip   不保留源文件   不能对目录进行打包压缩</p> <p>.bz2 --- bzip2  -k 来保留源文件  不能对目录进行打包压缩</p> <p>tar： 压缩：tar zcvf 新起的压缩包名字.tar.gz   原材料</p> <div class="language- extra-class"><pre><code>  解压：tar zxvf 已有的压缩包
+</code></pre></div><p>前台：能够跟用户完成交互。</p> <p>后台：不能直接跟用户交互。</p> <p>sudo adduser lisi 添加李四用户  他默认属于李四用户组</p> <p>sudo adduser liwu 添加李五用户  他默认属于李五用户组</p> <p>sudo adduser liwu lisi   将 李五用户加入到李四用户组</p> <p>sudo deluser lisi  删除用户lisi</p> <p>sudo delgroup  liwu  删除用户组李五</p> <hr> <p>服务器：</p> <ol><li><p>安装	sudo apt-get install vsftpd</p></li> <li><p>配置	sudo vi /etc/vsftpd.conf</p> <p>尽量不要手写内容到文件中。通过打开、关闭注释的方式调整该文件。</p></li> <li><p>启动 （重启——如果修改过配置必须重启）</p> <p>sudo service vsftpd restart</p></li> <li><p>客户端发起链接</p> <p>ftp 127.0.0.1（自己充当服务器、自己充当客户端）</p> <p>ftp 192.168.36.xxx（对方IP）</p></li> <li><p>数据传递(上传、下载)</p> <p>下载：get	非目录</p> <p>上传：put	非目录</p></li> <li><p>关闭连接
+quit/exit/bye</p></li></ol> <p>匿名用户：</p> <ol><li><p>创建匿名用户登录位置。</p> <p>cat /etc/passwd | grep ftp  查找本机默认指定 匿名用户登录位置。——/srv/ftp</p></li> <li><p>sudo mkdir /srv/ftp/incoming</p></li> <li><p>sudo chown ftp:nogroup /srv/ftp/incoming ——所有者：ftp  所属组：nogroup</p></li> <li><p>修改配置文件，给匿名用户开放各种权限。/etc/vasftpd.conf</p></li> <li><p>sudo service vsftpd restart</p></li> <li><p>ps aux | grep ftp   ——查询结果应为2+ 才表示启动成功</p></li> <li><p>ftp 127.0.0.1  ——用户名：anonymous   密码：回车</p></li> <li><p>默认匿名用户登录上以后在/srv/ftp(默认)</p></li> <li><p>cd  incoming (注意目录权限)</p></li></ol> <p>10  put 上传  get 下载。</p> <hr> <p>lftp使用：</p> <ol><li><p>sudo apt-get install lftp  安装lftp客户端</p></li> <li><p>配置vsftpd.conf(与ftp共享同一个配置文件)</p></li> <li><p>restart</p></li> <li><p>登录lftp 127.1</p></li> <li><p>login itcat/anonymous	(匿名用户可省略该步)</p></li> <li><p>mirror -R 上传目录</p></li> <li><p>mirror  目录下载</p></li> <li><p>bye</p></li></ol> <p>上传位置：ftp或lftp登录后，cd到哪个目录执行put/mirror -R 就上传至哪个目录。</p> <p>下载位置：默认情况从哪个目录执行了ftp 127.0.0.1 就get到哪个目录，</p> <div class="language- extra-class"><pre><code>  可以使用lcd 改变本地机的工作目录位置。lcd ..可以修改至上级目录
+
+  !ls 列出本地机列表项。
+
+  !pwd 查看本地机工作目录位置
+</code></pre></div><hr> <p>nfs使用流程：</p> <p>1.安装：sudo apt-get install nfs-kernel-server</p> <p>2.创建一个欲共享出去的目录 如：/home/itcast/itcast</p> <p>3.打开配置文件：sudo vi /etc/exports</p> <p>4.写入共享目录的绝对路径，及对应权限。如：</p> <div class="language- extra-class"><pre><code>/home/itcast/itcast *（ro,sync,no_root_squash）
+</code></pre></div><p>5.重启nfs</p> <div class="language- extra-class"><pre><code>sudo /etc/init.d/nfs-kernel-server restart
+
+-------------------------
+</code></pre></div><p>6.客户端访问共享目录：</p> <div class="language- extra-class"><pre><code>sudo mount 192.168.43.75:/home/itcast/itcast/ /mnt
+</code></pre></div><ol start="7"><li>cd 到本机的/mnt 目录中就可以使用cp命令得到目录中的所有文件。</li></ol> <p>【常见错误】：1. 虚拟机下出现“不能mount实体”错误时，需在mount之前使用</p> <div class="language- extra-class"><pre><code>	 install nfs-common 即可解决。
+  
+      2. 出现“超级坏块儿”错误无法挂载，多是因为没有安装nfs-kernel-server导致。
+</code></pre></div><p>对比语法格式：</p> <p>nfs：sudo mount　192.168.43.75:/home/itcast/itcast/ /mnt</p> <p>ssh: ssh itcast@192.168.43.75   ——&gt;yes   密码</p> <p>scp -r itcast@192.168.43.75:/home/itcast/aa ../</p> <hr> <div class="language- extra-class"><pre><code>	文件				目录
+</code></pre></div><p>r	可以查文件内容			可以查看目录(文件的)内容	
+cat/more/head...vim			ls /get</p> <p>w	文件的内容可修改、删除		可以在目录内创、修改、删除
+vim对文件写操作			rm、mkdir、touch、mv、cp... /put
+&gt; / &gt;&gt;</p> <p>x	可以运行(可执行程序、脚本)	目录可以被打开</p> <p>MMU  单位：4K  一个page</p> <p>.data: 初始化为非0的全局变量、初始化为非0静态局部变量</p> <p>.bss: 初始化为0全局变量、初始化为0的静态变量、未初始化的全局、静态变量</p> <p>.text: 代码段</p> <p>.rodata: 只读数据段</p> <hr> <p>函数库：本质：一组函数。具有相近的功能或操作同一数据结构。strcpy/strcmp/strcat/strlen/strstr/strchr/strtok...  &lt;string.h&gt;</p> <div class="language- extra-class"><pre><code>bubble_sort / select_sort / quick_sort / insert_sort  &lt;mysort.h&gt; 
+
+
+作用：	1. 代码复用：软件开发的大部分时间用在应用程序设计上。而不是花在处理底层的细节上。(面向对象程序设计也体现了代码复用)
+
+	   硬件——系统调用——标准库——用户库——应用程序 (层层复用)
+
+	2. 程序积累
+
+
+发布形式：	1. 源码形式发布    缺点：1. 保密性差  2.  编译程序耗时、平台、编译器版本
+
+				   优点：方便使用者学习和研究
+
+		2. 二进制形式	   优缺点 与上相反
+
+标准C库libc.so.6
+</code></pre></div><hr> <p>静态库：</p> <div class="language- extra-class"><pre><code>机制：复制静态库作为程序代码段的一部分。
+
+优点：将函数库中的函数本地化。寻址方便，速度快。（库函数调用效率 == 自定义函数使用效率） 
+
+缺点：消耗系统资源较大。每个进程使用静态库都要复制一份。无端浪费内存
+
+使用场景：多应用于核心程序，保证时效性，可以忽视空间。 
+
+制作：
+	1. gcc add.c sub.c mul.c -c 		——&gt;得到*.o
+
+	2. ar rs libmymath.a add.o sub.o mul.o 	——&gt;得到静态库
+
+		ar工具不包含在gcc中
+
+		r更新、c创建、s建立索引
+
+		file libmymath.a 		——&gt;查看库信息
+
+	3. gcc main.c -L ./ -l mymath -o app 	——&gt;使用静态库
+
+
+使用：L:指定静态库所在目录位置；l：指定静态库名字 I：指定头文件所在目录位置
+</code></pre></div><hr> <p>动态库（共享库）：</p> <div class="language- extra-class"><pre><code>机制：共享代码(不共享数据)
+
+优点：节省内存(共享)、易于更新(动态链接)  ./a.out   《--- libc.so
+
+缺点：相较于静态库函数调用速度略慢(延迟绑定机制)
+
+使用场景：1. 对程序执行速度要求不是很强烈，而相对于系统资源有一定要求的场景
+
+	  2. 对于更新比较频繁的程序
+
+		1）停止运行程序
+		2）使用新库覆盖旧库(保证新旧库名称一致，接口一致) “接口”
+		3）重新启动程序。
+
+重点强调：1. 动态库是否加载到内存，取决于程序是否运行
+
+	  2. 动态库加载到内存的位置不固定----动态链接器
+
+
+制作：
+
+1. gcc -fPIC add.c mul.c sub.c -c （-fPIC：生成“与位置无关”的目标文件*.o）
+
+2. gcc -shared -o libmymath.so add.o mul.o sub.o
+
+3. gcc main.c -L库路径 -l库名 -I头文件名  -o app
+
+4. ./app --&gt; 出错 	
+
+   原因：动态连接器 ld-linux.so.2 搜寻动态库的路径未指定，
+
+	 执行ldd app发现动态链接器找不到 libmymath 库。
+
+   指定方法：
+
+	1. 环境变量法：export LD_LIBRARY_PATH=./ 将当前目录加入环境变量，但是终端退出了就无效了。
+
+	2. 配置文件法：将上条写入家目录下.bashrc文件中	（永久生效，设置到~/.bashrc）
+
+	3. 拷贝法：直接将libmymath.so文件拷贝到/usr/lib/目录下。(受libc库的启发)
+
+	4. 缓存文件法：将libmymath.so所在绝对路径加入到/etc/ld.so.conf文件，
+
+	   使用sudo ldconfig -v 动态更新/etc/ld.so.cache文件(2进制文件)
+
+*5. 指定动态库的soname
+
+    gcc -shared -Wl,-soname,libmymath.so.1 -o libmymath.so.1.10 add.o mul.o sub.o
+
+*6. 创建动态库的LinkerName
+
+    ln -s libmymath.so.1.10 libmymath.so
+</code></pre></div><p>动、静态库共存时：</p> <div class="language- extra-class"><pre><code>编译器默认使用.so的动态库，找不到才使用静态库。
+
+-static可以直接指定使用静态库。
+
+objdump -dS app &gt; out
+
+注意比较加了static和没有加static的可执行文件大小，及内部printf的地址。
+</code></pre></div><hr> <p>gdb：</p> <div class="language- extra-class"><pre><code>使用场景：程序编译无误，但是有逻辑错误。 
+
+
+加-g 编译 ---&gt; gdb xxx  
+
+list 1 ---&gt; b 行号
+
+info b  查看断点信息。
+
+disable/enable  断点号——设置断点非使能/使能。
+
+delete 断点号——删除断点
+
+b 行号 if i=5  设置条件断点，只有i=3时断点生效。
+
+run  ----  start
+
+p 变量名——查看变量值
+display——跟踪变量
+undisplay——取消跟踪
+ptype 变量名——查看变量类型
+
+bt 	查看当前程序函数栈帧使用基本情况
+
+	函数的栈帧保存局部变量和临时值，形参，与局部变量等价。
+
+info locals 查看当前栈帧上变量的存储值。
+
+frame 栈帧编号查看变量的值
+
+s——step
+n——next
+
+finish 终止当前函数
+
+continue 结束当前断点调试
+
+p *数组名@10 列出数组前10个元素值
+
+p 数组名[n]@m 从下标n开始向后打印m个元素。
+</code></pre></div><hr> <p>静态模式规则:</p> <p>ALL：$(target)</p> <p>$(target):%.o:%.c
+gcc -c xxxx -o xxxx</p></div></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/Agnes001/blog_vuepress/edit/master/docs/30.编程技术/30.Linux/11.itcast.md" target="_blank" rel="noopener noreferrer">编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="tags"><a href="/tags/?tag=itcast-command" title="标签">
+      #itcast-command
+    </a></div> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/pages/d0e49a/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">
+        基础命令
+      </div></a> <a href="/technology/linux/io/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">
+        文件io
+      </div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/d0e49a/" class="prev">基础命令</a></span> <span class="next"><a href="/technology/linux/io/">文件io</a>
+        →
+      </span></p></div></div></div> <!----> </main></div> <div class="footer"><div class="icons"><a href="mailto:17125131@bjtu.edu.cn" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/Agnes001" title="GitHub" target="_blank" class="iconfont icon-github"></a></div> 
+  Theme by <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> <!----></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2df33bbd.js" defer></script><script src="/assets/js/2.f873f4a5.js" defer></script><script src="/assets/js/83.18d0b631.js" defer></script>
+  </body>
+</html>

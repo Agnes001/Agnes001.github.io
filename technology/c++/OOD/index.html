@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>C++程序设计 | 个人知识库</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/">
+    <meta name="description" content="Just playing around">
+    <link rel="preload" href="/assets/css/0.styles.cdff4760.css" as="style"><link rel="preload" href="/assets/js/app.2df33bbd.js" as="script"><link rel="preload" href="/assets/js/2.f873f4a5.js" as="script"><link rel="preload" href="/assets/js/44.816538c7.js" as="script"><link rel="prefetch" href="/assets/js/10.fce11a4f.js"><link rel="prefetch" href="/assets/js/100.93d57fe5.js"><link rel="prefetch" href="/assets/js/101.cb59cb7c.js"><link rel="prefetch" href="/assets/js/102.9bda773f.js"><link rel="prefetch" href="/assets/js/103.90765133.js"><link rel="prefetch" href="/assets/js/104.3198dcb0.js"><link rel="prefetch" href="/assets/js/105.56ce9ed9.js"><link rel="prefetch" href="/assets/js/106.53664c48.js"><link rel="prefetch" href="/assets/js/107.5cda28a1.js"><link rel="prefetch" href="/assets/js/108.6f6019c3.js"><link rel="prefetch" href="/assets/js/109.a7740201.js"><link rel="prefetch" href="/assets/js/11.49901c43.js"><link rel="prefetch" href="/assets/js/110.632b525e.js"><link rel="prefetch" href="/assets/js/111.274b06dc.js"><link rel="prefetch" href="/assets/js/112.d0e88d20.js"><link rel="prefetch" href="/assets/js/113.486e4fc8.js"><link rel="prefetch" href="/assets/js/114.c69339e6.js"><link rel="prefetch" href="/assets/js/115.204c5dbb.js"><link rel="prefetch" href="/assets/js/116.3765742a.js"><link rel="prefetch" href="/assets/js/117.8d1b805e.js"><link rel="prefetch" href="/assets/js/118.ef246e62.js"><link rel="prefetch" href="/assets/js/119.b9f20cb0.js"><link rel="prefetch" href="/assets/js/12.9581203a.js"><link rel="prefetch" href="/assets/js/120.8cd8657c.js"><link rel="prefetch" href="/assets/js/121.72f63b4e.js"><link rel="prefetch" href="/assets/js/122.8928e827.js"><link rel="prefetch" href="/assets/js/123.67594cad.js"><link rel="prefetch" href="/assets/js/124.eb1ef9b0.js"><link rel="prefetch" href="/assets/js/125.1a2cee51.js"><link rel="prefetch" href="/assets/js/126.d1e6cc77.js"><link rel="prefetch" href="/assets/js/13.175440db.js"><link rel="prefetch" href="/assets/js/14.dd1b88c1.js"><link rel="prefetch" href="/assets/js/15.c0d81c5c.js"><link rel="prefetch" href="/assets/js/16.af59b3be.js"><link rel="prefetch" href="/assets/js/17.a8b4125e.js"><link rel="prefetch" href="/assets/js/18.1b6202ac.js"><link rel="prefetch" href="/assets/js/19.eba09d42.js"><link rel="prefetch" href="/assets/js/20.781c5235.js"><link rel="prefetch" href="/assets/js/21.0d0dcb08.js"><link rel="prefetch" href="/assets/js/22.29dad8ec.js"><link rel="prefetch" href="/assets/js/23.1d26584e.js"><link rel="prefetch" href="/assets/js/24.c3f593b2.js"><link rel="prefetch" href="/assets/js/25.e67dbcb2.js"><link rel="prefetch" href="/assets/js/26.9bee3ad2.js"><link rel="prefetch" href="/assets/js/27.584f8aa6.js"><link rel="prefetch" href="/assets/js/28.139d901b.js"><link rel="prefetch" href="/assets/js/29.95eb557b.js"><link rel="prefetch" href="/assets/js/3.37ac9c63.js"><link rel="prefetch" href="/assets/js/30.94baf8dd.js"><link rel="prefetch" href="/assets/js/31.c834f849.js"><link rel="prefetch" href="/assets/js/32.87c1eecf.js"><link rel="prefetch" href="/assets/js/33.1688c66e.js"><link rel="prefetch" href="/assets/js/34.ed32a02c.js"><link rel="prefetch" href="/assets/js/35.df4f1018.js"><link rel="prefetch" href="/assets/js/36.527e96b0.js"><link rel="prefetch" href="/assets/js/37.7c5e9b9c.js"><link rel="prefetch" href="/assets/js/38.a3f4dc09.js"><link rel="prefetch" href="/assets/js/39.9a9e7eea.js"><link rel="prefetch" href="/assets/js/4.0b4366d3.js"><link rel="prefetch" href="/assets/js/40.bbf5aca3.js"><link rel="prefetch" href="/assets/js/41.20271d2a.js"><link rel="prefetch" href="/assets/js/42.044ea8ca.js"><link rel="prefetch" href="/assets/js/43.e2de2e27.js"><link rel="prefetch" href="/assets/js/45.423e2f6b.js"><link rel="prefetch" href="/assets/js/46.d97670c4.js"><link rel="prefetch" href="/assets/js/47.6fcd8eed.js"><link rel="prefetch" href="/assets/js/48.145fd2d1.js"><link rel="prefetch" href="/assets/js/49.7ef5a6f8.js"><link rel="prefetch" href="/assets/js/5.d7192128.js"><link rel="prefetch" href="/assets/js/50.63ebea49.js"><link rel="prefetch" href="/assets/js/51.cd1b6979.js"><link rel="prefetch" href="/assets/js/52.65e83723.js"><link rel="prefetch" href="/assets/js/53.482bb8f0.js"><link rel="prefetch" href="/assets/js/54.8d211ee5.js"><link rel="prefetch" href="/assets/js/55.6d0279ca.js"><link rel="prefetch" href="/assets/js/56.0d7dabe8.js"><link rel="prefetch" href="/assets/js/57.d174b462.js"><link rel="prefetch" href="/assets/js/58.10d297e6.js"><link rel="prefetch" href="/assets/js/59.8994ec9e.js"><link rel="prefetch" href="/assets/js/6.cbfd5b89.js"><link rel="prefetch" href="/assets/js/60.af139070.js"><link rel="prefetch" href="/assets/js/61.d3577fc0.js"><link rel="prefetch" href="/assets/js/62.e17d1882.js"><link rel="prefetch" href="/assets/js/63.e4036107.js"><link rel="prefetch" href="/assets/js/64.49321f56.js"><link rel="prefetch" href="/assets/js/65.3d22da24.js"><link rel="prefetch" href="/assets/js/66.77f21329.js"><link rel="prefetch" href="/assets/js/67.fde317d6.js"><link rel="prefetch" href="/assets/js/68.be19352b.js"><link rel="prefetch" href="/assets/js/69.4d3394b6.js"><link rel="prefetch" href="/assets/js/7.72adfabd.js"><link rel="prefetch" href="/assets/js/70.8fb36dbf.js"><link rel="prefetch" href="/assets/js/71.ac4e90a2.js"><link rel="prefetch" href="/assets/js/72.d098537d.js"><link rel="prefetch" href="/assets/js/73.95e18118.js"><link rel="prefetch" href="/assets/js/74.6fcf2855.js"><link rel="prefetch" href="/assets/js/75.87ad266a.js"><link rel="prefetch" href="/assets/js/76.28b55be0.js"><link rel="prefetch" href="/assets/js/77.6cb37bb4.js"><link rel="prefetch" href="/assets/js/78.79aefebb.js"><link rel="prefetch" href="/assets/js/79.6ed9e466.js"><link rel="prefetch" href="/assets/js/8.33b24897.js"><link rel="prefetch" href="/assets/js/80.671e3b50.js"><link rel="prefetch" href="/assets/js/81.f62a79b7.js"><link rel="prefetch" href="/assets/js/82.f3617058.js"><link rel="prefetch" href="/assets/js/83.18d0b631.js"><link rel="prefetch" href="/assets/js/84.fa6dee80.js"><link rel="prefetch" href="/assets/js/85.5f503b09.js"><link rel="prefetch" href="/assets/js/86.ad4607a2.js"><link rel="prefetch" href="/assets/js/87.f138000c.js"><link rel="prefetch" href="/assets/js/88.4b42282c.js"><link rel="prefetch" href="/assets/js/89.12e2a728.js"><link rel="prefetch" href="/assets/js/9.58fc3c18.js"><link rel="prefetch" href="/assets/js/90.ab27811b.js"><link rel="prefetch" href="/assets/js/91.97ac4e80.js"><link rel="prefetch" href="/assets/js/92.05c95c03.js"><link rel="prefetch" href="/assets/js/93.2df35e20.js"><link rel="prefetch" href="/assets/js/94.95c2bb02.js"><link rel="prefetch" href="/assets/js/95.6f61d80f.js"><link rel="prefetch" href="/assets/js/96.4ad62f06.js"><link rel="prefetch" href="/assets/js/97.b2963771.js"><link rel="prefetch" href="/assets/js/98.aec26723.js"><link rel="prefetch" href="/assets/js/99.15dceb59.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cdff4760.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/image/logo.png" alt="个人知识库" class="logo"> <span class="site-name can-hide">个人知识库</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/pages/about/me/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程技术" class="dropdown-title"><a href="/technology/" class="link-title router-link-active">编程技术</a> <span class="title" style="display:none;">编程技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/technology/c/array/" class="nav-link">C语言</a></li><li class="dropdown-item"><!----> <a href="/technology/c++/vs-setting/" class="nav-link">CPlusPlus</a></li><li class="dropdown-item"><!----> <a href="/technology/linux/basic/" class="nav-link">Linux</a></li><li class="dropdown-item"><!----> <a href="/technology/php/" class="nav-link">PHP</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="应用框架" class="dropdown-title"><a href="/framework/" class="link-title">应用框架</a> <span class="title" style="display:none;">应用框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/framework/nginx/install/" class="nav-link">Nginx</a></li><li class="dropdown-item"><!----> <a href="/framework/mysql/c_api/" class="nav-link">MySQL</a></li><li class="dropdown-item"><!----> <a href="/framework/redis/basic/" class="nav-link">Redis</a></li><li class="dropdown-item"><!----> <a href="/framework/docker/basic/" class="nav-link">Docker</a></li><li class="dropdown-item"><!----> <a href="/framework/kubernetes/basic/" class="nav-link">Kubernetes</a></li><li class="dropdown-item"><!----> <a href="/framework/srs/basic/" class="nav-link">SRS</a></li></ul></div></div><div class="nav-item"><a href="/read/soul/Self-motivated/" class="nav-link">阅读</a></div><div class="nav-item"><a href="/tools/github/" class="nav-link">常用工具</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/tags/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/Agnes001/blog_vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="/image/1.jpg"> <div class="blogger-info"><h3>Agnes001</h3> <span>
+        坚持是一件很伟大的事业
+      </span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/pages/about/me/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程技术" class="dropdown-title"><a href="/technology/" class="link-title router-link-active">编程技术</a> <span class="title" style="display:none;">编程技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/technology/c/array/" class="nav-link">C语言</a></li><li class="dropdown-item"><!----> <a href="/technology/c++/vs-setting/" class="nav-link">CPlusPlus</a></li><li class="dropdown-item"><!----> <a href="/technology/linux/basic/" class="nav-link">Linux</a></li><li class="dropdown-item"><!----> <a href="/technology/php/" class="nav-link">PHP</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="应用框架" class="dropdown-title"><a href="/framework/" class="link-title">应用框架</a> <span class="title" style="display:none;">应用框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/framework/nginx/install/" class="nav-link">Nginx</a></li><li class="dropdown-item"><!----> <a href="/framework/mysql/c_api/" class="nav-link">MySQL</a></li><li class="dropdown-item"><!----> <a href="/framework/redis/basic/" class="nav-link">Redis</a></li><li class="dropdown-item"><!----> <a href="/framework/docker/basic/" class="nav-link">Docker</a></li><li class="dropdown-item"><!----> <a href="/framework/kubernetes/basic/" class="nav-link">Kubernetes</a></li><li class="dropdown-item"><!----> <a href="/framework/srs/basic/" class="nav-link">SRS</a></li></ul></div></div><div class="nav-item"><a href="/read/soul/Self-motivated/" class="nav-link">阅读</a></div><div class="nav-item"><a href="/tools/github/" class="nav-link">常用工具</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/tags/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/Agnes001/blog_vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>C语言</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>CPlusPlus</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>基础特性</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/technology/c++/basic/enmu/" class="sidebar-link">枚举</a></li><li><a href="/technology/c++/basic/char-pointer/" class="sidebar-link">字符指针</a></li></ul></section></li><li><a href="/technology/c++/vs-setting/" class="sidebar-link">vs2019设置</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>C++11特性</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>并发编程</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/technology/c++/reference/" class="sidebar-link">引用</a></li><li><a href="/technology/c++/class/" class="sidebar-link">类和对象</a></li><li><a href="/technology/c++/friend/" class="sidebar-link">友元和运算符重载</a></li><li><a href="/technology/c++/inheritance/" class="sidebar-link">继承</a></li><li><a href="/technology/c++/12/" class="sidebar-link">继承和多态</a></li><li><a href="/technology/c++/template/" class="sidebar-link">模板</a></li><li><a href="/technology/c++/basic-summary/" class="sidebar-link">C++基础总结</a></li><li><a href="/technology/c++/type_cast/" class="sidebar-link">类型转换</a></li><li><a href="/technology/c++/exception/" class="sidebar-link">异常</a></li><li><a href="/technology/c++/container/" class="sidebar-link">容器</a></li><li><a href="/technology/c++/algorithm/" class="sidebar-link">算法</a></li><li><a href="/technology/c++/OOD/" aria-current="page" class="active sidebar-link">C++程序设计</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/c++/OOD/#转换函数-conversion-function" class="sidebar-link">转换函数 (conversion function)</a></li><li class="sidebar-sub-header"><a href="/technology/c++/OOD/#non-explicit-one-argument-ctor" class="sidebar-link">non-explicit-one-argument ctor</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/c++/OOD/#conversion-function-vs-non-explicit-one-argument-ctor" class="sidebar-link">conversion function VS. non-explicit-one-argument ctor</a></li><li class="sidebar-sub-header"><a href="/technology/c++/OOD/#explicit-one-argument-ctor" class="sidebar-link">explicit-one-argument ctor</a></li></ul></li><li class="sidebar-sub-header"><a href="/technology/c++/OOD/#模板" class="sidebar-link">模板</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/c++/OOD/#类模板" class="sidebar-link">类模板</a></li><li class="sidebar-sub-header"><a href="/technology/c++/OOD/#函数模板" class="sidebar-link">函数模板</a></li><li class="sidebar-sub-header"><a href="/technology/c++/OOD/#成员模板" class="sidebar-link">成员模板</a></li><li class="sidebar-sub-header"><a href="/technology/c++/OOD/#模板特化" class="sidebar-link">模板特化</a></li><li class="sidebar-sub-header"><a href="/technology/c++/OOD/#模板偏特化" class="sidebar-link">模板偏特化</a></li><li class="sidebar-sub-header"><a href="/technology/c++/OOD/#模板模板参数" class="sidebar-link">模板模板参数</a></li><li class="sidebar-sub-header"><a href="/technology/c++/OOD/#数量不定的参数模板-varidic-template" class="sidebar-link">数量不定的参数模板(varidic template)</a></li></ul></li><li class="sidebar-sub-header"><a href="/technology/c++/OOD/#仿指针类-pointer-like-classes" class="sidebar-link">仿指针类 (pointer-like classes)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/c++/OOD/#智能指针" class="sidebar-link">智能指针</a></li><li class="sidebar-sub-header"><a href="/technology/c++/OOD/#迭代器" class="sidebar-link">迭代器</a></li></ul></li><li class="sidebar-sub-header"><a href="/technology/c++/OOD/#仿函数类-function-like-classes" class="sidebar-link">仿函数类 (function-like classes)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/c++/OOD/#内建函数对象" class="sidebar-link">内建函数对象</a></li><li class="sidebar-sub-header"><a href="/technology/c++/OOD/#函数对象适配器" class="sidebar-link">函数对象适配器</a></li></ul></li></ul></li><li><a href="/technology/c++/primer/" class="sidebar-link">C++ Primer总结</a></li><li><a href="/technology/c++/tec/" class="sidebar-link">编程技巧</a></li><li><a href="/technology/c++/STL/" class="sidebar-link">标准库体系结构与内核分析</a></li><li><a href="/technology/c++/设计模式/" class="sidebar-link">设计模式</a></li><li><a href="/technology/c++/cmake/" class="sidebar-link">cmake配置C++工程</a></li><li><a href="/technology/c++/libcurl/" class="sidebar-link">libcurl的使用总结</a></li><li><a href="/technology/c++/drogon/" class="sidebar-link">web开发框架--drogon</a></li><li><a href="/technology/c++/log4cplus/" class="sidebar-link">log4cplus使用</a></li><li><a href="/technology/c++/datatype/" class="sidebar-link">C++数据类型</a></li><li><a href="/technology/c++/function/" class="sidebar-link">函数</a></li><li><a href="/technology/c++/thread/" class="sidebar-link">线程</a></li><li><a href="/technology/c++/process/" class="sidebar-link">进程</a></li><li><a href="/technology/c++/FileOperation/" class="sidebar-link">文件操作</a></li><li><a href="/technology/c++/problem-record/" class="sidebar-link">日常问题记录</a></li><li><a href="/technology/c++/demo/" class="sidebar-link">Cpp案例程序</a></li><li><a href="/technology/c++/multi-thread/" class="sidebar-link">多线程</a></li><li><a href="/technology/c++/11-new feature/" class="sidebar-link">侯捷c++11新特性</a></li><li><a href="/technology/c++/jj-stl/" class="sidebar-link">侯捷stl</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Lua技术栈</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>edoyun</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>内存管理</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>网络编程</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Linux</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>池化技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>操作系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>python</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div><main class="page"> <div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-14888ed5><div class="articleInfo" data-v-14888ed5><ul class="breadcrumbs" data-v-14888ed5><li data-v-14888ed5><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-14888ed5></a></li> <li data-v-14888ed5><a href="/categories/?category=%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF" title="分类" data-v-14888ed5>编程技术</a></li> <li data-v-14888ed5><a href="/categories/?category=CPlusPlus" title="分类" data-v-14888ed5>CPlusPlus</a></li></ul> <div class="info" data-v-14888ed5><div title="作者" class="author iconfont icon-touxiang" data-v-14888ed5><a href="https://github.com/Agnes001" target="_blank" title="作者" class="beLink" data-v-14888ed5>Agnes001</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-14888ed5><a href="javascript:;" data-v-14888ed5>2021-03-27</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABKFJREFUSA3tVl1oFVcQnrMbrak3QUgkya1akpJYcrUtIqW1JvFBE9LiQ5v6JmJpolbMg32rVrhgoYK0QiMY6i9Y6EMaW5D+xFJaTYItIuK2Kr3+BJNwkxBj05sQY3b3nM6cs2dv9t7NT/vQJw/sndk5M/PNzJkzewGerP+pAmy+ON8lLzUJgA8ZYxYIYZmGYRnctDaWvJJAmTtfP1pvXsBCCPP8QFcCaRkZYACgDZFO4stNIcBCajEOlmmC9XpJ9bAGCaPaPmzPl32dvLSVu3BWCTQs0XQQ6g0DYgwLIoAZbBCdW/i+781o1VVlm/410mw4h06Y7bIPHNyWDyL4FHkX03Q8SrzNhZTZriieckWt7cL6MM85YcLpsi/7O9/iXFT6MswI0DmmpkSaJ0qLxFIm3+i1THHB3zmBH3PYx9CcykcLOeQVVa7QtdxTgQgEleX2AjHYfwA+2ddV77ruGoJUbhGDI09YSNXyMpUt5ylOzxgbUmtOp7NmbNt8v3arjTBfYELmLUV+M+nSawNNAUqpT3ClJWg5I3BLT+cGW/DXNGCa6tx1aakCGEigArTn4TDIPdrXXYKCZNrHLMCOEPvHBlLQ99s9eHB7EB6NTki73CVPQ2F5MSx/uRQixfmq7rK0wYD8w8E905bnPDfwoWs/rfv93NWN/ZfvwsLIU7A09gxECyISeGJkHAau98L97tuw7NXnoPyNF8FcYGLGKsOs0mN3OEyec9esGW/ZEl945dTP34wlR2FZVQWU1q0Cw8Tr7p+hgLLNL0FPxx/Q35mA8aEUrH6nCgwEl0tn7wUiZYJnNRh6DK4UH/k0lfyrsBKdPVv/AriGIQcEDQZ65LBAGe2Rzui9Ybjz7XUppz1/uKBbyVPGkN3ZAeC6hr0x7Nr38N5+EqkoOm17xpoqR9ohQF55ERSvr4Dkr3chNfC3DMzGJlNBElW8w9nsGQvhNGIzDkXzCg8cLK951xHsFBlTJspJNi3ZFIMF2AeDV3q8DNOB+YHi6QTrChDIWDBRi5U5f+ZMfJLu3ccrqxtdxk4SKH336LFxSmkqefwU5T8fhdSdQf9IVKD6aNiwI/hnmcAZ91isYMJIaCUCx9W098+LgruikeTqzqqxKPUwqJyCPJiyemVVZBOijDGjD38Os0jOiSPL1z3SPjXNANbiNPXAdzTfukjjuknNBbyz3nwgTd3AVFqUJ5hpHlq9MveLnWwttUfoygBmvVjuikxND3znrhsELnZk7k+OjIGxeNEkomyLVta0xxn+HZhjBc4YZ/AFjHjz9u3xRZl2BN4aq9nFwWh16IrQ1aHHEd3j1+4/dB9OtH4e29A2H1DyHQRmOSfQZ1Fy7MHBTGB6J/Djq6p3OxyO2cB+4Car7v/o3GXgfAkj23+x9ID1Teoamo/SXcbvSf2PX7Vc8DdCmE1vN9di+32P9/5YR3vLnhCVGUWBjEkr3yh4H8v9CzmsbdhzOKzsJKM90iFdaTMjRPhGVsakRvOaRidljo6H6G7j+ctrJpsP+4COhDIl0La2+FS4+5mlocBaXY5QnGZysIBYoeSsl5qQzrSj/cgNrfuEzlWBfwA+EjrZyWUvpAAAAABJRU5ErkJggg==">
+          C++程序设计
+        </h1> <div class="theme-vdoing-content content__default"><h2 id="转换函数-conversion-function"><a href="#转换函数-conversion-function" class="header-anchor">#</a> 转换函数 (conversion function)</h2> <p>格式： operator type() const<br>
+说明： 要以operator开头，函数名称为需要转成的类型，不可以有参数。前面不需要写返回类型，因为c++会自动返回函数名称这个类型。
+转换函数通常后面有const，即不需要改变数据则要加const。</p> <div class="language-c++ extra-class"><pre class="language-text"><code>class Fraction
+{
+public:
+    Fraction(int num,int den=1) : m_numerator(num),m_denominator(den){ }
+    operator double() const{
+        return (double)(m_numerator/m_denominator);
+    }
+private:
+    int m_numerator;//分子
+    int m_denominator;//分母
+};
+
+Fraction f(3,5);
+double d = 4+f;//调用operator double() 将f转为0.6
+</code></pre></div><h2 id="non-explicit-one-argument-ctor"><a href="#non-explicit-one-argument-ctor" class="header-anchor">#</a> non-explicit-one-argument ctor</h2> <div class="language-c++ extra-class"><pre class="language-text"><code>class Fraction
+{
+public:
+    Fraction(int num,int den=1) : m_numerator(num),m_denominator(den){ }
+    Fraction operator+(const Fraction&amp; f){
+        return Fraction(...);
+    }
+private:
+    int m_numerator;//分子 
+    int m_denominator;//分母
+};
+
+Fraction f(3,5);
+Fraction d = f+4;//调用non-explicit ctor 将4转为Fraction(4,1),然后调用operator+
+</code></pre></div><ul><li>这里没有写转换函数，而是重载了+操作符。</li> <li>重载之后的+是分数+分数，编译器处理d2 = f+4的时候，发现右边不是分数，则看4能否转换成分数。</li> <li>因为是只需要一个实参的构造函数，因此4可以转为分数，则可以调用重载之后的+。</li> <li>因此non-explicit-one-argument ctor可以把其他类型转换为该类型。</li></ul> <h3 id="conversion-function-vs-non-explicit-one-argument-ctor"><a href="#conversion-function-vs-non-explicit-one-argument-ctor" class="header-anchor">#</a> conversion function VS. non-explicit-one-argument ctor</h3> <div class="language-c++ extra-class"><pre class="language-text"><code>class Fraction
+{
+public:
+    Fraction(int num,int den=1) : m_numerator(num),m_denominator(den){ }
+    Fraction operator+(const Fraction&amp; f){
+        return Fraction(...);
+    }
+    operator double() const{
+        return (double)(m_numerator/m_denominator);
+    }
+private:
+    int m_numerator;//分子 
+    int m_denominator;//分母
+};
+
+Fraction f(3,5);
+Fraction d = 4+f;//[Error] ambiguous
+</code></pre></div><p>如果这两个并存了，编译器就不知道该调用哪个了。（不知道把分数转为double还是把int转为分数）</p> <h3 id="explicit-one-argument-ctor"><a href="#explicit-one-argument-ctor" class="header-anchor">#</a> explicit-one-argument ctor</h3> <div class="language-c++ extra-class"><pre class="language-text"><code>class Fraction
+{
+public:
+    explicit Fraction(int num,int den=1) : m_numerator(num),m_denominator(den){ }
+    Fraction operator+(const Fraction&amp; f){
+        return Fraction(...);
+    }
+    operator double() const{
+        return (double)(m_numerator/m_denominator);
+    }
+private:
+    int m_numerator;//分子 
+    int m_denominator;//分母
+};
+
+Fraction f(3,5);
+Fraction d = 4+f;//[Error] conversion from double to Fraction requested
+</code></pre></div><ul><li>构造函数加上explicit之后，表示这个构造函数只能在构造的时候使用，不会在转换类型时使用了。</li> <li>这个explicit关键字主要就出现在这里。</li></ul> <h2 id="模板"><a href="#模板" class="header-anchor">#</a> 模板</h2> <h3 id="类模板"><a href="#类模板" class="header-anchor">#</a> 类模板</h3> <p>类模板用于实现类所需数据的类型参数化。
+类模板在使用时，必须指定类型。</p> <h4 id="类模板派生普通类"><a href="#类模板派生普通类" class="header-anchor">#</a> 类模板派生普通类</h4> <p>子模板类派生时，需要具体化模板类，c++编译器要知道父类的数据类型具体是什么样的，因为 c++编译器要分配内存，必须知道父类所占内存大小<br>
+class SubClass : public MyClass&lt;int&gt;{};</p> <h4 id="类模板派生类模板"><a href="#类模板派生类模板" class="header-anchor">#</a> 类模板派生类模板</h4> <p>template<class T=""> class SubClass : public MyClass&lt;T&gt;</class></p> <p><strong>应该把类模板的声明和实现写在一起</strong></p> <h4 id="类模板中的static关键字"><a href="#类模板中的static关键字" class="header-anchor">#</a> 类模板中的static关键字</h4> <ul><li>从类模板实例化的每一个模板类有自己的类模板数据成员，该模板的所有对象共享一个 static 数据成员</li> <li>和非模板类的 static 数据成员一样，模板类的 static 数据成员也应该在文件范围 定义和初始化</li> <li>每个模板类有自己类模板的 static 数据成员的副本</li></ul> <h3 id="函数模板"><a href="#函数模板" class="header-anchor">#</a> 函数模板</h3> <ul><li>函数模板调用，将会严格匹配类型，不会进行自动类型转换；</li> <li>普通函数调用，可以进行隐式类型转换。</li> <li>编译器会对函数模板进行两次编译，在声明的地方对模板代码本身进行编译，在调用的地方对参数替换后的代码进行编译。</li></ul> <h3 id="成员模板"><a href="#成员模板" class="header-anchor">#</a> 成员模板</h3> <h4 id="例1"><a href="#例1" class="header-anchor">#</a> 例1</h4> <div class="language-c++ extra-class"><pre class="language-text"><code>template&lt;typename T1,typename T2&gt;
+struct pair{
+    ...
+    template&lt;typename U1,typename U2&gt;
+    pair(const pair&lt;U1,U2&gt;&amp; p):first(p.first),second(p.second){}
+    ...    
+};
+
+pair&lt;Base1,Base2&gt; p(pair&lt;Derived1,Derived2&gt;());
+</code></pre></div><h4 id="例2"><a href="#例2" class="header-anchor">#</a> 例2</h4> <div class="language-c++ extra-class"><pre class="language-text"><code>template&lt;typeneme _Tp&gt;
+class shared_ptr:public __shared_ptr&lt;_Tp&gt;{
+    ...
+    template&lt;typename _Tp1&gt;
+    explict shared_ptr(_Tp1* __p):__shared_ptr&lt;_Tp&gt;(__p){}
+    ...
+};
+
+Base1* ptr = new Derived1; //up-cast
+shared_ptr&lt;Base1&gt; sptr(new Derived1); //模拟up-cast
+</code></pre></div><h3 id="模板特化"><a href="#模板特化" class="header-anchor">#</a> 模板特化</h3> <div class="language-c++ extra-class"><pre class="language-text"><code>template &lt;class Key&gt;
+struct hash{};
+
+template&lt;&gt;
+struct hash&lt;char&gt;{};
+template&lt;&gt;
+struct hash&lt;int&gt;{};
+template&lt;&gt;
+struct hash&lt;long&gt;{};
+</code></pre></div><h3 id="模板偏特化"><a href="#模板偏特化" class="header-anchor">#</a> 模板偏特化</h3> <h4 id="个数的偏"><a href="#个数的偏" class="header-anchor">#</a> 个数的偏</h4> <div class="language-c++ extra-class"><pre class="language-text"><code>template &lt;typename T, typename Alloc = ...&gt;
+class vector{};
+
+template &lt;typename Alloc = ...&gt;
+class vector&lt;bool,Alloc&gt;{};
+</code></pre></div><h4 id="范围的偏"><a href="#范围的偏" class="header-anchor">#</a> 范围的偏</h4> <div class="language-c++ extra-class"><pre class="language-text"><code>template &lt;typename T&gt;
+class C{};
+
+template &lt;typename T&gt;
+class C&lt;T*&gt;{};
+</code></pre></div><h3 id="模板模板参数"><a href="#模板模板参数" class="header-anchor">#</a> 模板模板参数</h3> <div class="language-c++ extra-class"><pre class="language-text"><code>template&lt;typename T,
+            template&lt;typename T&gt;
+            class Container
+        &gt;
+class XCls{
+private:
+    Container&lt;T&gt; c;
+public:
+    ...
+};
+
+template&lt;typename T&gt;
+using Lst = list&lt;T,alloctor&lt;T&gt;&gt;;
+Xls&lt;string,Lst&gt; mylst1;
+</code></pre></div><div class="language-c++ extra-class"><pre class="language-text"><code>template&lt;typename T,
+            template&lt;typename T&gt;
+            class SmartPtr
+        &gt;
+class XCls{
+private:
+    SmartPtr&lt;T&gt; c;
+public:
+    XCls():sp(new T){}
+};
+
+Xls&lt;string,shared_ptr&gt; p1;
+Xls&lt;double,unique_ptr&gt; p1; //错
+Xls&lt;int,weak_ptr&gt; p1; //错
+Xls&lt;long,auto_ptr&gt; p1;
+</code></pre></div><h3 id="数量不定的参数模板-varidic-template"><a href="#数量不定的参数模板-varidic-template" class="header-anchor">#</a> 数量不定的参数模板(varidic template)</h3> <div class="language-c++ extra-class"><pre class="language-text"><code>void print(){
+    ...
+}
+
+template&lt;typename T,typename... Types&gt;
+void print(const T&amp; firstArg,const Types&amp;... args){
+    cout &lt;&lt; firstArg &lt;&lt; endl;
+    print(args...);
+}
+</code></pre></div><h2 id="仿指针类-pointer-like-classes"><a href="#仿指针类-pointer-like-classes" class="header-anchor">#</a> 仿指针类 (pointer-like classes)</h2> <h3 id="智能指针"><a href="#智能指针" class="header-anchor">#</a> 智能指针</h3> <div class="language-c++ extra-class"><pre class="language-text"><code>template&lt;typename T&gt;
+class shared_ptr{
+public:
+    T&amp; operator*() const{
+        return *px;
+    }
+    T* operator-&gt;() const{
+        return px;
+    }
+private:
+    T* px;
+    long* pn;
+}
+//指向操作符具有传递作用
+shared_ptr&lt;Foo&gt; sp(new Foo);
+Foo f(*sp);
+sp-&gt;method();
+</code></pre></div><ul><li>设计的class，像指针。智能指针，完成比指针更多的工作。一般都是包着一层普通指针。</li> <li>指针允许的动作，这个类也需要允许操作。</li> <li>*操作符和-&gt;操作符都需要重载。</li> <li>这样调用sp-&gt;的时候，实际上内部重载操作符，将内部的普通指针px返回出来，然后px可以继续使用-&gt;来完成。相当于这个-&gt;符号用了两次。
+详讲：https://zhuanlan.zhihu.com/p/436290273</li></ul> <p>实践：https://blog.csdn.net/albertsh/article/details/82286999</p> <h3 id="迭代器"><a href="#迭代器" class="header-anchor">#</a> 迭代器</h3> <p>stl中的迭代器也是一种指针，迭代器这种智能指针不仅需要重载*  -&gt;操作符，还需要处理++，--等符号。</p> <h2 id="仿函数类-function-like-classes"><a href="#仿函数类-function-like-classes" class="header-anchor">#</a> 仿函数类 (function-like classes)</h2> <p>设计一个class，行为像一个函数，即仿函数。</p> <div class="language-c++ extra-class"><pre class="language-text"><code>template&lt;class T&gt;
+struct identity{
+    const T&amp; operator()(const T&amp; x) const{
+        return x;
+    }
+}
+</code></pre></div><ul><li>即可以使用小括号来调用。</li> <li>对小括号（）操作符进行重载。</li></ul> <div class="language-c++ extra-class"><pre class="language-text"><code>//一元函数对象 应用举例：for_each  
+class print{
+public:
+    void operator()(const int&amp; v){
+        cout &lt;&lt; v &lt;&lt; &quot; &quot;; 
+    }
+};
+
+for_each(v.begin(),v.end(), print());
+
+//二元函数对象 应用举例：transform  
+class myplus{
+public:
+    int operator()(int v1,int v2){
+        return v1 + v2; 
+    }
+};
+
+transform(v1.begin(), v1.end(), v2.begin(),v3.begin(), myplus());
+
+//一元谓词 应用举例：find_if  
+class mygreater{
+public:
+    bool operator()(const int&amp; v){
+        return v &gt; 2;
+    }
+};
+
+vector&lt;int&gt;::iterator it = find_if(v.begin(), v.end(), mygreater()); //匿名函数对象
+cout &lt;&lt; *it &lt;&lt; endl;
+
+//二元谓词 应用举例：sort  
+class mycompare{
+public:
+    bool operator()(int v1,int v2){
+        return v1 &gt; v2; 
+    }
+};
+
+sort(v.begin(), v.end(), mycompare());
+</code></pre></div><h3 id="内建函数对象"><a href="#内建函数对象" class="header-anchor">#</a> 内建函数对象</h3> <p>使用内建函数对象，需要引入头文件 #include &lt;functional&gt;</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token number">6</span>个算数类函数对象,除了 negate 是一元运算，其他都是二元运算。
+    template<span class="token operator">&lt;</span>class T<span class="token operator">&gt;</span> T plus<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span>//加法仿函数
+    template<span class="token operator">&lt;</span>class T<span class="token operator">&gt;</span> T minute<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span>//减法仿函数
+    template<span class="token operator">&lt;</span>class T<span class="token operator">&gt;</span> T multiplies<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span>//乘法仿函数
+    template<span class="token operator">&lt;</span>class T<span class="token operator">&gt;</span> T divides<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span>//除法仿函数
+    template<span class="token operator">&lt;</span>class T<span class="token operator">&gt;</span> T modulus<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span>//取模仿函数
+    template<span class="token operator">&lt;</span>class T<span class="token operator">&gt;</span> T negate<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span>//取反仿函数
+<span class="token number">6</span>个关系运算类函数对象,每一种都是二元运算。
+    template<span class="token operator">&lt;</span>class T<span class="token operator">&gt;</span> bool equal_to<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span>//等于
+    template<span class="token operator">&lt;</span>class T<span class="token operator">&gt;</span> bool not_equal_to<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span>//不等于
+    template<span class="token operator">&lt;</span>class T<span class="token operator">&gt;</span> bool greater<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span>//大于
+    template<span class="token operator">&lt;</span>class T<span class="token operator">&gt;</span> bool greater_equal<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span>//大于等于
+    template<span class="token operator">&lt;</span>class T<span class="token operator">&gt;</span> bool less<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span>//小于
+    template<span class="token operator">&lt;</span>class T<span class="token operator">&gt;</span> bool less_equal<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span>//小于等于
+<span class="token number">3</span>个逻辑运算类运算函数,not 为一元运算，其余为二元运算。
+template<span class="token operator">&lt;</span>class T<span class="token operator">&gt;</span> bool logical_and<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span>//逻辑与
+template<span class="token operator">&lt;</span>class T<span class="token operator">&gt;</span> bool logical_or<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span>//逻辑或
+template<span class="token operator">&lt;</span>class T<span class="token operator">&gt;</span> bool logical_not<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span>//逻辑非
+</code></pre></div><div class="language-c++ extra-class"><pre class="language-text"><code>//使用内建函数对象声明一个对象
+plus&lt;int&gt; myPlus;
+cout &lt;&lt; myPlus(5, 3) &lt;&lt; endl;
+//使用匿名临时对象
+cout &lt;&lt; plus&lt;int&gt;()(5, 6) &lt;&lt; endl;
+</code></pre></div><h3 id="函数对象适配器"><a href="#函数对象适配器" class="header-anchor">#</a> 函数对象适配器</h3> <p>函数对象适配器是完成一些配接工作，这些配接包括绑定(bind)，否定(negate),以及对一般函数或成员函数的修饰，使其成为函数对象</p> <div class="language-bash extra-class"><pre class="language-bash"><code>bind1st ：将参数绑定为函数对象的第一个参数
+bind2nd ： 将参数绑定为函数对象的第二个参数
+not1 ： 对一元函数对象取反
+not2 <span class="token builtin class-name">:</span> 对二元函数对象取反
+ptr_fun ： 将普通函数修饰成函数对象
+mem_fun ： 修饰成员函数
+mem_fun_ref ： 修饰成员函数
+</code></pre></div><p>如果希望函数对象适配器能对我们自己编写的函数对象有效，我们需要根据我们的函数对象类型继承 STL 的父类对象。</p> <p>二元函数继承：public binary_function&lt;参数类型,参数类型,返回类型&gt;
+一元函数继承：public unary_function&lt;参数类型,返回类型&gt;</p> <div class="language-c++ extra-class"><pre class="language-text"><code>//函数适配器 bind1st bind2nd
+//现在我有这个需求 在遍历容器的时候，我希望将容器中的值全部加上 100 之后显示出来，怎么做
+哇？
+struct myprint : public binary_function&lt;int,int,void&gt;{ //二元函数对象 所以需要继承binary_fucntion&lt;参数类型,参数类型,返回值类型&gt;
+void operator()(int v1 ,int v2) const{
+cout &lt;&lt; v1 + v2 &lt;&lt; &quot; &quot;; }
+};
+//我们直接给函数对象绑定参数 编译阶段就会报错
+//for_each(v.begin(), v.end(), bind2nd(myprint(),100));
+//如果我们想使用绑定适配器,需要我们自己的函数对象继承 binary_function 或者unary_function
+//根据我们函数对象是一元函数对象 还是二元函数对象
+for_each(v.begin(), v.end(), bind2nd(myprint(), 100));
+
+//总结： bind1st 和 bind2nd 区别?
+//bind1st ： 将参数绑定为函数对象的第一个参数
+//bind2nd ： 将参数绑定为函数对象的第二个参数
+//bind1st bind2nd 将二元函数对象转为一元函数对象
+
+vector&lt;int&gt;::iterator it = find_if(v.begin(), v.end(),
+not1(bind2nd(less_equal&lt;int&gt;(), 2)));
+cout &lt;&lt; &quot;it:&quot; &lt;&lt; *it &lt;&lt; endl;
+sort(v.begin(),v.end(),not2(greater&lt;int&gt;()));
+for_each(v.begin(), v.end(), myprint02());
+cout &lt;&lt; endl;
+//not1 对一元函数对象取反
+//not2 对二元函数对象取反
+
+
+//如何给一个普通函数使用绑定适配器(bind1st bind2nd)绑定一个参数？(拓展)
+//ptr_fun
+void myprint04(int v1,int v2){
+cout &lt;&lt; v1 + v2 &lt;&lt; &quot; &quot;; }
+
+//1 将普通函数适配成函数对象
+//2 然后通过绑定器绑定参数
+for_each(v.begin(), v.end(), bind2nd(ptr_fun(myprint04),100));
+cout &lt;&lt; endl;
+//总结: ptr_fun 将普通函数转变为函数对象
+
+
+//mem_fun mem_fun_ref
+//如果我们容器中存储的是对象或者对象指针，如果能指定某个成员函数处理成员数据。
+class student{
+public:
+    student(string name, int age) :name(name), age(age){}
+    void print(){
+        cout &lt;&lt; &quot;name:&quot; &lt;&lt; name &lt;&lt; &quot; age:&quot; &lt;&lt; age &lt;&lt; endl;;
+    }
+    int age;
+    string name;
+};
+void test05(){
+//mem_fun : 如果存储的是对象指针，需要使用 mem_fun
+vector&lt;student*&gt; v;
+student* s1 = new student(&quot;zhaosi&quot;,10);
+student* s2 = new student(&quot;liuneng&quot;, 20);
+student* s3 = new student(&quot;shenyang&quot;, 30);
+student* s4 = new student(&quot;xiaobao&quot;, 40);
+v.push_back(s1);
+v.push_back(s2);
+v.push_back(s3);
+v.push_back(s4);
+for_each(v.begin(), v.end(), mem_fun(&amp;student::print));
+cout &lt;&lt; &quot;-----------------------------&quot; &lt;&lt; endl;
+//mem_fun_ref : 如果存储的是对象，需要使用 mem_fun_ref
+vector&lt;student&gt; v2;
+v2.push_back(student(&quot;zhaosi&quot;,50));
+v2.push_back(student(&quot;liuneng&quot;, 60));
+v2.push_back(student(&quot;shenyang&quot;, 70));
+v2.push_back(student(&quot;xiaobao&quot;, 80));
+for_each(v2.begin(), v2.end(), mem_fun_ref(&amp;student::print));
+</code></pre></div></div></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/Agnes001/blog_vuepress/edit/master/docs/30.编程技术/10.CPlusPlus/30.C++程序设计.md" target="_blank" rel="noopener noreferrer">编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="tags"><a href="/tags/?tag=Generic-Programming" title="标签">
+      #Generic Programming
+    </a></div> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/technology/c++/algorithm/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">
+        算法
+      </div></a> <a href="/technology/c++/primer/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">
+        C++ Primer总结
+      </div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/technology/c++/algorithm/" class="prev">算法</a></span> <span class="next"><a href="/technology/c++/primer/">C++ Primer总结</a>
+        →
+      </span></p></div></div></div> <!----> </main></div> <div class="footer"><div class="icons"><a href="mailto:17125131@bjtu.edu.cn" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/Agnes001" title="GitHub" target="_blank" class="iconfont icon-github"></a></div> 
+  Theme by <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> <!----></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2df33bbd.js" defer></script><script src="/assets/js/2.f873f4a5.js" defer></script><script src="/assets/js/44.816538c7.js" defer></script>
+  </body>
+</html>

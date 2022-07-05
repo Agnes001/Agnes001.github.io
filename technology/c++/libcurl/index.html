@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>libcurl的使用总结 | 个人知识库</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/">
+    <meta name="description" content="Just playing around">
+    <link rel="preload" href="/assets/css/0.styles.cdff4760.css" as="style"><link rel="preload" href="/assets/js/app.2df33bbd.js" as="script"><link rel="preload" href="/assets/js/2.f873f4a5.js" as="script"><link rel="preload" href="/assets/js/58.10d297e6.js" as="script"><link rel="prefetch" href="/assets/js/10.fce11a4f.js"><link rel="prefetch" href="/assets/js/100.93d57fe5.js"><link rel="prefetch" href="/assets/js/101.cb59cb7c.js"><link rel="prefetch" href="/assets/js/102.9bda773f.js"><link rel="prefetch" href="/assets/js/103.90765133.js"><link rel="prefetch" href="/assets/js/104.3198dcb0.js"><link rel="prefetch" href="/assets/js/105.56ce9ed9.js"><link rel="prefetch" href="/assets/js/106.53664c48.js"><link rel="prefetch" href="/assets/js/107.5cda28a1.js"><link rel="prefetch" href="/assets/js/108.6f6019c3.js"><link rel="prefetch" href="/assets/js/109.a7740201.js"><link rel="prefetch" href="/assets/js/11.49901c43.js"><link rel="prefetch" href="/assets/js/110.632b525e.js"><link rel="prefetch" href="/assets/js/111.274b06dc.js"><link rel="prefetch" href="/assets/js/112.d0e88d20.js"><link rel="prefetch" href="/assets/js/113.486e4fc8.js"><link rel="prefetch" href="/assets/js/114.c69339e6.js"><link rel="prefetch" href="/assets/js/115.204c5dbb.js"><link rel="prefetch" href="/assets/js/116.3765742a.js"><link rel="prefetch" href="/assets/js/117.8d1b805e.js"><link rel="prefetch" href="/assets/js/118.ef246e62.js"><link rel="prefetch" href="/assets/js/119.b9f20cb0.js"><link rel="prefetch" href="/assets/js/12.9581203a.js"><link rel="prefetch" href="/assets/js/120.8cd8657c.js"><link rel="prefetch" href="/assets/js/121.72f63b4e.js"><link rel="prefetch" href="/assets/js/122.8928e827.js"><link rel="prefetch" href="/assets/js/123.67594cad.js"><link rel="prefetch" href="/assets/js/124.eb1ef9b0.js"><link rel="prefetch" href="/assets/js/125.1a2cee51.js"><link rel="prefetch" href="/assets/js/126.d1e6cc77.js"><link rel="prefetch" href="/assets/js/13.175440db.js"><link rel="prefetch" href="/assets/js/14.dd1b88c1.js"><link rel="prefetch" href="/assets/js/15.c0d81c5c.js"><link rel="prefetch" href="/assets/js/16.af59b3be.js"><link rel="prefetch" href="/assets/js/17.a8b4125e.js"><link rel="prefetch" href="/assets/js/18.1b6202ac.js"><link rel="prefetch" href="/assets/js/19.eba09d42.js"><link rel="prefetch" href="/assets/js/20.781c5235.js"><link rel="prefetch" href="/assets/js/21.0d0dcb08.js"><link rel="prefetch" href="/assets/js/22.29dad8ec.js"><link rel="prefetch" href="/assets/js/23.1d26584e.js"><link rel="prefetch" href="/assets/js/24.c3f593b2.js"><link rel="prefetch" href="/assets/js/25.e67dbcb2.js"><link rel="prefetch" href="/assets/js/26.9bee3ad2.js"><link rel="prefetch" href="/assets/js/27.584f8aa6.js"><link rel="prefetch" href="/assets/js/28.139d901b.js"><link rel="prefetch" href="/assets/js/29.95eb557b.js"><link rel="prefetch" href="/assets/js/3.37ac9c63.js"><link rel="prefetch" href="/assets/js/30.94baf8dd.js"><link rel="prefetch" href="/assets/js/31.c834f849.js"><link rel="prefetch" href="/assets/js/32.87c1eecf.js"><link rel="prefetch" href="/assets/js/33.1688c66e.js"><link rel="prefetch" href="/assets/js/34.ed32a02c.js"><link rel="prefetch" href="/assets/js/35.df4f1018.js"><link rel="prefetch" href="/assets/js/36.527e96b0.js"><link rel="prefetch" href="/assets/js/37.7c5e9b9c.js"><link rel="prefetch" href="/assets/js/38.a3f4dc09.js"><link rel="prefetch" href="/assets/js/39.9a9e7eea.js"><link rel="prefetch" href="/assets/js/4.0b4366d3.js"><link rel="prefetch" href="/assets/js/40.bbf5aca3.js"><link rel="prefetch" href="/assets/js/41.20271d2a.js"><link rel="prefetch" href="/assets/js/42.044ea8ca.js"><link rel="prefetch" href="/assets/js/43.e2de2e27.js"><link rel="prefetch" href="/assets/js/44.816538c7.js"><link rel="prefetch" href="/assets/js/45.423e2f6b.js"><link rel="prefetch" href="/assets/js/46.d97670c4.js"><link rel="prefetch" href="/assets/js/47.6fcd8eed.js"><link rel="prefetch" href="/assets/js/48.145fd2d1.js"><link rel="prefetch" href="/assets/js/49.7ef5a6f8.js"><link rel="prefetch" href="/assets/js/5.d7192128.js"><link rel="prefetch" href="/assets/js/50.63ebea49.js"><link rel="prefetch" href="/assets/js/51.cd1b6979.js"><link rel="prefetch" href="/assets/js/52.65e83723.js"><link rel="prefetch" href="/assets/js/53.482bb8f0.js"><link rel="prefetch" href="/assets/js/54.8d211ee5.js"><link rel="prefetch" href="/assets/js/55.6d0279ca.js"><link rel="prefetch" href="/assets/js/56.0d7dabe8.js"><link rel="prefetch" href="/assets/js/57.d174b462.js"><link rel="prefetch" href="/assets/js/59.8994ec9e.js"><link rel="prefetch" href="/assets/js/6.cbfd5b89.js"><link rel="prefetch" href="/assets/js/60.af139070.js"><link rel="prefetch" href="/assets/js/61.d3577fc0.js"><link rel="prefetch" href="/assets/js/62.e17d1882.js"><link rel="prefetch" href="/assets/js/63.e4036107.js"><link rel="prefetch" href="/assets/js/64.49321f56.js"><link rel="prefetch" href="/assets/js/65.3d22da24.js"><link rel="prefetch" href="/assets/js/66.77f21329.js"><link rel="prefetch" href="/assets/js/67.fde317d6.js"><link rel="prefetch" href="/assets/js/68.be19352b.js"><link rel="prefetch" href="/assets/js/69.4d3394b6.js"><link rel="prefetch" href="/assets/js/7.72adfabd.js"><link rel="prefetch" href="/assets/js/70.8fb36dbf.js"><link rel="prefetch" href="/assets/js/71.ac4e90a2.js"><link rel="prefetch" href="/assets/js/72.d098537d.js"><link rel="prefetch" href="/assets/js/73.95e18118.js"><link rel="prefetch" href="/assets/js/74.6fcf2855.js"><link rel="prefetch" href="/assets/js/75.87ad266a.js"><link rel="prefetch" href="/assets/js/76.28b55be0.js"><link rel="prefetch" href="/assets/js/77.6cb37bb4.js"><link rel="prefetch" href="/assets/js/78.79aefebb.js"><link rel="prefetch" href="/assets/js/79.6ed9e466.js"><link rel="prefetch" href="/assets/js/8.33b24897.js"><link rel="prefetch" href="/assets/js/80.671e3b50.js"><link rel="prefetch" href="/assets/js/81.f62a79b7.js"><link rel="prefetch" href="/assets/js/82.f3617058.js"><link rel="prefetch" href="/assets/js/83.18d0b631.js"><link rel="prefetch" href="/assets/js/84.fa6dee80.js"><link rel="prefetch" href="/assets/js/85.5f503b09.js"><link rel="prefetch" href="/assets/js/86.ad4607a2.js"><link rel="prefetch" href="/assets/js/87.f138000c.js"><link rel="prefetch" href="/assets/js/88.4b42282c.js"><link rel="prefetch" href="/assets/js/89.12e2a728.js"><link rel="prefetch" href="/assets/js/9.58fc3c18.js"><link rel="prefetch" href="/assets/js/90.ab27811b.js"><link rel="prefetch" href="/assets/js/91.97ac4e80.js"><link rel="prefetch" href="/assets/js/92.05c95c03.js"><link rel="prefetch" href="/assets/js/93.2df35e20.js"><link rel="prefetch" href="/assets/js/94.95c2bb02.js"><link rel="prefetch" href="/assets/js/95.6f61d80f.js"><link rel="prefetch" href="/assets/js/96.4ad62f06.js"><link rel="prefetch" href="/assets/js/97.b2963771.js"><link rel="prefetch" href="/assets/js/98.aec26723.js"><link rel="prefetch" href="/assets/js/99.15dceb59.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cdff4760.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/image/logo.png" alt="个人知识库" class="logo"> <span class="site-name can-hide">个人知识库</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/pages/about/me/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程技术" class="dropdown-title"><a href="/technology/" class="link-title router-link-active">编程技术</a> <span class="title" style="display:none;">编程技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/technology/c/array/" class="nav-link">C语言</a></li><li class="dropdown-item"><!----> <a href="/technology/c++/vs-setting/" class="nav-link">CPlusPlus</a></li><li class="dropdown-item"><!----> <a href="/technology/linux/basic/" class="nav-link">Linux</a></li><li class="dropdown-item"><!----> <a href="/technology/php/" class="nav-link">PHP</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="应用框架" class="dropdown-title"><a href="/framework/" class="link-title">应用框架</a> <span class="title" style="display:none;">应用框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/framework/nginx/install/" class="nav-link">Nginx</a></li><li class="dropdown-item"><!----> <a href="/framework/mysql/c_api/" class="nav-link">MySQL</a></li><li class="dropdown-item"><!----> <a href="/framework/redis/basic/" class="nav-link">Redis</a></li><li class="dropdown-item"><!----> <a href="/framework/docker/basic/" class="nav-link">Docker</a></li><li class="dropdown-item"><!----> <a href="/framework/kubernetes/basic/" class="nav-link">Kubernetes</a></li><li class="dropdown-item"><!----> <a href="/framework/srs/basic/" class="nav-link">SRS</a></li></ul></div></div><div class="nav-item"><a href="/read/soul/Self-motivated/" class="nav-link">阅读</a></div><div class="nav-item"><a href="/tools/github/" class="nav-link">常用工具</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/tags/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/Agnes001/blog_vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="/image/1.jpg"> <div class="blogger-info"><h3>Agnes001</h3> <span>
+        坚持是一件很伟大的事业
+      </span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/pages/about/me/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程技术" class="dropdown-title"><a href="/technology/" class="link-title router-link-active">编程技术</a> <span class="title" style="display:none;">编程技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/technology/c/array/" class="nav-link">C语言</a></li><li class="dropdown-item"><!----> <a href="/technology/c++/vs-setting/" class="nav-link">CPlusPlus</a></li><li class="dropdown-item"><!----> <a href="/technology/linux/basic/" class="nav-link">Linux</a></li><li class="dropdown-item"><!----> <a href="/technology/php/" class="nav-link">PHP</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="应用框架" class="dropdown-title"><a href="/framework/" class="link-title">应用框架</a> <span class="title" style="display:none;">应用框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/framework/nginx/install/" class="nav-link">Nginx</a></li><li class="dropdown-item"><!----> <a href="/framework/mysql/c_api/" class="nav-link">MySQL</a></li><li class="dropdown-item"><!----> <a href="/framework/redis/basic/" class="nav-link">Redis</a></li><li class="dropdown-item"><!----> <a href="/framework/docker/basic/" class="nav-link">Docker</a></li><li class="dropdown-item"><!----> <a href="/framework/kubernetes/basic/" class="nav-link">Kubernetes</a></li><li class="dropdown-item"><!----> <a href="/framework/srs/basic/" class="nav-link">SRS</a></li></ul></div></div><div class="nav-item"><a href="/read/soul/Self-motivated/" class="nav-link">阅读</a></div><div class="nav-item"><a href="/tools/github/" class="nav-link">常用工具</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/tags/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/Agnes001/blog_vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>C语言</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>CPlusPlus</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>基础特性</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/technology/c++/basic/enmu/" class="sidebar-link">枚举</a></li><li><a href="/technology/c++/basic/char-pointer/" class="sidebar-link">字符指针</a></li></ul></section></li><li><a href="/technology/c++/vs-setting/" class="sidebar-link">vs2019设置</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>C++11特性</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>并发编程</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/technology/c++/reference/" class="sidebar-link">引用</a></li><li><a href="/technology/c++/class/" class="sidebar-link">类和对象</a></li><li><a href="/technology/c++/friend/" class="sidebar-link">友元和运算符重载</a></li><li><a href="/technology/c++/inheritance/" class="sidebar-link">继承</a></li><li><a href="/technology/c++/12/" class="sidebar-link">继承和多态</a></li><li><a href="/technology/c++/template/" class="sidebar-link">模板</a></li><li><a href="/technology/c++/basic-summary/" class="sidebar-link">C++基础总结</a></li><li><a href="/technology/c++/type_cast/" class="sidebar-link">类型转换</a></li><li><a href="/technology/c++/exception/" class="sidebar-link">异常</a></li><li><a href="/technology/c++/container/" class="sidebar-link">容器</a></li><li><a href="/technology/c++/algorithm/" class="sidebar-link">算法</a></li><li><a href="/technology/c++/OOD/" class="sidebar-link">C++程序设计</a></li><li><a href="/technology/c++/primer/" class="sidebar-link">C++ Primer总结</a></li><li><a href="/technology/c++/tec/" class="sidebar-link">编程技巧</a></li><li><a href="/technology/c++/STL/" class="sidebar-link">标准库体系结构与内核分析</a></li><li><a href="/technology/c++/设计模式/" class="sidebar-link">设计模式</a></li><li><a href="/technology/c++/cmake/" class="sidebar-link">cmake配置C++工程</a></li><li><a href="/technology/c++/libcurl/" aria-current="page" class="active sidebar-link">libcurl的使用总结</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#一、-概念" class="sidebar-link">一、 概念</a></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#二、使用步骤" class="sidebar-link">二、使用步骤</a></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#三、函数说明" class="sidebar-link">三、函数说明</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#_1-curlcode-curl-global-init-long-flags" class="sidebar-link">1 CURLcode curlglobalinit(long flags);</a></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#_2-void-curl-global-cleanup-void" class="sidebar-link">2 void curlglobalcleanup(void);</a></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#_3-char-curl-version" class="sidebar-link">3 char *curl_version( );</a></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#_4-curl-curl-easy-init" class="sidebar-link">4 CURL *curleasyinit( );</a></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#_5-void-curl-easy-cleanup-curl-handle" class="sidebar-link">5 void curleasycleanup(CURL *handle);</a></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#_6-curlcode-curl-easy-setopt-curl-handle-curloption-option-parameter" class="sidebar-link">6 CURLcode curleasysetopt(CURL *handle, CURLoption option, parameter);</a></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#_7-curlcode-curl-easy-perform-curl-handle" class="sidebar-link">7 CURLcode curleasyperform(CURL *handle);</a></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#_8-void-curl-global-cleanup-void" class="sidebar-link">8 void curlglobalcleanup(void);</a></li></ul></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#四、curl-easy-setopt函数部分选项介绍" class="sidebar-link">四、curleasysetopt函数部分选项介绍</a></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#五、libcurl使用的http消息头" class="sidebar-link">五、libcurl使用的HTTP消息头</a></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#六、获取http应答头信息" class="sidebar-link">六、获取http应答头信息</a></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#七、多线程问题" class="sidebar-link">七、多线程问题</a></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#八、http验证" class="sidebar-link">八、HTTP验证</a></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#九、编译libcurl库" class="sidebar-link">九、编译libcurl库</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#_9-1-如果需要libcur支持https-需要openssl库支持。" class="sidebar-link">9.1 如果需要libcur支持https，需要openssl库支持。</a></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#_9-2不支持https的libcurl库编译方法" class="sidebar-link">9.2不支持https的libcurl库编译方法：</a></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#_9-3-libcurld-lib-libcurl-lib引用方法" class="sidebar-link">9.3 libcurld.lib/libcurl.lib引用方法</a></li></ul></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#十、实例代码" class="sidebar-link">十、实例代码</a></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#注意事项" class="sidebar-link">注意事项：</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#_1、http模式测试-使用postman插件或模拟测试网站" class="sidebar-link">1、http模式测试，使用Postman插件或模拟测试网站</a></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#_2、保持长连接-设置选项。" class="sidebar-link">2、保持长连接，设置选项。</a></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#_3、调用libcurl下载-然后使用netstat查看发现有大量的tcp连接保持在close-wait状态" class="sidebar-link">3、调用libcurl下载，然后使用netstat查看发现有大量的TCP连接保持在CLOSE_WAIT状态</a></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#_4、libcurl进行异步并发" class="sidebar-link">4、libcurl进行异步并发</a></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#_5、请求头、响应头多个参数设置。使用curl-slist-append函数一个个参数插入。" class="sidebar-link">5、请求头、响应头多个参数设置。使用curlslistappend函数一个个参数插入。</a></li></ul></li><li class="sidebar-sub-header"><a href="/technology/c++/libcurl/#参考资料" class="sidebar-link">参考资料：</a></li></ul></li><li><a href="/technology/c++/drogon/" class="sidebar-link">web开发框架--drogon</a></li><li><a href="/technology/c++/log4cplus/" class="sidebar-link">log4cplus使用</a></li><li><a href="/technology/c++/datatype/" class="sidebar-link">C++数据类型</a></li><li><a href="/technology/c++/function/" class="sidebar-link">函数</a></li><li><a href="/technology/c++/thread/" class="sidebar-link">线程</a></li><li><a href="/technology/c++/process/" class="sidebar-link">进程</a></li><li><a href="/technology/c++/FileOperation/" class="sidebar-link">文件操作</a></li><li><a href="/technology/c++/problem-record/" class="sidebar-link">日常问题记录</a></li><li><a href="/technology/c++/demo/" class="sidebar-link">Cpp案例程序</a></li><li><a href="/technology/c++/multi-thread/" class="sidebar-link">多线程</a></li><li><a href="/technology/c++/11-new feature/" class="sidebar-link">侯捷c++11新特性</a></li><li><a href="/technology/c++/jj-stl/" class="sidebar-link">侯捷stl</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Lua技术栈</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>edoyun</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>内存管理</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>网络编程</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Linux</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>池化技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>操作系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>python</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div><main class="page"> <div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-14888ed5><div class="articleInfo" data-v-14888ed5><ul class="breadcrumbs" data-v-14888ed5><li data-v-14888ed5><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-14888ed5></a></li> <li data-v-14888ed5><a href="/categories/?category=%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF" title="分类" data-v-14888ed5>编程技术</a></li> <li data-v-14888ed5><a href="/categories/?category=CPlusPlus" title="分类" data-v-14888ed5>CPlusPlus</a></li></ul> <div class="info" data-v-14888ed5><div title="作者" class="author iconfont icon-touxiang" data-v-14888ed5><a href="https://github.com/Agnes001" target="_blank" title="作者" class="beLink" data-v-14888ed5>Agnes001</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-14888ed5><a href="javascript:;" data-v-14888ed5>2021-09-03</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABKFJREFUSA3tVl1oFVcQnrMbrak3QUgkya1akpJYcrUtIqW1JvFBE9LiQ5v6JmJpolbMg32rVrhgoYK0QiMY6i9Y6EMaW5D+xFJaTYItIuK2Kr3+BJNwkxBj05sQY3b3nM6cs2dv9t7NT/vQJw/sndk5M/PNzJkzewGerP+pAmy+ON8lLzUJgA8ZYxYIYZmGYRnctDaWvJJAmTtfP1pvXsBCCPP8QFcCaRkZYACgDZFO4stNIcBCajEOlmmC9XpJ9bAGCaPaPmzPl32dvLSVu3BWCTQs0XQQ6g0DYgwLIoAZbBCdW/i+781o1VVlm/410mw4h06Y7bIPHNyWDyL4FHkX03Q8SrzNhZTZriieckWt7cL6MM85YcLpsi/7O9/iXFT6MswI0DmmpkSaJ0qLxFIm3+i1THHB3zmBH3PYx9CcykcLOeQVVa7QtdxTgQgEleX2AjHYfwA+2ddV77ruGoJUbhGDI09YSNXyMpUt5ylOzxgbUmtOp7NmbNt8v3arjTBfYELmLUV+M+nSawNNAUqpT3ClJWg5I3BLT+cGW/DXNGCa6tx1aakCGEigArTn4TDIPdrXXYKCZNrHLMCOEPvHBlLQ99s9eHB7EB6NTki73CVPQ2F5MSx/uRQixfmq7rK0wYD8w8E905bnPDfwoWs/rfv93NWN/ZfvwsLIU7A09gxECyISeGJkHAau98L97tuw7NXnoPyNF8FcYGLGKsOs0mN3OEyec9esGW/ZEl945dTP34wlR2FZVQWU1q0Cw8Tr7p+hgLLNL0FPxx/Q35mA8aEUrH6nCgwEl0tn7wUiZYJnNRh6DK4UH/k0lfyrsBKdPVv/AriGIQcEDQZ65LBAGe2Rzui9Ybjz7XUppz1/uKBbyVPGkN3ZAeC6hr0x7Nr38N5+EqkoOm17xpoqR9ohQF55ERSvr4Dkr3chNfC3DMzGJlNBElW8w9nsGQvhNGIzDkXzCg8cLK951xHsFBlTJspJNi3ZFIMF2AeDV3q8DNOB+YHi6QTrChDIWDBRi5U5f+ZMfJLu3ccrqxtdxk4SKH336LFxSmkqefwU5T8fhdSdQf9IVKD6aNiwI/hnmcAZ91isYMJIaCUCx9W098+LgruikeTqzqqxKPUwqJyCPJiyemVVZBOijDGjD38Os0jOiSPL1z3SPjXNANbiNPXAdzTfukjjuknNBbyz3nwgTd3AVFqUJ5hpHlq9MveLnWwttUfoygBmvVjuikxND3znrhsELnZk7k+OjIGxeNEkomyLVta0xxn+HZhjBc4YZ/AFjHjz9u3xRZl2BN4aq9nFwWh16IrQ1aHHEd3j1+4/dB9OtH4e29A2H1DyHQRmOSfQZ1Fy7MHBTGB6J/Djq6p3OxyO2cB+4Car7v/o3GXgfAkj23+x9ID1Teoamo/SXcbvSf2PX7Vc8DdCmE1vN9di+32P9/5YR3vLnhCVGUWBjEkr3yh4H8v9CzmsbdhzOKzsJKM90iFdaTMjRPhGVsakRvOaRidljo6H6G7j+ctrJpsP+4COhDIl0La2+FS4+5mlocBaXY5QnGZysIBYoeSsl5qQzrSj/cgNrfuEzlWBfwA+EjrZyWUvpAAAAABJRU5ErkJggg==">
+          libcurl的使用总结
+        </h1> <div class="theme-vdoing-content content__default"><h1 id="libcurl库使用方法"><a href="#libcurl库使用方法" class="header-anchor">#</a> libcurl库使用方法</h1> <h2 id="一、-概念"><a href="#一、-概念" class="header-anchor">#</a> 一、 概念</h2> <p>libcurl作为是一个多协议的便于客户端使用的URL传输库，基于C语言，提供C语言的API接口，支持DICT, FILE, FTP, FTPS, Gopher, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3S, RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, Telnet and TFTP这些协议，同时支持使用SSL证书的安全文件传输：HTTP POST, HTTP PUT, FTP 上传, 基于HTTP形式的上传、代理、Cookies、用户加密码的认证等多种应用场景。另外，libcurl是一个高移植性的库，能在绝大多数系统上运行，包括Solaris, NetBSD, FreeBSD, OpenBSD, Darwin, HPUX, IRIX, AIX, Tru64, Linux, UnixWare, HURD, Windows, Amiga, OS/2, BeOs, Mac OS X, Ultrix, QNX, OpenVMS, RISC OS, Novell NetWare, DOS等。</p> <h2 id="二、使用步骤"><a href="#二、使用步骤" class="header-anchor">#</a> 二、使用步骤</h2> <ol><li>调用curl_global_init()初始化libcurl</li> <li>调用curl_easy_init()函数得到 easy interface型指针</li> <li>调用curl_easy_setopt()设置传输选项</li> <li>根据curl_easy_setopt()设置的传输选项，实现回调函数以完成用户特定任务</li> <li>调用curl_easy_perform()函数完成传输任务</li> <li>调用curl_easy_cleanup()释放内存</li> <li>调用curl_global_cleanup()析构libcurl
+在整过过程中设置curl_easy_setopt()参数是最关键的，几乎所有的libcurl程序都要使用它。</li></ol> <p>在基于Libcurl的程序里，主要采用callback function （回调函数）的形式完成传输任务，用户在启动传输前设置好各类参数和回调函数，当满足条件时libcurl将调用用户的回调函数实现特定功能。</p> <h2 id="三、函数说明"><a href="#三、函数说明" class="header-anchor">#</a> 三、函数说明</h2> <h3 id="_1-curlcode-curl-global-init-long-flags"><a href="#_1-curlcode-curl-global-init-long-flags" class="header-anchor">#</a> 1 CURLcode curl_global_init(long flags);</h3> <p>描述：
+这个函数只能用一次。(其实在调用curl_global_cleanup 函数后仍然可再用)
+如果这个函数在curl_easy_init函数调用时还没调用，它讲由libcurl库自动调用，所以多线程下最好主动调用该函数以防止在线程中curl_easy_init时多次调用。</p> <p>注意：虽然libcurl是线程安全的，但curl_global_init是不能保证线程安全的，所以不要在每个线程中都调用curl_global_init，应该将该函数的调用放在主线程中。<strong>将其放在构造函数中较为合适</strong></p> <div class="language- extra-class"><pre class="language-text"><code>参数：flags
+CURL_GLOBAL_ALL          //初始化所有的可能的调用。
+CURL_GLOBAL_SSL          //初始化支持 安全套接字层。
+CURL_GLOBAL_WIN32        //初始化win32套接字库。
+CURL_GLOBAL_NOTHING      //没有额外的初始化。
+</code></pre></div><h3 id="_2-void-curl-global-cleanup-void"><a href="#_2-void-curl-global-cleanup-void" class="header-anchor">#</a> 2 void curl_global_cleanup(void);</h3> <p>描述：在结束libcurl使用的时候，用来对curl_global_init做的工作清理。类似于close的函数。</p> <p>注意：虽然libcurl是线程安全的，但curl_global_cleanup是不能保证线程安全的，所以不要在每个线程中都调用curl_global_init，应该将该函数的调用放在主线程中。</p> <h3 id="_3-char-curl-version"><a href="#_3-char-curl-version" class="header-anchor">#</a> 3 char *curl_version( );</h3> <p>描述: 打印当前libcurl库的版本。</p> <h3 id="_4-curl-curl-easy-init"><a href="#_4-curl-curl-easy-init" class="header-anchor">#</a> 4 CURL *curl_easy_init( );</h3> <p>描述:
+curl_easy_init用来初始化一个CURL的指针(有些像返回FILE类型的指针一样). 相应的在调用结束时要用curl_easy_cleanup函数清理.
+一般curl_easy_init意味着一个会话的开始. 它会返回一个easy_handle(CURL*对象), 一般都用在easy系列的函数中.</p> <h3 id="_5-void-curl-easy-cleanup-curl-handle"><a href="#_5-void-curl-easy-cleanup-curl-handle" class="header-anchor">#</a> 5 void curl_easy_cleanup(CURL *handle);</h3> <p>描述:
+这个调用用来结束一个会话.与curl_easy_init配合着用.
+参数:
+CURL类型的指针.</p> <h3 id="_6-curlcode-curl-easy-setopt-curl-handle-curloption-option-parameter"><a href="#_6-curlcode-curl-easy-setopt-curl-handle-curloption-option-parameter" class="header-anchor">#</a> 6 CURLcode curl_easy_setopt(CURL *handle, CURLoption option, parameter);</h3> <p>描述: 这个函数最重要了，几乎所有的curl 程序都要频繁的使用它.它告诉curl库.程序将有如何的行为. 比如要查看一个网页的html代码等.(这个函数有些像ioctl函数)参数:</p> <ol><li>CURL类型的指针</li> <li>各种CURLoption类型的选项.(都在curl.h库里有定义,man 也可以查看到)</li> <li>parameter 这个参数 既可以是个函数的指针,也可以是某个对象的指针,也可以是个long型的变量.它用什么这取决于第二个参数.
+CURLoption 这个参数的取值很多.具体的可以查看man手册.</li></ol> <h3 id="_7-curlcode-curl-easy-perform-curl-handle"><a href="#_7-curlcode-curl-easy-perform-curl-handle" class="header-anchor">#</a> 7 CURLcode curl_easy_perform(CURL *handle);</h3> <p>描述:这个函数在初始化CURL类型的指针 以及curl_easy_setopt完成后调用. 就像字面的意思所说perform就像是个舞台.让我们设置的
+option 运作起来.参数:
+CURL类型的指针.</p> <h3 id="_8-void-curl-global-cleanup-void"><a href="#_8-void-curl-global-cleanup-void" class="header-anchor">#</a> 8 void curl_global_cleanup(void);</h3> <p>释放libcurl</p> <h2 id="四、curl-easy-setopt函数部分选项介绍"><a href="#四、curl-easy-setopt函数部分选项介绍" class="header-anchor">#</a> 四、curl_easy_setopt函数部分选项介绍</h2> <p>本节主要介绍curl_easy_setopt中跟http相关的参数。该函数是curl中非常重要的函数，curl所有设置都是在该函数中完成的，该函数的设置选项众多，注意本节的阐述的只是部分常见选项。</p> <ol><li>CURLOPT_URL —— 设置访问URL</li> <li>CURLOPT_WRITEFUNCTION，CURLOPT_WRITEDATA
+回调函数原型为：</li></ol> <div class="language-c++ extra-class"><pre class="language-text"><code>size_t function( void *ptr, size_t size, size_t nmemb, void *stream); 
+curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, req_reply);
+curl_easy_setopt(curl, CURLOPT_WRITEDATA, (void *)&amp;response);
+
+// reply of the requery  
+// 将返回的内容写入到stream中
+size_t req_reply(void *ptr, size_t size, size_t nmemb, void *stream)
+{
+    if (stream == NULL || ptr == NULL || size == 0)
+        return 0;
+ 
+    size_t realsize = size * nmemb;
+    std::string *buffer = (std::string*)stream;
+    if (buffer != NULL)
+    {
+        buffer-&gt;append((const char *)ptr, realsize);
+    }
+    return realsize;
+}
+
+CURLcode curl_get_req(const std::string &amp;url, std::string &amp;response, std::list&lt;std::string&gt; listRequestHeader, bool bResponseIsWithHeaderData = false, int nConnectTimeout = 10, int nTimeout = 10)
+{
+    // init curl  
+    CURL *curl = curl_easy_init();
+    // res code  
+    CURLcode res;
+    if (curl)
+    {
+        // set params  
+        curl_easy_setopt(curl, CURLOPT_URL, url.c_str()); // url  
+        //curl_easy_setopt(m_curl, CURLOPT_PORT, 8089);    //port
+        curl_easy_setopt(curl, CURLOPT_POST, 0); // get reqest 
+        //构建HTTP报文头
+        struct curl_slist* headers = NULL;
+        if (listRequestHeader.size() &gt; 0)
+        {
+            std::list&lt;std::string&gt;::iterator iter, iterEnd;
+            iter = listRequestHeader.begin();
+            iterEnd = listRequestHeader.end();
+            for (iter; iter != iterEnd; iter++)
+            {
+                headers = curl_slist_append(headers, iter-&gt;c_str());
+            }
+            //headers = curl_slist_append(headers, &quot;Content-Type:application/json;charset=UTF-8&quot;);
+            //headers = curl_slist_append(headers, &quot;Content-Type:application/x-www-form-urlencoded&quot;);
+            if (headers != NULL)
+            {
+                curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);//设置http请求头信息
+            }
+        }
+        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, false); // if want to use https  
+        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, false); // set peer and host verify false  
+        curl_easy_setopt(curl, CURLOPT_VERBOSE, 1);
+        curl_easy_setopt(curl, CURLOPT_READFUNCTION, NULL);
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, req_reply);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, (void *)&amp;response);
+        curl_easy_setopt(curl, CURLOPT_NOSIGNAL, 1);
+        if (bResponseIsWithHeaderData)
+        {
+            curl_easy_setopt(curl, CURLOPT_HEADER, 1);//响应体中是否包含了头信息，比如Content-Type:application/json;charset=UTF-8
+        }
+        curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, nConnectTimeout); // set transport and time out time  
+        curl_easy_setopt(curl, CURLOPT_TIMEOUT, nTimeout);
+        // start request  
+        res = curl_easy_perform(curl);
+        if (headers != NULL)
+        {
+            curl_slist_free_all(headers); //free the list again
+        }
+    }
+    // release curl  
+    curl_easy_cleanup(curl);
+    return res;
+}
+</code></pre></div><ul><li>函数将在libcurl接收到数据后被调用，因此函数多做数据保存的功能，如处理下载文件。</li> <li>CURLOPT_WRITEDATA 用于表明CURLOPT_WRITEFUNCTION函数中的stream指针的来源。通过 CURLOPT_WRITEDATA属性给默认回调函数传递一个已经打开的文件指针，用于将数据输出到文件里。</li> <li>如果你没有通过CURLOPT_WRITEFUNCTION属性给easy handle设置回调函数，libcurl会提供一个默认的回调函数，它只是简单的将接收到的数据打印到标准输出。</li></ul> <ol start="3"><li>CURLOPT_HEADERFUNCTION，CURLOPT_HEADERDATA
+回调函数原型为</li></ol> <div class="language- extra-class"><pre class="language-text"><code>size_t function( void *ptr, size_t size,size_t nmemb, void *stream);
+</code></pre></div><p>libcurl一旦接收到http 头部数据后将调用该函数。CURLOPT_WRITEDATA 传递指针给libcurl，该指针表明CURLOPT_HEADERFUNCTION 函数的stream指针的来源。</p> <ol start="4"><li><p>CURLOPT_READFUNCTION, CURLOPT_READDATA
+libCurl需要读取数据传递给远程主机时将调用CURLOPT_READFUNCTION指定的函数，函数原型是：size_t function(void *ptr, size_t size, size_t nmemb,void *stream). CURLOPT_READDATA 表明CURLOPT_READFUNCTION函数原型中的stream指针来源.</p></li> <li><p>CURLOPT_NOPROGRESS，CURLOPT_PROGRESSFUNCTION，CURLOPT_PROGRESSDATA
+跟数据传输进度相关的参数。CURLOPT_PROGRESSFUNCTION 指定的函数正常情况下每秒被libcurl调用一次，为了使CURLOPT_PROGRESSFUNCTION被调用，CURLOPT_NOPROGRESS必须被设置为false，CURLOPT_PROGRESSDATA指定的参数将作为CURLOPT_PROGRESSFUNCTION指定函数的第一个参数</p></li> <li><p>CURLOPT_TIMEOUT，CURLOPT_CONNECTIONTIMEOUT:
+CURLOPT_TIMEOUT 由于设置传输时间，CURLOPT_CONNECTIONTIMEOUT 设置连接等待时间</p></li> <li><p>CURLOPT_FOLLOWLOCATION
+设置重定位URL</p></li></ol> <div class="language-c++ extra-class"><pre class="language-text"><code>curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1); //返回的头部中有Location(一般直接请求的url没找到)，则继续请求Location对应的数据
+</code></pre></div><ol start="8"><li>CURLOPT_RANGE: CURLOPT_RESUME_FROM:
+断点续传相关设置。CURLOPT_RANGE 指定char *参数传递给libcurl，用于指明http域的RANGE头域，例如：
+表示头500个字节：bytes=0-499
+表示第二个500字节：bytes=500-999
+表示最后500个字节：bytes=-500
+表示500字节以后的范围：bytes=500-
+第一个和最后一个字节：bytes=0-0,-1
+同时指定几个范围：bytes=500-600,601-999
+CURLOPT_RESUME_FROM 传递一个long参数给libcurl，指定你希望开始传递的偏移量。</li></ol> <h2 id="五、libcurl使用的http消息头"><a href="#五、libcurl使用的http消息头" class="header-anchor">#</a> 五、libcurl使用的HTTP消息头</h2> <p>当使用libcurl发送http请求时，它会自动添加一些http头。我们可以通过CURLOPT_HTTPHEADER属性手动替换、添加或删除相应 的HTTP消息头。
+Host
+http1.1（大部分http1.0)版本都要求客户端请求提供这个信息头。
+Pragma
+&quot;no-cache&quot;。表示不要缓冲数据。
+Accept
+&quot;<em>/</em>&quot;。表示允许接收任何类型的数据。
+Expect
+以POST的方式向HTTP服务器提交请求时，libcurl会设置该消息头为&quot;100-continue&quot;，它要求服务器在正式处理该请求之前，返回一 个&quot;OK&quot;消息。如果POST的数据很小，libcurl可能不会设置该消息头。
+自定义选项
+当前越来越多的协议都构建在HTTP协议之上（如：soap），这主要归功于HTTP的可靠性，以及被广泛使用的代理支持（可以穿透大部分防火墙）。 这些协议的使用方式与传统HTTP可能有很大的不同。对此，libcurl作了很好的支持。
+自定义请求方式(CustomRequest)
+HTTP支持GET, HEAD或者POST提交请求。可以设置CURLOPT_CUSTOMREQUEST来设置自定义的请求方式，libcurl默认以GET方式提交请求：
+curl_easy_setopt(easy_handle, CURLOPT_CUSTOMREQUEST, &quot;MYOWNREQUEST&quot;);</p> <div class="language-c++ extra-class"><pre class="language-text"><code>struct curl_slist *headers=NULL; /* init to NULL is important */ 
+headers = curl_slist_append(headers, &quot;Hey-server-hey: how are you?&quot;); 
+headers = curl_slist_append(headers, &quot;X-silly-content: yes&quot;); /* pass our list of custom made headers */ 
+//post请求头的json数据格式
+//Content-Type:application/json;charset=UTF-8
+curl_easy_setopt(easyhandle, CURLOPT_HTTPHEADER, headers); 
+curl_easy_perform(easyhandle); /* transfer http */ 
+curl_slist_free_all(headers); /* free the header list */
+</code></pre></div><h2 id="六、获取http应答头信息"><a href="#六、获取http应答头信息" class="header-anchor">#</a> 六、获取http应答头信息</h2> <p>发出http请求后，服务器会返回应答头信息和应答数据，如果仅仅是打印应答头的所有内容，则直接可以通过curl_easy_setopt(curl, CURLOPT_HEADERFUNCTION, 打印函数)的方式来完成，这里需要获取的是应答头中特定的信息，比如应答码、cookies列表等，则需要通过下面这个函数：
+CURLcode curl_easy_getinfo(CURL *curl, CURLINFO info, ... );
+info参数就是我们需要获取的内容，下面是一些参数值:</p> <ol><li>CURLINFO_RESPONSE_CODE<br>
+获取应答码</li> <li>CURLINFO_HEADER_SIZE
+头大小</li> <li>CURLINFO_COOKIELIST
+cookies列表</li></ol> <p>除了获取应答信息外，这个函数还能获取curl的一些内部信息，如请求时间、连接时间等等。</p> <h2 id="七、多线程问题"><a href="#七、多线程问题" class="header-anchor">#</a> 七、多线程问题</h2> <p>首先一个基本原则就是：绝对不应该在线程之间共享同一个libcurl handle(CURL *对象)，不管是easy handle还是multi handle（本文只介绍easy_handle）。一个线程每次只能使用一个handle。
+libcurl是线程安全的，但有两点例外：信号(signals)和SSL/TLS handler。 信号用于超时失效名字解析(timing out name resolves)。libcurl依赖其他的库来支持SSL/STL，所以用多线程的方式访问HTTPS或FTPS的URL时，应该满足这些库对多线程 操作的一些要求。详细可以参考：
+OpenSSL: http://www.openssl.org/docs/crypto/threads.html#DESCRIPTION</p> <p>GnuTLS: http://www.gnu.org/software/gnutls/manual/html_node/Multi_002dthreaded-applications.html</p> <h2 id="八、http验证"><a href="#八、http验证" class="header-anchor">#</a> 八、HTTP验证</h2> <p>在使用HTTP协议时，客户端有很多种方式向服务器提供验证信息。默认的 HTTP验证方法是&quot;Basic”，它将用户名与密码以明文的方式、经Base64编码后保存在HTTP请求头中，发往服务器。当然这不太安全。
+当前版本的libcurl支持的验证方法有：basic, Digest, NTLM, Negotiate, GSS-Negotiate and SPNEGO。可以通过CURLOPT_HTTPAUTH属性来设置具体 的验证方式：</p> <div class="language-c++ extra-class"><pre class="language-text"><code>curl_easy_setopt(easy_handle, CURLOPT_HTTPAUTH, CURLAUTH_DIGEST);
+//向代理服务器发送验证信息时，可以通过CURLOPT_PROXYAUTH设置验证方式：
+curl_easy_setopt(easy_handle, CURLOPT_PROXYAUTH, CURLAUTH_NTLM);
+//也可以同时设置多种验证方式（通过按位与）， 使用‘CURLAUTH_ANY‘将允许libcurl可以选择任何它所支持的验证方式。通过CURLOPT_HTTPAUTH或 CURLOPT_PROXYAUTH属性设置的多种验证方式，libcurl会在运行时选择一种它认为是最好的方式与服务器通信：
+curl_easy_setopt(easy_handle, CURLOPT_HTTPAUTH, CURLAUTH_DIGEST|CURLAUTH_BASIC); 
+// curl_easy_setopt(easy_handle, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
+</code></pre></div><h2 id="九、编译libcurl库"><a href="#九、编译libcurl库" class="header-anchor">#</a> 九、编译libcurl库</h2> <p>从网站https://curl.haxx.se/download找到源码包，官网最新版为7.56.0，但是这个压缩包的curl-7.56.0\projects\Windows路径下VC6-VC14各个版本的VS解决方案。</p> <h3 id="_9-1-如果需要libcur支持https-需要openssl库支持。"><a href="#_9-1-如果需要libcur支持https-需要openssl库支持。" class="header-anchor">#</a> 9.1 如果需要libcur支持https，需要openssl库支持。</h3> <p>libcurl主要功能就是用不同的协议连接和沟通不同的服务器，如果使用HTTPS，需要OpenSSL</p> <p>libcurl https://curl.haxx.se/download.html 下载Source Archives即可</p> <p>ActiveState https://www.activestate.com/activeperl/downloads 下载perl解析器，编译openssl需要用到。</p> <p>openssl https://www.openssl.org/source/ 下载openssl-1.0.2k，1.1.0以后的文件和安装方法都换了。</p> <p>zlib http://zlib.net/ 下载1.2.7以外的版本，比如1.2.11。</p> <p>支持https的libcurl库编译方法：</p> <ol><li>解压</li></ol> <p>为了方便安装，在D盘根目录下新建一个名为libcurl-ssl的文件夹，将下载的三个压缩包解压到该文件夹。
+在 curl-7.54.0 -&gt; lib 下新建文件夹openssl用来存放openssl的头文件。</p> <ol start="2"><li>zlib编译：</li></ol> <p>zlib-1.2.11\contrib\vstudio\vc14\zlibvc.sln，编译release版本。</p> <p>在生成的x86\ZlibDllRelease文件夹中有zlibwapi.dll和zlibwapi.lib文件</p> <ol start="3"><li>ActiveState安装：</li></ol> <p>打开安装包，选择Modify默认安装或Repair修改安装路径都可以</p> <ol start="4"><li>openssl编译：</li></ol> <p>这是最麻烦、最容易出错的一环了，因为他没有项目文件，只能通过命令行来编译。</p> <p>在开始菜单中找到vs自带的 VS2015 x86 本机工具命令提示符</p> <p>使用cd命令进入到openssl-1.0.2k文件夹中</p> <p>命令行键入 perl Configure VC-WIN32 no-asm</p> <p>命令行键入 ms\do_ms.bat</p> <p>命令行键入 nmake -f ms/ntdll.mak</p> <p>等待差不多五分钟，只要不出现“stop”，安全地执行到结束，就算成功。
+一旦中间出了差错，最好是把文件夹也删了，重新解压、配置编译，如果你留有编译失败的半成品，它可能会告诉你“无法解析XXX”。</p> <ol start="5"><li>将 openssl-1.0.2k -&gt; inc32 -&gt; openssl 所有的.h 和 openssl-1.0.2k -&gt; out32dll 的 libeay32.lib、libeay32.dll、ssleay32.lib、ssleay32.dll 一起复制到 curl-7.54.0 -&gt; lib -&gt; openssl 中</li></ol> <p>libcurl编译：</p> <p>编译平台选择 DLL Debug - DLL OpenSSL</p> <p>curl-7.54.0 -&gt;projects -&gt; Windows -&gt; VC14 -&gt; curl-all.sln，可能会提示升级工程，确定即可。</p> <p>将 libcurl 设为启动项目，选择 libcurl -&gt; Resource Files -&gt; libcurl.rc，右键“移出”，它记录着版本信息，只会增大文件，可以移出掉。</p> <p>选择 属性 -&gt; C/C++ -&gt; 预处理器 -&gt; 预处理器定义，将&quot;BUILDING_LIBCURL&quot;改成&quot;CURL_STATICLIB&quot;。这样那些接口函数就不会被声明为导出函数了。</p> <p>选择 属性 -&gt; 链接器 -&gt; 常规 -&gt; 附加库目录 添加 ........\lib\openssl，指向curl-7.54.0 -&gt; lib -&gt; openssl</p> <p>选择 属性 -&gt; 链接器 -&gt; 输入 -&gt; 附加依赖项 添加 libeay32.lib;ssleay32.lib;ws2_32.lib;wldap32.lib; 前两个是为了OpenSSL，后两个是CURL必须依赖的。</p> <p>在编译成功后 curl-7.54.0 -&gt; build -&gt; Win32 -&gt; VC14 -&gt; DLL Debug - DLL OpenSSL 文件夹中会生成有 libcurld.dll 和 libcurld.lib（注意名字不是libcurl）。</p> <h3 id="_9-2不支持https的libcurl库编译方法"><a href="#_9-2不支持https的libcurl库编译方法" class="header-anchor">#</a> 9.2不支持https的libcurl库编译方法：</h3> <p>使用curl-7.32.0版本中vs工程，vc自动编译。从网站https://curl.haxx.se/download 中下载curl-7.32.0版本。解压curl-7.32.0，找到vs工程目录，比如：curl-7.32.0\vs\vc8\lib\vc8libcurl.vcproj</p> <ol><li><p>打开curl-7.32.0\vs\vc8\lib\vc8libcurl.vcproj文件，VS2010会提示升级工程，下一步即可。
+VC工程里有些设置问题导致不能直接编译，需要稍作修改</p></li> <li><p>打开工程属性 &gt; C\C++ &gt; 常规 &gt; 附加包含目录。这里的包含目录是&quot;..\include&quot;，而这个目录根本就不存在，它应该指向&quot;curl-7.32.0\include&quot;才对，所以把这里改成&quot;......\include&quot;。(或者直接完整路径也可以）</p></li> <li><p>打开工程属性 &gt; C\C++ &gt; 预处理器 &gt; 预处理器定义。这里有个默认宏&quot;BUILDING_LIBCURL&quot;，如果要编译生成静态库，则要把它改成&quot;CURL_STATICLIB&quot;。这样，那些接口函数就不会被声明为导出函数了。</p></li> <li><p>打开工程属性 &gt; C\C++ &gt; 库管理器 &gt; 常规 &gt; 附加依赖项。添加ws2_32.lib和wldap32.lib，这是CURL必须依赖的。或者在代码中使用#pragma comment预编译指令，手动引入这两个lib库。</p></li></ol> <h3 id="_9-3-libcurld-lib-libcurl-lib引用方法"><a href="#_9-3-libcurld-lib-libcurl-lib引用方法" class="header-anchor">#</a> 9.3 libcurld.lib/libcurl.lib引用方法</h3> <p>将 curl-7.54.0 -&gt; include 目录下的curl文件夹，复制过去。</p> <p>将libcurl编译的 libcurld.dll 和 libcurld.lib 复制到debug。</p> <p>将libcurld.dll和之前OpenSSL生成的 libeay32.dll、ssleay32.dll 各复制一份到项目文件夹下，否则会报错。</p> <p>选择 配置属性 -&gt; C\C++ -&gt; 预处理器 -&gt; 预处理器定义，添加CURL_STATICLIB。</p> <p>属性中的 附加包含目录、附加库目录和附加依赖项就在代码中实现。</p> <h2 id="十、实例代码"><a href="#十、实例代码" class="header-anchor">#</a> 十、实例代码</h2> <div class="language-c++ extra-class"><pre class="language-text"><code>#define CURL_STATICLIB                //如果是静态库方式，需要包含这句
+ 
+#include &quot;curl\curl.h&quot;
+#include &lt;iostream&gt;
+#include &lt;list&gt;
+#include &lt;string&gt;
+ 
+#ifdef _DEBUG
+#pragma comment(lib,&quot;libcurld.lib&quot;)
+#else
+#pragma comment(lib,&quot;libcurl.lib&quot;)
+#endif
+ 
+#pragma comment ( lib, &quot;ws2_32.lib&quot; )
+#pragma comment ( lib, &quot;winmm.lib&quot; )
+#pragma comment ( lib, &quot;wldap32.lib&quot; )
+#pragma comment(lib, &quot;Advapi32.lib&quot;)
+ 
+ 
+std::wstring AsciiToUnicode(const std::string&amp; str)
+{
+    // 预算-缓冲区中宽字节的长度  
+    int unicodeLen = MultiByteToWideChar(CP_ACP, 0, str.c_str(), -1, nullptr, 0);
+    // 给指向缓冲区的指针变量分配内存  
+    wchar_t *pUnicode = (wchar_t*)malloc(sizeof(wchar_t)*unicodeLen);
+    // 开始向缓冲区转换字节  
+    MultiByteToWideChar(CP_ACP, 0, str.c_str(), -1, pUnicode, unicodeLen);
+    std::wstring ret_str = pUnicode;
+    free(pUnicode);
+    return ret_str;
+}
+ 
+std::string UnicodeToUtf8(const std::wstring&amp; wstr)
+{
+    // 预算-缓冲区中多字节的长度  
+    int ansiiLen = WideCharToMultiByte(CP_UTF8, 0, wstr.c_str(), -1, nullptr, 0, nullptr, nullptr);
+    // 给指向缓冲区的指针变量分配内存  
+    char *pAssii = (char*)malloc(sizeof(char)*ansiiLen);
+    // 开始向缓冲区转换字节  
+    WideCharToMultiByte(CP_UTF8, 0, wstr.c_str(), -1, pAssii, ansiiLen, nullptr, nullptr);
+    std::string ret_str = pAssii;
+    free(pAssii);
+    return ret_str;
+}
+ 
+//ANSI转UTF8
+std::string AsciiToUtf8(const std::string&amp; str)
+{
+    return UnicodeToUtf8(AsciiToUnicode(str));
+}
+ 
+//UTF8转ANSI
+std::string Utf8toAscii(const std::string strUTF8)
+{
+    std::string  strAnsi = &quot;&quot;;
+    //获取转换为多字节后需要的缓冲区大小，创建多字节缓冲区
+    UINT nLen = MultiByteToWideChar(CP_UTF8, NULL, strUTF8.c_str(), -1, NULL, NULL);
+    WCHAR *wszBuffer = new WCHAR[nLen + 1];
+    nLen = MultiByteToWideChar(CP_UTF8, NULL, strUTF8.c_str(), -1, wszBuffer, nLen);
+    wszBuffer[nLen] = 0;
+    nLen = WideCharToMultiByte(936, NULL, wszBuffer, -1, NULL, NULL, NULL, NULL);
+    CHAR *szBuffer = new CHAR[nLen + 1];
+    nLen = WideCharToMultiByte(936, NULL, wszBuffer, -1, szBuffer, nLen, NULL, NULL);
+    szBuffer[nLen] = 0;
+    strAnsi = szBuffer;
+    //清理内存
+    delete[]szBuffer;
+    delete[]wszBuffer;
+    return strAnsi;
+}
+ 
+// reply of the requery  
+size_t req_reply(void *ptr, size_t size, size_t nmemb, void *stream)
+{
+    if (stream == NULL || ptr == NULL || size == 0)
+        return 0;
+ 
+    size_t realsize = size * nmemb;
+    std::string *buffer = (std::string*)stream;
+    if (buffer != NULL)
+    {
+        buffer-&gt;append((const char *)ptr, realsize);
+    }
+    return realsize;
+    /*
+    std::string *str = (std::string*)stream;
+    (*str).append((char*)ptr, size*nmemb);
+    return size * nmemb;
+    */
+}
+ 
+/*
+功能：get http数据
+参数：url：请求字符串。如果请求带参数数据，直接拼凑到url后面；比如：http://127.0.0.1:8080/api/Accounts/Login?uername=admin&amp;password=123
+listRequestHeader：请求头数据列表。
+bResponseIsWithHeaderData：bool类型，表示响应体中是否包含应答头数据。true，包含，false，不包含。如果包含的话，应答数据中包含Content-Type，Server等信息。
+nConnectTimeout：连接超时时间，单位为秒；
+nTimeout：读写数据超时时间，单位为秒
+返回值：CURLcode
+*/
+CURLcode curl_get_req(const std::string &amp;url, std::string &amp;response, std::list&lt;std::string&gt; listRequestHeader, bool bResponseIsWithHeaderData = false, int nConnectTimeout = 10, int nTimeout = 10)
+{
+    // init curl  
+    CURL *curl = curl_easy_init();
+    // res code  
+    CURLcode res;
+    if (curl)
+    {
+        // set params  
+        curl_easy_setopt(curl, CURLOPT_URL, url.c_str()); // url  
+        //curl_easy_setopt(m_curl, CURLOPT_PORT, 8089);    //port
+        curl_easy_setopt(curl, CURLOPT_POST, 0); // get reqest 
+        //构建HTTP报文头
+        struct curl_slist* headers = NULL;
+        if (listRequestHeader.size() &gt; 0)
+        {
+            std::list&lt;std::string&gt;::iterator iter, iterEnd;
+            iter = listRequestHeader.begin();
+            iterEnd = listRequestHeader.end();
+            for (iter; iter != iterEnd; iter++)
+            {
+                headers = curl_slist_append(headers, iter-&gt;c_str());
+            }
+            //headers = curl_slist_append(headers, &quot;Content-Type:application/json;charset=UTF-8&quot;);
+            //headers = curl_slist_append(headers, &quot;Content-Type:application/x-www-form-urlencoded&quot;);
+            if (headers != NULL)
+            {
+                curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);//设置http请求头信息
+            }
+        }
+        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, false); // if want to use https  
+        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, false); // set peer and host verify false  
+        curl_easy_setopt(curl, CURLOPT_VERBOSE, 1);
+        curl_easy_setopt(curl, CURLOPT_READFUNCTION, NULL);
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, req_reply);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, (void *)&amp;response);
+        curl_easy_setopt(curl, CURLOPT_NOSIGNAL, 1);
+        if (bResponseIsWithHeaderData)
+        {
+            curl_easy_setopt(curl, CURLOPT_HEADER, 1);//响应体中是否包含了头信息，比如Content-Type:application/json;charset=UTF-8
+        }
+        curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, nConnectTimeout); // set transport and time out time  
+        curl_easy_setopt(curl, CURLOPT_TIMEOUT, nTimeout);
+        // start request  
+        res = curl_easy_perform(curl);
+        if (headers != NULL)
+        {
+            curl_slist_free_all(headers); //free the list again
+        }
+    }
+    // release curl  
+    curl_easy_cleanup(curl);
+    return res;
+}
+ 
+CURLcode curl_get_req_ex(CURL *curl, const std::string &amp;url, std::string &amp;response, std::list&lt;std::string&gt; listRequestHeader, bool bResponseIsWithHeaderData = false, int nConnectTimeout = 10, int nTimeout = 10)
+{
+    // res code  
+    CURLcode res;
+    if (curl)
+    {
+        // set params 
+                curl_easy_reset(curl);
+        /* enable TCP keep-alive for this transfer */
+        curl_easy_setopt(curl, CURLOPT_TCP_KEEPALIVE, 1L);
+        /* keep-alive idle time to 120 seconds */
+        curl_easy_setopt(curl, CURLOPT_TCP_KEEPIDLE, 120L);
+        /* interval time between keep-alive probes: 30 seconds */
+        curl_easy_setopt(curl, CURLOPT_TCP_KEEPINTVL, 30L);
+ 
+        curl_easy_setopt(curl, CURLOPT_URL, url.c_str()); // url  
+        //curl_easy_setopt(m_curl, CURLOPT_PORT, 8089);    //port
+        curl_easy_setopt(curl, CURLOPT_POST, 0); // get reqest 
+        //构建HTTP报文头
+        struct curl_slist* headers = NULL;
+        if (listRequestHeader.size() &gt; 0)
+        {
+            std::list&lt;std::string&gt;::iterator iter, iterEnd;
+            iter = listRequestHeader.begin();
+            iterEnd = listRequestHeader.end();
+            for (iter; iter != iterEnd; iter++)
+            {
+                headers = curl_slist_append(headers, iter-&gt;c_str());
+            }
+            //headers = curl_slist_append(headers, &quot;Content-Type:application/json;charset=UTF-8&quot;);
+            //headers = curl_slist_append(headers, &quot;Content-Type:application/x-www-form-urlencoded&quot;);
+            if (headers != NULL)
+            {
+                curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);//设置http请求头信息
+            }
+        }
+        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, false); // if want to use https  
+        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, false); // set peer and host verify false  
+        curl_easy_setopt(curl, CURLOPT_VERBOSE, 1);
+        curl_easy_setopt(curl, CURLOPT_READFUNCTION, NULL);
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, req_reply);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, (void *)&amp;response);
+        curl_easy_setopt(curl, CURLOPT_NOSIGNAL, 1);
+        if (bResponseIsWithHeaderData)
+        {
+            curl_easy_setopt(curl, CURLOPT_HEADER, 1);//响应体中是否包含了头信息，比如Content-Type:application/json;charset=UTF-8
+        }
+        curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, nConnectTimeout); // set transport and time out time  
+        curl_easy_setopt(curl, CURLOPT_TIMEOUT, nTimeout);
+        // start request  
+        res = curl_easy_perform(curl);
+        if (headers != NULL)
+        {
+            curl_slist_free_all(headers); //free the list again
+        }
+    }
+    return res;
+}
+ 
+/*
+功能：post http数据
+参数：url：请求字符串，比如：http://127.0.0.1:8080/api/Accounts/Login
+postParams：请求附带的参数，比如uername=admin&amp;password=123
+listRequestHeader：请求头数据列表。
+bResponseIsWithHeaderData：bool类型，表示响应体中是否包含应答头数据。true，包含，false，不包含。如果包含的话，应答数据中包含Content-Type，Server等信息。
+nConnectTimeout：连接超时时间，单位为秒；
+nTimeout：读写数据超时时间，单位为秒
+返回值：CURLcode
+*/
+CURLcode curl_post_req(const std::string &amp;url, const std::string &amp;postParams, std::string &amp;response, std::list&lt;std::string&gt; listRequestHeader, bool bResponseIsWithHeaderData = false, int nConnectTimeout = 10, int nTimeout = 10)
+{
+    // init curl  
+    CURL *curl = curl_easy_init();
+    // res code  
+    CURLcode res;
+    if (curl)
+    {
+        // set params  
+        curl_easy_setopt(curl, CURLOPT_POST, 1); // post req  
+        curl_easy_setopt(curl, CURLOPT_URL, url.c_str()); // url  
+        //curl_easy_setopt(m_curl, CURLOPT_PORT, 8089);    //port
+        curl_easy_setopt(curl, CURLOPT_POST, 1); // post reqest 
+        //构建HTTP报文头
+        struct curl_slist* headers = NULL;
+        if (listRequestHeader.size() &gt; 0)
+        {
+            std::list&lt;std::string&gt;::iterator iter, iterEnd;
+            iter = listRequestHeader.begin();
+            iterEnd = listRequestHeader.end();
+            for (iter; iter != iterEnd; iter++)
+            {
+                headers = curl_slist_append(headers, iter-&gt;c_str());
+            }
+            //headers = curl_slist_append(headers, &quot;Content-Type:application/json;charset=UTF-8&quot;);
+            //headers = curl_slist_append(headers, &quot;Content-Type:application/x-www-form-urlencoded&quot;);
+            if (headers != NULL)
+            {
+                curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);//设置http请求头信息
+            }
+        }
+        else
+        {
+            headers = curl_slist_append(headers, &quot;Content-Type:application/x-www-form-urlencoded&quot;);
+            if (headers != NULL)
+            {
+                curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);//设置http请求头信息
+            }
+        }
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, postParams.c_str()); // params  
+        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, false); // if want to use https  
+        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, false); // set peer and host verify false  
+        curl_easy_setopt(curl, CURLOPT_VERBOSE, 1);
+        curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1); //返回的头部中有Location(一般直接请求的url没找到)，则继续请求Location对应的数据 
+        curl_easy_setopt(curl, CURLOPT_READFUNCTION, NULL);
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, req_reply);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, (void *)&amp;response);
+        curl_easy_setopt(curl, CURLOPT_NOSIGNAL, 1);
+        if (bResponseIsWithHeaderData)
+        {
+            curl_easy_setopt(curl, CURLOPT_HEADER, 1);//响应体中是否包含了头信息，比如Content-Type:application/json;charset=UTF-8
+        }
+        curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, nConnectTimeout);
+        curl_easy_setopt(curl, CURLOPT_TIMEOUT, nTimeout);
+        // start request  
+        res = curl_easy_perform(curl);
+        if (headers != NULL)
+        {
+            curl_slist_free_all(headers); //free the list again
+        }
+    }
+    // release curl  
+    curl_easy_cleanup(curl);
+    return res;
+}
+ 
+CURLcode curl_post_req_ex(CURL *curl, const std::string &amp;url, const std::string &amp;postParams, std::string &amp;response, std::list&lt;std::string&gt; listRequestHeader, bool bResponseIsWithHeaderData = false, int nConnectTimeout = 10, int nTimeout = 10)
+{
+    // res code  
+    CURLcode res;
+    if (curl)
+    {
+        // set params
+                curl_easy_reset(curl);
+        /* enable TCP keep-alive for this transfer */
+        curl_easy_setopt(curl, CURLOPT_TCP_KEEPALIVE, 1L);
+        /* keep-alive idle time to 120 seconds */
+        curl_easy_setopt(curl, CURLOPT_TCP_KEEPIDLE, 120L);
+        /* interval time between keep-alive probes: 30 seconds */
+        curl_easy_setopt(curl, CURLOPT_TCP_KEEPINTVL, 30L);
+ 
+        curl_easy_setopt(curl, CURLOPT_URL, url.c_str()); // url  
+        //curl_easy_setopt(m_curl, CURLOPT_PORT, 8089);    //port
+        curl_easy_setopt(curl, CURLOPT_POST, 1); // post reqest 
+        //构建HTTP报文头
+        struct curl_slist* headers = NULL;
+        if (listRequestHeader.size() &gt; 0)
+        {
+            std::list&lt;std::string&gt;::iterator iter, iterEnd;
+            iter = listRequestHeader.begin();
+            iterEnd = listRequestHeader.end();
+            for (iter; iter != iterEnd; iter++)
+            {
+                headers = curl_slist_append(headers, iter-&gt;c_str());
+            }
+            //headers = curl_slist_append(headers, &quot;Content-Type:application/json;charset=UTF-8&quot;);
+            //headers = curl_slist_append(headers, &quot;Content-Type:application/x-www-form-urlencoded;charset=UTF-8&quot;);
+            if (headers != NULL)
+            {
+                curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);//设置http请求头信息
+            }
+        }
+        else
+        {
+            headers = curl_slist_append(headers, &quot;Content-Type:application/x-www-form-urlencoded&quot;);
+            if (headers != NULL)
+            {
+                curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);//设置http请求头信息
+            }
+        }
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, postParams.c_str()); // params  
+        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, false); // if want to use https  
+        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, false); // set peer and host verify false  
+        curl_easy_setopt(curl, CURLOPT_VERBOSE, 1);
+        curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1); //返回的头部中有Location(一般直接请求的url没找到)，则继续请求Location对应的数据 
+        curl_easy_setopt(curl, CURLOPT_READFUNCTION, NULL);
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, req_reply);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, (void *)&amp;response);
+        curl_easy_setopt(curl, CURLOPT_NOSIGNAL, 1);
+        if (bResponseIsWithHeaderData)
+        {
+            curl_easy_setopt(curl, CURLOPT_HEADER, 1);//响应体中是否包含了头信息，比如Content-Type:application/json;charset=UTF-8
+        }
+        curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, nConnectTimeout);
+        curl_easy_setopt(curl, CURLOPT_TIMEOUT, nTimeout);
+        // start request  
+        res = curl_easy_perform(curl);
+        if (headers != NULL)
+        {
+            curl_slist_free_all(headers); //free the list again
+        }
+    }
+    return res;
+}
+ 
+//实例1
+{
+    curl_global_init(CURL_GLOBAL_ALL);
+    
+    //post获取数据
+    std::string strResponse = &quot;&quot;,strResponseAnsi = &quot;&quot;;
+        strResponse.clear();
+    CURLcode res = curl_post_req(&quot;http://127.0.0.1:8080/api/Accounts/Login&quot;, &quot;username=admin&amp;password=123&quot;, strResponse);
+    if (res == CURLE_OK)
+    {
+        std::string strToken = &quot;&quot;;
+        strResponseAnsi = Utf8toAscii(strResponse);
+    }
+ 
+    //get获取数据
+        strResponse.clear();
+    res = curl_get_req(&quot;http://127.0.0.1:8080/api/Accounts/Login?username=admin&amp;password=123&quot;, strResponse);
+    if (res == CURLE_OK)
+    {
+        int jj = 0;
+    }
+ 
+    curl_global_cleanup();
+}
+//实例2    
+{
+    //post json数据
+    CURL * curl = curl_easy_init();
+    std::string strResponse = &quot;&quot;, strResponseAnsi = &quot;&quot;;
+    char szRequestUrl[256] = { 0 };
+    CURLcode res = CURLE_OK;
+    sprintf_s(szRequestUrl, &quot;%s/api/GPS/AddOne&quot;, &quot;http://127.0.0.1:8080&quot;);
+    std::string strPostParams = &quot;&quot;;
+    try
+    {
+        boost::property_tree::ptree ptroot;
+        ptroot.put(&quot;deviceid&quot;, &quot;12345678&quot;);
+        ptroot.put&lt;unsigned int&gt;(&quot;deviceStatus&quot;, 0);
+        ptroot.put&lt;unsigned int&gt;(&quot;alarmFlag&quot;, 0);
+        ptroot.put(&quot;lng&quot;, fLongitude);
+        ptroot.put(&quot;lat&quot;, fLatitude);
+        ptroot.put(&quot;speed&quot;, 0);
+        ptroot.put(&quot;direction&quot;, 0);
+        ptroot.put&lt;int&gt;(&quot;altitude&quot;, 10);
+        ptroot.put(&quot;gpsTime&quot;, &quot;2018-10-10 12:00:01&quot;);
+        std::stringstream sstream;
+        boost::property_tree::write_json(sstream, ptroot);
+        strPostParams = sstream.str();
+        bSuccess = true;
+    }
+    catch (boost::property_tree::ptree_error pt)
+    {
+        pt.what();
+    }
+    if (bSuccess)
+    {
+      std::string strAuthorization = &quot;admin---&quot;;
+        std::string strRequestHeaders = strAuthorization;
+        std::list&lt;std::string&gt; listRequestHeader;
+        listRequestHeader.push_back(strRequestHeaders);
+        listRequestHeader.push_back(&quot;Content-Type:application/json;charset=UTF-8&quot;);
+        res = curl_post_req_ex(curl, szRequestUrl, strPostParams, strResponse, listRequestHeader);
+        if (res == CURLE_OK)
+        {
+            bSuccess = true;
+        }
+    }
+	curl_easy_cleanup(curl);
+}
+</code></pre></div><h2 id="注意事项"><a href="#注意事项" class="header-anchor">#</a> 注意事项：</h2> <h3 id="_1、http模式测试-使用postman插件或模拟测试网站"><a href="#_1、http模式测试-使用postman插件或模拟测试网站" class="header-anchor">#</a> 1、http模式测试，使用Postman插件或模拟测试网站</h3> <p>https://www.sojson.com/httpRequest/</p> <h3 id="_2、保持长连接-设置选项。"><a href="#_2、保持长连接-设置选项。" class="header-anchor">#</a> 2、保持长连接，设置选项。</h3> <div class="language-c++ extra-class"><pre class="language-text"><code>  /* enable TCP keep-alive for this transfer */
+  curl_easy_setopt(curl, CURLOPT_TCP_KEEPALIVE, 1L);
+  /* keep-alive idle time to 120 seconds */
+  curl_easy_setopt(curl, CURLOPT_TCP_KEEPIDLE, 120L);
+  /* interval time between keep-alive probes: 60 seconds */
+  curl_easy_setopt(curl, CURLOPT_TCP_KEEPINTVL, 60L);
+</code></pre></div><h3 id="_3、调用libcurl下载-然后使用netstat查看发现有大量的tcp连接保持在close-wait状态"><a href="#_3、调用libcurl下载-然后使用netstat查看发现有大量的tcp连接保持在close-wait状态" class="header-anchor">#</a> 3、调用libcurl下载，然后使用netstat查看发现有大量的TCP连接保持在CLOSE_WAIT状态</h3> <p>查看libcurl的文档说明，有这样一个选项：CURLOPT_FORBID_REUSE</p> <p>Pass a long. Set to 1 to make the next transfer explicitly close the connection when done. Normally, libcurl keeps all connections alive when done with one transfer in case a succeeding one follows that can re-use them. This option should be used with caution and only if you understand what it does. Set to 0 to have libcurl keep the connection open for possible later re-use (default behavior).<br>
+也就是说，默认情况下libcurl完成一个任务以后，出于重用连接的考虑不会马上关闭
+如果没有新的TCP请求来重用这个连接，那么只能等到CLOSE_WAIT超时，这个时间默认在7200秒甚至更高，太多的CLOSE_WAIT连接会导致性能问题
+解决方法：
+curl_easy_setopt(curl, CURLOPT_FORBID_REUSE, 1);
+最好再修改一下TCP参数调低CLOSE_WAIT和TIME_WAIT的超时时间</p> <h3 id="_4、libcurl进行异步并发"><a href="#_4、libcurl进行异步并发" class="header-anchor">#</a> 4、libcurl进行异步并发</h3> <p>使用multi接口，multi接口的使用会比easy 接口稍微复杂点，毕竟multi接口是依赖easy接口的，首先粗略的讲下其使用流程：curl_multi _init初始化一个multi curl对象，为了同时进行多个curl的并发访问，我们需要初始化多个easy curl对象，使用curl_easy_setopt进行相关设置，然后调用curl_multi _add_handle把easy curl对象添加到multi curl对象中，添加完毕后执行curl_multi_perform方法进行并发的访问，访问结束后curl_multi_remove_handle移除相关easy curl对象，curl_easy_cleanup清除easy curl对象，最后curl_multi_cleanup清除multi curl对象。multi接口具体使用方法参考下面链接</p> <p>https://blog.csdn.net/whui19890911/article/details/79320408</p> <h3 id="_5、请求头、响应头多个参数设置。使用curl-slist-append函数一个个参数插入。"><a href="#_5、请求头、响应头多个参数设置。使用curl-slist-append函数一个个参数插入。" class="header-anchor">#</a> 5、请求头、响应头多个参数设置。使用curl_slist_append函数一个个参数插入。</h3> <h2 id="参考资料"><a href="#参考资料" class="header-anchor">#</a> 参考资料：</h2> <p>libcurl官网：https://curl.haxx.se/libcurl/</p> <p>vc编译libcurl：https://www.cnblogs.com/findumars/p/7496122.html</p> <p>curl_errno错误码说明</p> <p>CURLE_UNSUPPORTED_PROTOCOL (1) – 您传送给 libcurl 的网址使用了此 libcurl 不支持的协议。 可能是您没有使用的编译时选项造成了这种情况（可能是协议字符串拼写有误，或没有指定协议 libcurl 代码）。</p> <p>CURLE_FAILED_INIT (2) – 非常早期的初始化代码失败。 可能是内部错误或问题。</p> <p>CURLE_URL_MALFORMAT (3) – 网址格式不正确。</p> <p>CURLE_COULDNT_RESOLVE_PROXY (5) – 无法解析代理服务器。 指定的代理服务器主机无法解析。</p> <p>CURLE_COULDNT_RESOLVE_HOST (6) – 无法解析主机。 指定的远程主机无法解析。</p> <p>CURLE_COULDNT_CONNECT (7) – 无法通过 connect() 连接至主机或代理服务器。</p> <p>CURLE_FTP_WEIRD_SERVER_REPLY (8) – 在连接到 FTP 服务器后，libcurl 需要收到特定的回复。 此错误代码表示收到了不正常或不正确的回复。 指定的远程服务器可能不是正确的 FTP 服务器。</p> <p>CURLE_REMOTE_ACCESS_DENIED (9) – 我们无法访问网址中指定的资源。 对于 FTP，如果尝试更改为远程目录，就会发生这种情况。</p> <p>CURLE_FTP_WEIRD_PASS_REPLY (11) – 在将 FTP 密码发送到服务器后，libcurl 需要收到正确的回复。 此错误代码表示返回的是意外的代码。</p> <p>CURLE_FTP_WEIRD_PASV_REPLY (13) – libcurl 无法从服务器端收到有用的结果，作为对 PASV 或 EPSV 命令的响应。 服务器有问题。</p> <p>CURLE_FTP_WEIRD_227_FORMAT (14) – FTP 服务器返回 227 行作为对 PASV 命令的响应。如果 libcurl 无法解析此行，就会返回此代码。</p> <p>CURLE_FTP_CANT_GET_HOST (15) – 在查找用于新连接的主机时出现内部错误。</p> <p>CURLE_FTP_COULDNT_SET_TYPE (17) – 在尝试将传输模式设置为二进制或 ascii 时发生错误。</p> <p>CURLE_PARTIAL_FILE (18) – 文件传输尺寸小于或大于预期。当服务器先报告了一个预期的传输尺寸，然后所传送的数据与先前指定尺寸不相符时，就会发生此错误。</p> <p>CURLE_FTP_COULDNT_RETR_FILE (19) – ‘RETR’ 命令收到了不正常的回复，或完成的传输尺寸为零字节。</p> <p>CURLE_QUOTE_ERROR (21) – 在向远程服务器发送自定义 “QUOTE” 命令时，其中一个命令返回的错误代码为 400 或更大的数字（对于 FTP），或以其他方式表明命令无法成功完成。</p> <p>CURLE_HTTP_RETURNED_ERROR (22) – 如 果 CURLOPT_FAILONERROR 设置为 TRUE，且 HTTP 服务器返回 &gt;= 400 的错误代码，就会返回此代码。 （此错 误代码以前又称为 CURLE_HTTP_NOT_FOUND。）</p> <p>CURLE_WRITE_ERROR (23) – 在向本地文件写入所收到的数据时发生错误，或由写入回调 (write callback) 向 libcurl 返回了一个错误。</p> <p>CURLE_UPLOAD_FAILED (25) – 无法开始上传。 对于 FTP，服务器通常会拒绝执行 STOR 命令。错误缓冲区通常会提供服务器对此问题的说明。 （此错误代码以前又称为 CURLE_FTP_COULDNT_STOR_FILE。）</p> <p>CURLE_READ_ERROR (26) – 读取本地文件时遇到问题，或由读取回调 (read callback) 返回了一个错误。</p> <p>CURLE_OUT_OF_MEMORY (27) – 内存分配请求失败。此错误比较严重，若发生此错误，则表明出现了非常严重的问题。</p> <p>CURLE_OPERATION_TIMEDOUT (28) – 操作超时。 已达到根据相应情况指定的超时时间。 请注意： 自 Urchin 6.6.0.2 开始，超时时间可以自行更改。 要指定远程日志下载超时， 请打开 urchin.conf 文件，取消以下行的注释标记：</p> <p>#DownloadTimeout: 30</p> <p>CURLE_FTP_PORT_FAILED (30) – FTP PORT 命令返回错误。 在没有为 libcurl 指定适当的地址使用时，最有可能发生此问题。 请参阅 CURLOPT_FTPPORT。</p> <p>CURLE_FTP_COULDNT_USE_REST (31) – FTP REST 命令返回错误。如果服务器正常，则应当不会发生这种情况。</p> <p>CURLE_RANGE_ERROR (33) – 服务器不支持或不接受范围请求。</p> <p>CURLE_HTTP_POST_ERROR (34) – 此问题比较少见，主要由内部混乱引发。</p> <p>CURLE_SSL_CONNECT_ERROR (35) – 同时使用 SSL/TLS 时可能会发生此错误。您可以访问错误缓冲区查看相应信息，其中会对此问题进行更详细的介绍。可能是证书（文件格式、路径、许可）、密码及其他因素导致了此问题。</p> <p>CURLE_FTP_BAD_DOWNLOAD_RESUME (36) – 尝试恢复超过文件大小限制的 FTP 连接。</p> <p>CURLE_FILE_COULDNT_READ_FILE (37) – 无法打开 FILE:// 路径下的文件。原因很可能是文件路径无法识别现有文件。 建议您检查文件的访问权限。</p> <p>CURLE_LDAP_CANNOT_BIND (38) – LDAP 无法绑定。LDAP 绑定操作失败。</p> <p>CURLE_LDAP_SEARCH_FAILED (39) – LDAP 搜索无法进行。</p> <p>CURLE_FUNCTION_NOT_FOUND (41) – 找不到函数。 找不到必要的 zlib 函数。</p> <p>CURLE_ABORTED_BY_CALLBACK (42) – 由回调中止。 回调向 libcurl 返回了 “abort”。</p> <p>CURLE_BAD_FUNCTION_ARGUMENT (43) – 内部错误。 使用了不正确的参数调用函数。</p> <p>CURLE_INTERFACE_FAILED (45) – 界 面错误。 指定的外部界面无法使用。 请通过 CURLOPT_INTERFACE 设置要使用哪个界面来处理外部连接的来源 IP 地址。 （此错误代 码以前又称为 CURLE_HTTP_PORT_FAILED。）</p> <p>CURLE_TOO_MANY_REDIRECTS (47) – 重定向过多。 进行重定向时，libcurl 达到了网页点击上限。请使用 CURLOPT_MAXREDIRS 设置上限。</p> <p>CURLE_UNKNOWN_TELNET_OPTION (48) – 无法识别以 CURLOPT_TELNETOPTIONS 设置的选项。 请参阅相关文档。</p> <p>CURLE_TELNET_OPTION_SYNTAX (49) – telnet 选项字符串的格式不正确。</p> <p>CURLE_PEER_FAILED_VERIFICATION (51) – 远程服务器的 SSL 证书或 SSH md5 指纹不正确。</p> <p>CURLE_GOT_NOTHING (52) – 服务器未返回任何数据，在相应情况下，未返回任何数据就属于出现错误。</p> <p>CURLE_SSL_ENGINE_NOTFOUND (53) – 找不到指定的加密引擎。</p> <p>CURLE_SSL_ENGINE_SETFAILED (54) – 无法将选定的 SSL 加密引擎设为默认选项。</p> <p>CURLE_SEND_ERROR (55) – 无法发送网络数据。</p> <p>CURLE_RECV_ERROR (56) – 接收网络数据失败。</p> <p>CURLE_SSL_CERTPROBLEM (58) – 本地客户端证书有问题</p> <p>CURLE_SSL_CIPHER (59) – 无法使用指定的密钥</p> <p>CURLE_SSL_CACERT (60) – 无法使用已知的 CA 证书验证对等证书</p> <p>CURLE_BAD_CONTENT_ENCODING (61) – 无法识别传输编码</p> <p>CURLE_LDAP_INVALID_URL (62) – LDAP 网址无效</p> <p>CURLE_FILESIZE_EXCEEDED (63) – 超过了文件大小上限</p> <p>CURLE_USE_SSL_FAILED (64) – 请求的 FTP SSL 级别失败</p> <p>CURLE_SEND_FAIL_REWIND (65) – 进行发送操作时，curl 必须回转数据以便重新传输，但回转操作未能成功</p> <p>CURLE_SSL_ENGINE_INITFAILED (66) – SSL 引擎初始化失败</p> <p>CURLE_LOGIN_DENIED (67) – 远程服务器拒绝 curl 登录（7.13.1 新增功能）</p> <p>CURLE_TFTP_NOTFOUND (68) – 在 TFTP 服务器上找不到文件</p> <p>CURLE_TFTP_PERM (69) – 在 TFTP 服务器上遇到权限问题</p> <p>CURLE_REMOTE_DISK_FULL (70) – 服务器磁盘空间不足</p> <p>CURLE_TFTP_ILLEGAL (71) – TFTP 操作非法</p> <p>CURLE_TFTP_UNKNOWNID (72) – TFTP 传输 ID 未知</p> <p>CURLE_REMOTE_FILE_EXISTS (73) – 文件已存在，无法覆盖</p> <p>CURLE_TFTP_NOSUCHUSER (74) – 运行正常的 TFTP 服务器不会返回此错误</p> <p>CURLE_CONV_FAILED (75) – 字符转换失败</p> <p>CURLE_CONV_REQD (76) – 调用方必须注册转换回调</p> <p>CURLE_SSL_CACERT_BADFILE (77) – 读取 SSL CA 证书时遇到问题（可能是路径错误或访问权限问题）</p> <p>CURLE_REMOTE_FILE_NOT_FOUND (78) – 网址中引用的资源不存在</p> <p>CURLE_SSH (79) – SSH 会话中发生无法识别的错误</p> <p>CURLE_SSL_SHUTDOWN_FAILED (80) – 无法终止 SSL 连接</p></div></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/Agnes001/blog_vuepress/edit/master/docs/30.编程技术/10.CPlusPlus/61.libcurl的使用总结.md" target="_blank" rel="noopener noreferrer">编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="tags"><a href="/tags/?tag=libcurl" title="标签">
+      #libcurl
+    </a></div> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/technology/c++/cmake/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">
+        cmake配置C++工程
+      </div></a> <a href="/technology/c++/drogon/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">
+        web开发框架--drogon
+      </div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/technology/c++/cmake/" class="prev">cmake配置C++工程</a></span> <span class="next"><a href="/technology/c++/drogon/">web开发框架--drogon</a>
+        →
+      </span></p></div></div></div> <!----> </main></div> <div class="footer"><div class="icons"><a href="mailto:17125131@bjtu.edu.cn" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/Agnes001" title="GitHub" target="_blank" class="iconfont icon-github"></a></div> 
+  Theme by <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> <!----></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2df33bbd.js" defer></script><script src="/assets/js/2.f873f4a5.js" defer></script><script src="/assets/js/58.10d297e6.js" defer></script>
+  </body>
+</html>

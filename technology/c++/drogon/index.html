@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>web开发框架--drogon | 个人知识库</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/">
+    <meta name="description" content="Just playing around">
+    <link rel="preload" href="/assets/css/0.styles.cdff4760.css" as="style"><link rel="preload" href="/assets/js/app.2df33bbd.js" as="script"><link rel="preload" href="/assets/js/2.f873f4a5.js" as="script"><link rel="preload" href="/assets/js/59.8994ec9e.js" as="script"><link rel="prefetch" href="/assets/js/10.fce11a4f.js"><link rel="prefetch" href="/assets/js/100.93d57fe5.js"><link rel="prefetch" href="/assets/js/101.cb59cb7c.js"><link rel="prefetch" href="/assets/js/102.9bda773f.js"><link rel="prefetch" href="/assets/js/103.90765133.js"><link rel="prefetch" href="/assets/js/104.3198dcb0.js"><link rel="prefetch" href="/assets/js/105.56ce9ed9.js"><link rel="prefetch" href="/assets/js/106.53664c48.js"><link rel="prefetch" href="/assets/js/107.5cda28a1.js"><link rel="prefetch" href="/assets/js/108.6f6019c3.js"><link rel="prefetch" href="/assets/js/109.a7740201.js"><link rel="prefetch" href="/assets/js/11.49901c43.js"><link rel="prefetch" href="/assets/js/110.632b525e.js"><link rel="prefetch" href="/assets/js/111.274b06dc.js"><link rel="prefetch" href="/assets/js/112.d0e88d20.js"><link rel="prefetch" href="/assets/js/113.486e4fc8.js"><link rel="prefetch" href="/assets/js/114.c69339e6.js"><link rel="prefetch" href="/assets/js/115.204c5dbb.js"><link rel="prefetch" href="/assets/js/116.3765742a.js"><link rel="prefetch" href="/assets/js/117.8d1b805e.js"><link rel="prefetch" href="/assets/js/118.ef246e62.js"><link rel="prefetch" href="/assets/js/119.b9f20cb0.js"><link rel="prefetch" href="/assets/js/12.9581203a.js"><link rel="prefetch" href="/assets/js/120.8cd8657c.js"><link rel="prefetch" href="/assets/js/121.72f63b4e.js"><link rel="prefetch" href="/assets/js/122.8928e827.js"><link rel="prefetch" href="/assets/js/123.67594cad.js"><link rel="prefetch" href="/assets/js/124.eb1ef9b0.js"><link rel="prefetch" href="/assets/js/125.1a2cee51.js"><link rel="prefetch" href="/assets/js/126.d1e6cc77.js"><link rel="prefetch" href="/assets/js/13.175440db.js"><link rel="prefetch" href="/assets/js/14.dd1b88c1.js"><link rel="prefetch" href="/assets/js/15.c0d81c5c.js"><link rel="prefetch" href="/assets/js/16.af59b3be.js"><link rel="prefetch" href="/assets/js/17.a8b4125e.js"><link rel="prefetch" href="/assets/js/18.1b6202ac.js"><link rel="prefetch" href="/assets/js/19.eba09d42.js"><link rel="prefetch" href="/assets/js/20.781c5235.js"><link rel="prefetch" href="/assets/js/21.0d0dcb08.js"><link rel="prefetch" href="/assets/js/22.29dad8ec.js"><link rel="prefetch" href="/assets/js/23.1d26584e.js"><link rel="prefetch" href="/assets/js/24.c3f593b2.js"><link rel="prefetch" href="/assets/js/25.e67dbcb2.js"><link rel="prefetch" href="/assets/js/26.9bee3ad2.js"><link rel="prefetch" href="/assets/js/27.584f8aa6.js"><link rel="prefetch" href="/assets/js/28.139d901b.js"><link rel="prefetch" href="/assets/js/29.95eb557b.js"><link rel="prefetch" href="/assets/js/3.37ac9c63.js"><link rel="prefetch" href="/assets/js/30.94baf8dd.js"><link rel="prefetch" href="/assets/js/31.c834f849.js"><link rel="prefetch" href="/assets/js/32.87c1eecf.js"><link rel="prefetch" href="/assets/js/33.1688c66e.js"><link rel="prefetch" href="/assets/js/34.ed32a02c.js"><link rel="prefetch" href="/assets/js/35.df4f1018.js"><link rel="prefetch" href="/assets/js/36.527e96b0.js"><link rel="prefetch" href="/assets/js/37.7c5e9b9c.js"><link rel="prefetch" href="/assets/js/38.a3f4dc09.js"><link rel="prefetch" href="/assets/js/39.9a9e7eea.js"><link rel="prefetch" href="/assets/js/4.0b4366d3.js"><link rel="prefetch" href="/assets/js/40.bbf5aca3.js"><link rel="prefetch" href="/assets/js/41.20271d2a.js"><link rel="prefetch" href="/assets/js/42.044ea8ca.js"><link rel="prefetch" href="/assets/js/43.e2de2e27.js"><link rel="prefetch" href="/assets/js/44.816538c7.js"><link rel="prefetch" href="/assets/js/45.423e2f6b.js"><link rel="prefetch" href="/assets/js/46.d97670c4.js"><link rel="prefetch" href="/assets/js/47.6fcd8eed.js"><link rel="prefetch" href="/assets/js/48.145fd2d1.js"><link rel="prefetch" href="/assets/js/49.7ef5a6f8.js"><link rel="prefetch" href="/assets/js/5.d7192128.js"><link rel="prefetch" href="/assets/js/50.63ebea49.js"><link rel="prefetch" href="/assets/js/51.cd1b6979.js"><link rel="prefetch" href="/assets/js/52.65e83723.js"><link rel="prefetch" href="/assets/js/53.482bb8f0.js"><link rel="prefetch" href="/assets/js/54.8d211ee5.js"><link rel="prefetch" href="/assets/js/55.6d0279ca.js"><link rel="prefetch" href="/assets/js/56.0d7dabe8.js"><link rel="prefetch" href="/assets/js/57.d174b462.js"><link rel="prefetch" href="/assets/js/58.10d297e6.js"><link rel="prefetch" href="/assets/js/6.cbfd5b89.js"><link rel="prefetch" href="/assets/js/60.af139070.js"><link rel="prefetch" href="/assets/js/61.d3577fc0.js"><link rel="prefetch" href="/assets/js/62.e17d1882.js"><link rel="prefetch" href="/assets/js/63.e4036107.js"><link rel="prefetch" href="/assets/js/64.49321f56.js"><link rel="prefetch" href="/assets/js/65.3d22da24.js"><link rel="prefetch" href="/assets/js/66.77f21329.js"><link rel="prefetch" href="/assets/js/67.fde317d6.js"><link rel="prefetch" href="/assets/js/68.be19352b.js"><link rel="prefetch" href="/assets/js/69.4d3394b6.js"><link rel="prefetch" href="/assets/js/7.72adfabd.js"><link rel="prefetch" href="/assets/js/70.8fb36dbf.js"><link rel="prefetch" href="/assets/js/71.ac4e90a2.js"><link rel="prefetch" href="/assets/js/72.d098537d.js"><link rel="prefetch" href="/assets/js/73.95e18118.js"><link rel="prefetch" href="/assets/js/74.6fcf2855.js"><link rel="prefetch" href="/assets/js/75.87ad266a.js"><link rel="prefetch" href="/assets/js/76.28b55be0.js"><link rel="prefetch" href="/assets/js/77.6cb37bb4.js"><link rel="prefetch" href="/assets/js/78.79aefebb.js"><link rel="prefetch" href="/assets/js/79.6ed9e466.js"><link rel="prefetch" href="/assets/js/8.33b24897.js"><link rel="prefetch" href="/assets/js/80.671e3b50.js"><link rel="prefetch" href="/assets/js/81.f62a79b7.js"><link rel="prefetch" href="/assets/js/82.f3617058.js"><link rel="prefetch" href="/assets/js/83.18d0b631.js"><link rel="prefetch" href="/assets/js/84.fa6dee80.js"><link rel="prefetch" href="/assets/js/85.5f503b09.js"><link rel="prefetch" href="/assets/js/86.ad4607a2.js"><link rel="prefetch" href="/assets/js/87.f138000c.js"><link rel="prefetch" href="/assets/js/88.4b42282c.js"><link rel="prefetch" href="/assets/js/89.12e2a728.js"><link rel="prefetch" href="/assets/js/9.58fc3c18.js"><link rel="prefetch" href="/assets/js/90.ab27811b.js"><link rel="prefetch" href="/assets/js/91.97ac4e80.js"><link rel="prefetch" href="/assets/js/92.05c95c03.js"><link rel="prefetch" href="/assets/js/93.2df35e20.js"><link rel="prefetch" href="/assets/js/94.95c2bb02.js"><link rel="prefetch" href="/assets/js/95.6f61d80f.js"><link rel="prefetch" href="/assets/js/96.4ad62f06.js"><link rel="prefetch" href="/assets/js/97.b2963771.js"><link rel="prefetch" href="/assets/js/98.aec26723.js"><link rel="prefetch" href="/assets/js/99.15dceb59.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cdff4760.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/image/logo.png" alt="个人知识库" class="logo"> <span class="site-name can-hide">个人知识库</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/pages/about/me/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程技术" class="dropdown-title"><a href="/technology/" class="link-title router-link-active">编程技术</a> <span class="title" style="display:none;">编程技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/technology/c/array/" class="nav-link">C语言</a></li><li class="dropdown-item"><!----> <a href="/technology/c++/vs-setting/" class="nav-link">CPlusPlus</a></li><li class="dropdown-item"><!----> <a href="/technology/linux/basic/" class="nav-link">Linux</a></li><li class="dropdown-item"><!----> <a href="/technology/php/" class="nav-link">PHP</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="应用框架" class="dropdown-title"><a href="/framework/" class="link-title">应用框架</a> <span class="title" style="display:none;">应用框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/framework/nginx/install/" class="nav-link">Nginx</a></li><li class="dropdown-item"><!----> <a href="/framework/mysql/c_api/" class="nav-link">MySQL</a></li><li class="dropdown-item"><!----> <a href="/framework/redis/basic/" class="nav-link">Redis</a></li><li class="dropdown-item"><!----> <a href="/framework/docker/basic/" class="nav-link">Docker</a></li><li class="dropdown-item"><!----> <a href="/framework/kubernetes/basic/" class="nav-link">Kubernetes</a></li><li class="dropdown-item"><!----> <a href="/framework/srs/basic/" class="nav-link">SRS</a></li></ul></div></div><div class="nav-item"><a href="/read/soul/Self-motivated/" class="nav-link">阅读</a></div><div class="nav-item"><a href="/tools/github/" class="nav-link">常用工具</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/tags/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/Agnes001/blog_vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="/image/1.jpg"> <div class="blogger-info"><h3>Agnes001</h3> <span>
+        坚持是一件很伟大的事业
+      </span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/pages/about/me/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程技术" class="dropdown-title"><a href="/technology/" class="link-title router-link-active">编程技术</a> <span class="title" style="display:none;">编程技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/technology/c/array/" class="nav-link">C语言</a></li><li class="dropdown-item"><!----> <a href="/technology/c++/vs-setting/" class="nav-link">CPlusPlus</a></li><li class="dropdown-item"><!----> <a href="/technology/linux/basic/" class="nav-link">Linux</a></li><li class="dropdown-item"><!----> <a href="/technology/php/" class="nav-link">PHP</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="应用框架" class="dropdown-title"><a href="/framework/" class="link-title">应用框架</a> <span class="title" style="display:none;">应用框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/framework/nginx/install/" class="nav-link">Nginx</a></li><li class="dropdown-item"><!----> <a href="/framework/mysql/c_api/" class="nav-link">MySQL</a></li><li class="dropdown-item"><!----> <a href="/framework/redis/basic/" class="nav-link">Redis</a></li><li class="dropdown-item"><!----> <a href="/framework/docker/basic/" class="nav-link">Docker</a></li><li class="dropdown-item"><!----> <a href="/framework/kubernetes/basic/" class="nav-link">Kubernetes</a></li><li class="dropdown-item"><!----> <a href="/framework/srs/basic/" class="nav-link">SRS</a></li></ul></div></div><div class="nav-item"><a href="/read/soul/Self-motivated/" class="nav-link">阅读</a></div><div class="nav-item"><a href="/tools/github/" class="nav-link">常用工具</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/tags/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/Agnes001/blog_vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>C语言</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>CPlusPlus</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>基础特性</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/technology/c++/basic/enmu/" class="sidebar-link">枚举</a></li><li><a href="/technology/c++/basic/char-pointer/" class="sidebar-link">字符指针</a></li></ul></section></li><li><a href="/technology/c++/vs-setting/" class="sidebar-link">vs2019设置</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>C++11特性</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>并发编程</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/technology/c++/reference/" class="sidebar-link">引用</a></li><li><a href="/technology/c++/class/" class="sidebar-link">类和对象</a></li><li><a href="/technology/c++/friend/" class="sidebar-link">友元和运算符重载</a></li><li><a href="/technology/c++/inheritance/" class="sidebar-link">继承</a></li><li><a href="/technology/c++/12/" class="sidebar-link">继承和多态</a></li><li><a href="/technology/c++/template/" class="sidebar-link">模板</a></li><li><a href="/technology/c++/basic-summary/" class="sidebar-link">C++基础总结</a></li><li><a href="/technology/c++/type_cast/" class="sidebar-link">类型转换</a></li><li><a href="/technology/c++/exception/" class="sidebar-link">异常</a></li><li><a href="/technology/c++/container/" class="sidebar-link">容器</a></li><li><a href="/technology/c++/algorithm/" class="sidebar-link">算法</a></li><li><a href="/technology/c++/OOD/" class="sidebar-link">C++程序设计</a></li><li><a href="/technology/c++/primer/" class="sidebar-link">C++ Primer总结</a></li><li><a href="/technology/c++/tec/" class="sidebar-link">编程技巧</a></li><li><a href="/technology/c++/STL/" class="sidebar-link">标准库体系结构与内核分析</a></li><li><a href="/technology/c++/设计模式/" class="sidebar-link">设计模式</a></li><li><a href="/technology/c++/cmake/" class="sidebar-link">cmake配置C++工程</a></li><li><a href="/technology/c++/libcurl/" class="sidebar-link">libcurl的使用总结</a></li><li><a href="/technology/c++/drogon/" aria-current="page" class="active sidebar-link">web开发框架--drogon</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/c++/drogon/#准备工作" class="sidebar-link">准备工作</a></li><li class="sidebar-sub-header"><a href="/technology/c++/drogon/#安装drogon" class="sidebar-link">安装drogon</a></li><li class="sidebar-sub-header"><a href="/technology/c++/drogon/#静态网站" class="sidebar-link">静态网站</a></li><li class="sidebar-sub-header"><a href="/technology/c++/drogon/#动态网站" class="sidebar-link">动态网站</a></li><li class="sidebar-sub-header"><a href="/technology/c++/drogon/#控制器的生命周期" class="sidebar-link">控制器的生命周期</a></li><li class="sidebar-sub-header"><a href="/technology/c++/drogon/#httpsimplecontroller" class="sidebar-link">HttpSimpleController</a></li><li class="sidebar-sub-header"><a href="/technology/c++/drogon/#httpcontroller" class="sidebar-link">HttpController</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/c++/drogon/#生成" class="sidebar-link">生成</a></li><li class="sidebar-sub-header"><a href="/technology/c++/drogon/#使用" class="sidebar-link">使用</a></li><li class="sidebar-sub-header"><a href="/technology/c++/drogon/#参数映射" class="sidebar-link">参数映射</a></li><li class="sidebar-sub-header"><a href="/technology/c++/drogon/#多路径映射" class="sidebar-link">多路径映射</a></li><li class="sidebar-sub-header"><a href="/technology/c++/drogon/#正则表达式" class="sidebar-link">正则表达式</a></li></ul></li><li class="sidebar-sub-header"><a href="/technology/c++/drogon/#get和post请求的区别" class="sidebar-link">get和post请求的区别</a></li></ul></li><li><a href="/technology/c++/log4cplus/" class="sidebar-link">log4cplus使用</a></li><li><a href="/technology/c++/datatype/" class="sidebar-link">C++数据类型</a></li><li><a href="/technology/c++/function/" class="sidebar-link">函数</a></li><li><a href="/technology/c++/thread/" class="sidebar-link">线程</a></li><li><a href="/technology/c++/process/" class="sidebar-link">进程</a></li><li><a href="/technology/c++/FileOperation/" class="sidebar-link">文件操作</a></li><li><a href="/technology/c++/problem-record/" class="sidebar-link">日常问题记录</a></li><li><a href="/technology/c++/demo/" class="sidebar-link">Cpp案例程序</a></li><li><a href="/technology/c++/multi-thread/" class="sidebar-link">多线程</a></li><li><a href="/technology/c++/11-new feature/" class="sidebar-link">侯捷c++11新特性</a></li><li><a href="/technology/c++/jj-stl/" class="sidebar-link">侯捷stl</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Lua技术栈</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>edoyun</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>内存管理</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>网络编程</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Linux</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>池化技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>操作系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>python</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div><main class="page"> <div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-14888ed5><div class="articleInfo" data-v-14888ed5><ul class="breadcrumbs" data-v-14888ed5><li data-v-14888ed5><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-14888ed5></a></li> <li data-v-14888ed5><a href="/categories/?category=%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF" title="分类" data-v-14888ed5>编程技术</a></li> <li data-v-14888ed5><a href="/categories/?category=CPlusPlus" title="分类" data-v-14888ed5>CPlusPlus</a></li></ul> <div class="info" data-v-14888ed5><div title="作者" class="author iconfont icon-touxiang" data-v-14888ed5><a href="https://github.com/Agnes001" target="_blank" title="作者" class="beLink" data-v-14888ed5>Agnes001</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-14888ed5><a href="javascript:;" data-v-14888ed5>2021-09-06</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH1JREFUSA3tVl1oHFUUPmdmd2ltklqbpJDiNnXFmgbFktho7YMPNiJSSZM0+CAYSkUELVhM6YuwIPpgoOKDqOBDC0XE2CQoNtQXBUFTTcCi+Wlh1V2TQExsUzcltd3M9Tt3ZjZzZ2fT+OJTL8yeM+eee757fmeJbq//KQL8X3DUSFOcfr7cRsRtxNQMWueeVzOkaITIGqQHNg5y8+jNW9ldM7A6nTpAjuolUikAwq7CE3WcM2RRDz+XGVgN3FptU/aUSlvq9Pa3iZ1+sgAqJyyAFqkipd9dqiwHF3P65YycLWc/6sqGrvoEoIp6DOFaX5h6+dnfjkWprwqsPk0dUGq5vySwDImC10KxFHgGL1SWoc92O3eVht09qdXNH11I2SsTsJYqMWzihqGMi+A+Garf3BAuuLI5oGlULyNfyB/HYNujwktOfRrMr5t77NmevqaUopx0grnKAyvVpmwUDB4x6FPXuGvYLTDwWsejwgtgkYKPqRJg8SV6xaiZ3ZTppGneS4yfH5/66fZSDHv+QZci/+h5c5UHtpy67JUqGppM0sh0Nc1dW6/N1W5Yoqat8/TU/VnadmdeW2PLLSyh0cvxBs3KbqTmwYPpxN4do/mzE8nEpvX/UMu2Wbp74zUAK5q6WkHns7V0eWkdPbPzd3rxkTGybadYySumVzhcaJFbs5UrEkQ/+CK8gF5dnh/6ciIZ73gwQ927L1IitoxKLXYP3SjYdOrHHfTZhRRlFyrorafPk20B3HPD1y2G3qKZME5Jcf3t/HUC13/8tSd++vqFveMUTwAUxSUFI1QekR1+bIze3D9MF2aq6cPvG72CgnldWCFqyRw3lwH8ZMerjTD9ElRO7Gv44wNpC90aASqGfVlz/Rx17srQ57/UU26hkhQqUB7dBR71WmzQhHUnblGmVOEw0jhbV1n9OlXUDCIRGaNV5Jp43N516fN7JmnTHdfp7Hgy0luO4aMhtkLL8Bi3bUWYvzh5Mn1dTxrL6QmGuRhGL/TiTTxRoEdTszSaq9GR0NGA3KdkOz3hqSV3MIDhQ5IVX/Ivx3umBti2es2h4eZby7x8br1rkf7Mo90AqC8aQ3sJeNzqFRu+vSANAQe3PL7l0HGOAdwDCeZYvNKeoZp1Qfs6Aipndh86HmFRi0LAnEO47wsqM6cdfjh3jBPUzhZy7nvlUfFsamED1VQt6aISHVymXZ/B2aCtIG8AI8xfobj2d3en1wWVhOeHELKmLQ1s211s88comkv4UCwWyF787mJdYXtNfhKAXVqnKTq8QZvGAGGOfaTo5pGZ/PwbUCr5+DPr/1J92JNHr9aOl/F3iI5+O1nfybsGxoimvZ3ViWSluDITw3P37mypheDIPY0tw7+O/5ApbkYw+zpfaUVu32Pi98+defdUhEpZkRFq0aqyNh9FuL9hpYbEm6iwi0z2REd09ZmyENEbuhjDWzKvZXTqKYaBIr3tt5kuPtQBZFvEUwHt60vfCNu41XsksH9Ij1BMMz1Y0OOunHNShFIP5868g5zeXmuLwL9T4b6Q2+KejgAAAABJRU5ErkJggg==">
+          web开发框架--drogon
+        </h1> <div class="theme-vdoing-content content__default"><h1 id="drogon概述"><a href="#drogon概述" class="header-anchor">#</a> drogon概述</h1> <p><strong>Drogon</strong>是一个基于C++14/17的Http应用框架，使用Drogon可以方便的使用C++构建各种类型的Web应用服务端程序。</p> <p>Drogon的主要应用平台是Linux，也支持Mac OS、FreeBSD和Windows。它的主要特点如下：</p> <ul><li>网络层使用基于epoll(macOS/FreeBSD下是kqueue)的非阻塞IO框架，提供高并发、高性能的网络IO。详细请见<a href="https://www.techempower.com/benchmarks/#section=data-r19&amp;hw=ph&amp;test=composite" target="_blank" rel="noopener noreferrer">TFB Tests Results<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>；</li> <li>全异步编程模式；</li> <li>支持Http1.0/1.1(server端和client端)；</li> <li>基于template实现了简单的反射机制，使主程序框架、控制器(controller)和视图(view)完全解耦；</li> <li>支持cookies和内建的session；</li> <li>支持后端渲染，把控制器生成的数据交给视图生成Html页面，视图由CSP模板文件描述，通过CSP标签把C++代码嵌入到Html页面，由drogon的命令行工具在编译阶段自动生成C++代码并编译；</li> <li>支持运行期的视图页面动态加载(动态编译和加载so文件)；</li> <li>非常方便灵活的路径(path)到控制器处理函数(handler)的映射方案；</li> <li>支持过滤器(filter)链，方便在控制器之前执行统一的逻辑(如登录验证、Http Method约束验证等)；</li> <li>支持https(基于OpenSSL实现);</li> <li>支持websocket(server端和client端);</li> <li>支持Json格式请求和应答, 对Restful API应用开发非常友好;</li> <li>支持文件下载和上传,支持sendfile系统调用；</li> <li>支持gzip/brotli压缩传输；</li> <li>支持pipelining；</li> <li>提供一个轻量的命令行工具drogon_ctl，帮助简化各种类的创建和视图代码的生成过程；</li> <li>基于非阻塞IO实现的异步数据库读写，目前支持PostgreSQL和MySQL(MariaDB)数据库；</li> <li>基于线程池实现sqlite3数据库的异步读写，提供与上文数据库相同的接口；</li> <li>支持ARM架构；</li> <li>方便的轻量级ORM实现，支持常规的对象到数据库的双向映射操作；</li> <li>支持插件，可通过配置文件在加载期动态拆装；</li> <li>支持内建插入点的AOP</li></ul> <h1 id="drogon安装"><a href="#drogon安装" class="header-anchor">#</a> drogon安装</h1> <h2 id="准备工作"><a href="#准备工作" class="header-anchor">#</a> 准备工作</h2> <h4 id="环境"><a href="#环境" class="header-anchor">#</a> 环境</h4> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> <span class="token function">git</span>
+<span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> gcc
+<span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> g++
+<span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> cmake
+</code></pre></div><h4 id="jsoncpp"><a href="#jsoncpp" class="header-anchor">#</a> jsoncpp</h4> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> libjsoncpp-dev
+</code></pre></div><h4 id="uuid"><a href="#uuid" class="header-anchor">#</a> uuid</h4> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> uuid-dev
+</code></pre></div><h4 id="openssl"><a href="#openssl" class="header-anchor">#</a> OpenSSL</h4> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> openssl
+<span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> libssl-dev
+</code></pre></div><h4 id="zlib"><a href="#zlib" class="header-anchor">#</a> zlib</h4> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> zlib1g-dev
+</code></pre></div><h2 id="安装drogon"><a href="#安装drogon" class="header-anchor">#</a> 安装drogon</h2> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token builtin class-name">cd</span> <span class="token variable">$WORK_PATH</span>
+<span class="token function">git</span> clone https://github.com/an-tao/drogon
+<span class="token builtin class-name">cd</span> drogon
+<span class="token function">sudo</span> <span class="token function">git</span> submodule update --init
+<span class="token function">mkdir</span> build
+<span class="token builtin class-name">cd</span> build
+cmake <span class="token punctuation">..</span>
+<span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token function">sudo</span> <span class="token function">make</span> <span class="token function">install</span>
+</code></pre></div><p>默认是编译debug版本，如果想编译release版本，cmake命令要带如下参数：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>cmake -DCMAKE_BUILD_TYPE<span class="token operator">=</span>Release <span class="token punctuation">..</span> 
+</code></pre></div><p>安装结束后，将有如下文件被安装在系统中(CMAKE_INSTALL_PREFIX可以改变安装位置)：</p> <ul><li>drogon的头文件被安装到/usr/local/include/drogon中；</li> <li>drogon的库文件libdrogon.a被安装到/usr/local/lib中；</li> <li>drogon的命令行工具drogon_ctl被安装到/usr/local/bin中；</li> <li>trantor的头文件被安装到/usr/local/include/trantor中；</li> <li>trantor的库文件libtrantor.a被安装到/usr/local/lib中；</li></ul> <h1 id="drogon简单使用"><a href="#drogon简单使用" class="header-anchor">#</a> drogon简单使用</h1> <h2 id="静态网站"><a href="#静态网站" class="header-anchor">#</a> 静态网站</h2> <p>我们从一个最简单的例子开始介绍drogon的使用，在这个例子中我们使用命令行工具drogon_ctl创建一个工程：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>drogon_ctl create project your_project_name
+</code></pre></div><p>进入工程目录，可以看到如下文件:</p> <div class="language-shell extra-class"><pre class="language-shell"><code>├── build                         构建文件夹
+├── CMakeLists.txt                工程的cmake配置文件
+├── config.json                   drogon应用的配置文件
+├── controllers                   存放控制器文件的目录
+├── filters                       存放过滤器文件的目录
+├── main.cc                       主程序
+├── models                        数据库模型文件的目录
+│   └── model.json
+└── views                         存放视图csp文件的目录
+</code></pre></div><p>main.cc文件，内容如下：</p> <div class="language-c++ extra-class"><pre class="language-text"><code>#include &lt;drogon/HttpAppFramework.h&gt;
+int main() {
+    //Set HTTP listener address and port
+    drogon::app().addListener(&quot;0.0.0.0&quot;,80);
+    //Load config file
+    //drogon::app().loadConfigFile(&quot;../config.json&quot;);
+    //Run HTTP framework,the method will block in the internal event loop
+    drogon::app().run();
+    return 0;
+}
+</code></pre></div><p>然后构建项目:</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token builtin class-name">cd</span> build
+cmake <span class="token punctuation">..</span>
+<span class="token function">make</span>
+</code></pre></div><p>编译完成后，运行目标程序<code>./your_project_name</code>.</p> <p>现在，我们在Http根目录添加一个最简单的静态文件index.html:</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token builtin class-name">echo</span> <span class="token string">'&lt;h1&gt;Hello Drogon!&lt;/h1&gt;'</span> <span class="token operator">&gt;&gt;</span>index.html
+</code></pre></div><p>Http根目录默认值是<code>&quot;./&quot;</code>， 也就是webapp程序运行的当前路径， Http根目录也可在config.json配置文件中进行更改，可参见<a href="CHN-10-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">配置文件</a>， 然后在地址栏输入<code>http://localhost</code>或<code>http://localhost/index.html</code>(或者你的webapp所在服务器的ip)可以访问到这个页面，如果服务器找不到浏览器访问的页面，将返回404页面。</p> <p><strong>注意：请确认服务器的防火墙已经打开80端口，否则你看不到这些页面。</strong></p> <p>我们可以把一个静态网站的目录和文件复制到这个webapp的运行目录，然后通过浏览器就可以访问到它们，drogon默认支持的文件类型有&quot;html&quot;,&quot;js&quot;,&quot;css&quot;,&quot;xml&quot;,&quot;xsl&quot;,&quot;txt&quot;,&quot;svg&quot;,&quot;ttf&quot;,&quot;otf&quot;,&quot;woff2&quot;,&quot;woff&quot;,&quot;eot&quot;,&quot;png&quot;,&quot;jpg&quot;,&quot;jpeg&quot;,&quot;gif&quot;,&quot;bmp&quot;,&quot;ico&quot;,&quot;icns&quot;等等。</p> <h2 id="动态网站"><a href="#动态网站" class="header-anchor">#</a> 动态网站</h2> <p>下面我们看看怎么给这个应用添加控制器（controller）,并使用控制器（controller）输出内容。</p> <p>在<code>controller</code>目录下运行drogon_ctl命令行工具生成控制器（controller）源文件:</p> <div class="language-shell extra-class"><pre class="language-shell"><code>drogon_ctl create controller TestCtrl
+</code></pre></div><p>可以看到，目录下新增加了两个文件，TestCtrl.h和TestCtrl.cc:</p> <p>TestCtrl.h如下：</p> <div class="language-c++ extra-class"><pre class="language-text"><code>#pragma once
+#include &lt;drogon/HttpSimpleController.h&gt;
+using namespace drogon;
+class TestCtrl:public drogon::HttpSimpleController&lt;TestCtrl&gt;
+{
+public:
+    virtual void asyncHandleHttpRequest(const HttpRequestPtr &amp;req,
+                                        std::function&lt;void (const HttpResponsePtr &amp;)&gt; &amp;&amp;callback)override;
+    PATH_LIST_BEGIN
+    //list path definitions here;
+    //PATH_ADD(&quot;/path&quot;,&quot;filter1&quot;,&quot;filter2&quot;,HttpMethod1,HttpMethod2...);
+    PATH_LIST_END
+};
+</code></pre></div><p>TestCtrl.cc如下：</p> <div class="language-c++ extra-class"><pre class="language-text"><code>#include &quot;TestCtrl.h&quot;
+void TestCtrl::asyncHandleHttpRequest(const HttpRequestPtr &amp;req,
+                                      std::function&lt;void (const HttpResponsePtr &amp;)&gt; &amp;&amp;callback)
+{
+    //write your application logic here
+}
+</code></pre></div><p>我们编辑一下这两个文件，让这个控制器处理函数回应一个简单的“Hello World!”。</p> <p>TestCtrl.h如下：</p> <div class="language-c++ extra-class"><pre class="language-text"><code>#pragma once
+#include &lt;drogon/HttpSimpleController.h&gt;
+using namespace drogon;
+class TestCtrl:public drogon::HttpSimpleController&lt;TestCtrl&gt;
+{
+public:
+    virtual void asyncHandleHttpRequest(const HttpRequestPtr &amp;req,
+                                        std::function&lt;void (const HttpResponsePtr &amp;)&gt; &amp;&amp;callback)override;
+    PATH_LIST_BEGIN
+    //list path definitions here;
+    //PATH_ADD(&quot;/path&quot;,&quot;filter1&quot;,&quot;filter2&quot;,HttpMethod1,HttpMethod2...);
+    PATH_ADD(&quot;/&quot;,Get,Post);
+    PATH_ADD(&quot;/test&quot;,Get);
+    PATH_LIST_END
+};
+</code></pre></div><p>使用PATH_ADD添加路径到处理函数的映射，这里映射了两个路径'/'和'/test',并在路径后面添加了对这个路径的约束。</p> <p>TestCtrl.cc如下：</p> <div class="language-c++ extra-class"><pre class="language-text"><code>#include &quot;TestCtrl.h&quot;
+void TestCtrl::asyncHandleHttpRequest(const HttpRequestPtr &amp;req,
+                                      std::function&lt;void (const HttpResponsePtr &amp;)&gt; &amp;&amp;callback)
+{
+    //write your application logic here
+    auto resp=HttpResponse::newHttpResponse();
+    resp-&gt;setStatusCode(k200OK);
+    resp-&gt;setContentTypeCode(CT_TEXT_HTML);
+    resp-&gt;setBody(&quot;Hello World!&quot;);
+    callback(resp);
+}
+</code></pre></div><p>重新用cmake编译这个工程，然后运行目标程序<code>./your_project_name</code>：</p> <div class="language-shelll extra-class"><pre class="language-text"><code>cd ../build
+cmake ..
+make
+./your_project_name
+</code></pre></div><p>在浏览器地址栏输入<code>http://localhost/</code>或者<code>http://localhost/test</code>，你就可以在浏览器看到<code>Hello World!</code>了。</p> <p><strong>注意: 同时存在静态和动态资源的情况下，框架优先使用控制器响应请求，此例中<code>http://localhost/</code> 响应的是<code>TestCtrl</code>控制器的输出<code>Hello Word！</code>而不是静态网页<code>index.html</code>的<code>Hello Drogon！</code></strong></p> <p>我们看到，在应用中添加controller非常简单，只需要添加对应的源文件即可，甚至main文件不用做任何修改，这种低耦合度的设计对web应用开发是非常有效的。</p> <p><strong>注意: Drogon没有限制控制器（controller）源文件的位置，也可以放在工程目录下，甚至可以在<code>CMakeLists.txt</code>中指定到新的目录中，为了方便管理，建议将控制器源文件放在controllers目录。</strong></p> <h1 id="控制器-controller"><a href="#控制器-controller" class="header-anchor">#</a> 控制器(controller)</h1> <p>控制器(controller)在web应用开发中处于相当重要的地位，<strong>它处理浏览器发来的请求，然后生成响应发送给浏览器</strong>；drogon框架已经帮我们处理好网络传输、Http协议的解析等等细节，我们只需要关注控制器的逻辑即可；每一个控制器对象可以有一个或者多个处理函数(一般称为handler)，函数的接口，一般定义成如下形式：</p> <div class="language-c++ extra-class"><pre class="language-text"><code>void handlerName(const HttpRequestPtr &amp;req,
+                   std::function&lt;void (const HttpResponsePtr &amp;)&gt; &amp;&amp;callback,
+                  ...);
+</code></pre></div><p>其中，<code>req</code>是Http请求的对象(被智能指针包裹)，<code>callback</code>是框架传给控制器的回调函数对象，控制器生成应答对象(也通过智能指针包裹)后，通过callback把该对象传给drogon，然后框架会帮你把响应内容发送给浏览器，最后面的是若干参数列表<code>...</code>，由drogon根据映射规则把Http请求中的参数映射到对应的handler的形参上，这是对应用开发是非常方便的。</p> <p>很明显，这是个异步接口，用户可以在其它线程完成耗时操作后再调用callback；</p> <p>drogon的控制器分为三种类型，<code>HttpSimpleController</code>,<code>HttpController</code>和<code>WebSocketController</code>，用户使用时，需要继承相应的类模板，比如，一个HttpSimpleController的自定义类&quot;MyClass&quot;声明如下：</p> <div class="language-c++ extra-class"><pre class="language-text"><code>class MyClass:public drogon::HttpSimpleController&lt;MyClass&gt;
+{
+public:
+    //TestController(){}
+    virtual void asyncHandleHttpRequest(const HttpRequestPtr &amp;req,
+                                         std::function&lt;void (const HttpResponsePtr &amp;)&gt; &amp;&amp;callback) override;
+
+    PATH_LIST_BEGIN
+    PATH_ADD(&quot;/json&quot;);
+    PATH_LIST_END
+};
+</code></pre></div><h2 id="控制器的生命周期"><a href="#控制器的生命周期" class="header-anchor">#</a> 控制器的生命周期</h2> <p>注册到drogon框架的控制器最多只会有一个实例，在整个应用运行期间都不会销毁，所以，用户可以在控制器类中声明和使用成员变量。注意，控制器的handler被调用时，是在多线程环境下的（当框架的IO线程数配置成大于1的值时），如果需要访问非临时变量，请做好并发保护工作。</p> <h2 id="httpsimplecontroller"><a href="#httpsimplecontroller" class="header-anchor">#</a> HttpSimpleController</h2> <p>可以由<code>drogon_ctl</code>命令行工具快速生成基于<code>HttpSimpleController</code>的自定义类的源文件，命令格式如下：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>drogon_ctl create controller <span class="token operator">&lt;</span><span class="token punctuation">[</span>namespace::<span class="token punctuation">]</span>class_name<span class="token operator">&gt;</span>
+</code></pre></div><p>我们创建一个名称为<code>TestCtrl</code>的控制器：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>drogon_ctl create controller TestCtrl
+</code></pre></div><p>可以看到，目录下新增加了两个文件，TestCtrl.h和TestCtrl.cc，下面阐述一下这两个文件。</p> <p>TestCtrl.h如下：</p> <div class="language-c++ extra-class"><pre class="language-text"><code>#pragma once
+#include &lt;drogon/HttpSimpleController.h&gt;
+using namespace drogon;
+class TestCtrl:public drogon::HttpSimpleController&lt;TestCtrl&gt;
+{
+public:
+    virtual void asyncHandleHttpRequest(const HttpRequestPtr &amp;req,
+                                        std::function&lt;void (const HttpResponsePtr &amp;)&gt; &amp;&amp;callback)override;
+    PATH_LIST_BEGIN
+    //list path definitions here;
+    //PATH_ADD(&quot;/path&quot;,&quot;filter1&quot;,&quot;filter2&quot;,HttpMethod1,HttpMethod2...);
+    PATH_LIST_END
+};
+</code></pre></div><p>TestCtrl.cc如下：</p> <div class="language-c++ extra-class"><pre class="language-text"><code>#include &quot;TestCtrl.h&quot;
+void TestCtrl::asyncHandleHttpRequest(const HttpRequestPtr &amp;req,
+                                      std::function&lt;void (const HttpResponsePtr &amp;)&gt; &amp;&amp;callback)
+{
+    //write your application logic here
+}
+</code></pre></div><p>每个HttpSimpleController类只能定义一个Http请求处理函数(handler)，而且通过虚函数重载定义。</p> <p>从URL路径到处理函数的路由(或称映射)由宏完成，可以用<code>PATH_ADD</code>宏添加多重路径映射，所有<code>PATH_ADD</code>语句应夹在<code>PATH_LIST_BEGIN</code>和<code>PATH_LIST_END</code>宏语句之间。</p> <p>第一个参数是映射的路径,路径后面的参数是对这个路径的约束，目前支持两种约束，一种是<code>HttpMethod</code>类型，表示该路径允许使用的Http方法，可以配置零个或多个，一种是<code>HttpFilter</code>类的名字，这种对象执行特定的过滤操作，也可以配置0个或多个，两种类型没有顺序要求，框架会处理好类型的匹配。</p> <p>用户可以把同一个Simple Controller注册到多个路径上，也可以在同一个路径上注册多个Simple Controller（通过HTTP method区分）。</p> <p>你可以定义一个HttpResponse类的变量，然后使用callback()返回这个变量即可:</p> <div class="language-c++ extra-class"><pre class="language-text"><code>    //write your application logic here
+    auto resp=HttpResponse::newHttpResponse();
+    resp-&gt;setStatusCode(k200OK);
+    resp-&gt;setContentTypeCode(CT_TEXT_HTML);
+    resp-&gt;setBody(&quot;Your Page Contents&quot;);
+    callback(resp);
+</code></pre></div><p><strong>上述路径到处理函数的映射是在编译期完成的，事实上，drogon框架也提供了运行期完成映射的接口，运行期映射可以让用户通过配置文件或其它用户接口完成映射或修改映射关系而无需重新编译这个程序(出于性能的考虑，禁止在运行app().run()之后再注册任何映射)。</strong></p> <h2 id="httpcontroller"><a href="#httpcontroller" class="header-anchor">#</a> HttpController</h2> <h3 id="生成"><a href="#生成" class="header-anchor">#</a> 生成</h3> <p>可以由<code>drogon_ctl</code>命令行工具快速生成基于<code>HttpController</code>的自定义类的源文件，命令格式如下：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>drogon_ctl create controller -h <span class="token operator">&lt;</span><span class="token punctuation">[</span>namespace::<span class="token punctuation">]</span>class_name<span class="token operator">&gt;</span>
+</code></pre></div><p>我们创建一个位于<code>demo v1</code>名称空间内且名称为<code>User</code>的控制器：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>drogon_ctl create controller -h demo::v1::User
+</code></pre></div><p>可以看到，目录下新增加了两个文件，demo_v1_User.h和demo_v1_User.cc:</p> <p>demo_v1_User.h如下:</p> <div class="language-c++ extra-class"><pre class="language-text"><code>#pragma once
+#include &lt;drogon/HttpController.h&gt;
+using namespace drogon;
+namespace demo
+{
+    namespace v1
+    {
+        class User:public drogon::HttpController&lt;User&gt;
+        {
+        public:
+            METHOD_LIST_BEGIN
+                //use METHOD_ADD to add your custom processing function here;
+            METHOD_LIST_END
+            //your declaration of processing function maybe like this:
+        };
+    }
+}
+</code></pre></div><p>demo_v1_User.cc如下：</p> <div class="language-c++ extra-class"><pre class="language-text"><code>#include &quot;demo_v1_User.h&quot;
+using namespace demo::v1;
+//add definition of your processing function here
+</code></pre></div><h3 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h3> <p>我们编辑一下这两个文件，然后再阐述它们。</p> <p>demo_v1_User.h如下：</p> <div class="language-c++ extra-class"><pre class="language-text"><code>#pragma once
+#include &lt;drogon/HttpController.h&gt;
+using namespace drogon;
+namespace demo
+{
+    namespace v1
+    {
+        class User:public drogon::HttpController&lt;User&gt;
+        {
+        public:
+            METHOD_LIST_BEGIN
+                //use METHOD_ADD to add your custom processing function here;
+                METHOD_ADD(User::login,&quot;/token?userId={1}&amp;passwd={2}&quot;,Post);
+                METHOD_ADD(User::getInfo,&quot;/{1}/info?token={2}&quot;,Get);
+            METHOD_LIST_END
+            //your declaration of processing function maybe like this:
+            void login(const HttpRequestPtr &amp;req,
+                       std::function&lt;void (const HttpResponsePtr &amp;)&gt; &amp;&amp;callback,
+                       std::string &amp;&amp;userId,
+                       const std::string &amp;password);
+            void getInfo(const HttpRequestPtr &amp;req,
+                         std::function&lt;void (const HttpResponsePtr &amp;)&gt; &amp;&amp;callback,
+                         std::string userId,
+                         const std::string &amp;token) const;
+        };
+    }
+}
+</code></pre></div><p>demo_v1_User.cc如下：</p> <div class="language-c++ extra-class"><pre class="language-text"><code>#include &quot;demo_v1_User.h&quot;
+using namespace demo::v1;
+//add definition of your processing function here
+
+void User::login(const HttpRequestPtr &amp;req,
+           std::function&lt;void (const HttpResponsePtr &amp;)&gt; &amp;&amp;callback,
+           std::string &amp;&amp;userId,
+           const std::string &amp;password)
+{
+    LOG_DEBUG&lt;&lt;&quot;User &quot;&lt;&lt;userId&lt;&lt;&quot; login&quot;;
+    //认证算法，读数据库，验证身份等...
+    //...
+    Json::Value ret;
+    ret[&quot;result&quot;]=&quot;ok&quot;;
+    ret[&quot;token&quot;]=drogon::utils::getUuid();
+    auto resp=HttpResponse::newHttpJsonResponse(ret);
+    callback(resp);
+}
+void User::getInfo(const HttpRequestPtr &amp;req,
+             std::function&lt;void (const HttpResponsePtr &amp;)&gt; &amp;&amp;callback,
+             std::string userId,
+            const std::string &amp;token) const
+{
+    LOG_DEBUG&lt;&lt;&quot;User &quot;&lt;&lt;userId&lt;&lt;&quot; get his information&quot;;
+    //验证token有效性等
+    //读数据库或缓存获取用户信息
+    Json::Value ret;
+    ret[&quot;result&quot;]=&quot;ok&quot;;
+    ret[&quot;user_name&quot;]=&quot;Jack&quot;;
+    ret[&quot;user_id&quot;]=userId;
+    ret[&quot;gender&quot;]=1;
+    auto resp=HttpResponse::newHttpJsonResponse(ret);
+    callback(resp);
+}
+</code></pre></div><p>每个<code>HttpController</code>类可以定义多个Http请求处理函数(handler)，由于函数数目可以任意多，所以通过虚函数重载是不现实的，我们需要把处理函数本身(而不是类)注册到框架里去。</p> <p>从URL路径到处理函数的映射由宏完成，可以用<code>METHOD_ADD</code>宏或<code>ADD_METHOD_TO</code>宏添加多重路径映射，所有<code>METHOD_ADD</code>和<code>ADD_METHOD_TO</code>语句应夹在<code>METHOD_LIST_BEGIN</code>和<code>METHOD_LIST_END</code>宏语句之间。</p> <p><code>METHOD_ADD</code>宏会在路径映射中自动把<strong>名字空间和类名</strong>作为路径的前缀，所以，本例子中，login函数，被注册到了<code>/demo/v1/user/token</code>路径上，getInfo函数被注册到了<code>/demo/v1/user/xxx/info</code>路径上。后面的约束跟HttpSimpleController的PATH_ADD宏类似，不再赘述。</p> <p>如果使用了自动的前缀，访问地址要包含命名空间和类名，此例中要使用<code>http://localhost/demo/v1/user/token?userid=xxx&amp;passwd=xxx</code>或者<code>http://localhost/demo/v1/user/xxxxx/info?token=xxxx</code>来访问。</p> <p><code>ADD_METHOD_TO</code>宏的作用与前者几乎一样，除了它不会自动添加任何前缀，即这个宏注册的路径是一个绝对路径。</p> <p>我们看到，<code>HttpController</code>提供了更为灵活的路径映射功能，并且可以注册多个处理函数，我们可以把一类功能放在一个类里。</p> <p>另外可以看到，<code>METHOD_ADD</code>宏提供了参数映射的方法，我们可以把路径上的参数映射到函数的参数表里，由参数的数码对应形参的位置，非常方便，常见的可以由字符串类型转换的类型都可以作为参数(如std::string,int,float,double等等)，框架基于模板的类型推断会自动帮你转换类型，非常方便。注意左值引用必须是const类型。</p> <p>同一个路径还可以注册多次，相互之间通过Http Method区分，这是合法的，并且是Restful API的通常做法，比如</p> <div class="language-c++ extra-class"><pre class="language-text"><code> METHOD_LIST_BEGIN
+     METHOD_ADD(Book::getInfo,&quot;/{1}?detail={2}&quot;,Get);
+     METHOD_ADD(Book::newBook,&quot;/{1}&quot;,Post);
+     METHOD_ADD(Book::deleteOne,&quot;/{1}&quot;,Delete);
+ METHOD_LIST_END
+</code></pre></div><p>路径参数的占位符有多种写法:</p> <ul><li>{}: 表示这个路径参数映射到处理函数的对应位置上，路径上的位置就是函数参数的位置。</li> <li>{1},{2}: 中间有个数字的，表示映射到数字指定的处理函数参数上。</li> <li>{anystring}: 中间的字符串没有实际作用，但可以提高程序的可读性，与<code>{}</code>等价。</li> <li>{1:anystring},{2:xxx}: 冒号前的数字表示位置，后面的字符串没有实际作用，但可以提高程序的可读性，与<code>{1}</code>,<code>{2}</code>等价。</li></ul> <p>推荐使用后两种写法，如果路径参数和函数参数顺序一直，使用第三种写法即可。容易知道，以下几种写法是等价的：</p> <ul><li>&quot;/users/{}/books/{}&quot;</li> <li>&quot;/users/{}/books/{2}&quot;</li> <li>&quot;/users/{user_id}/books/{book_id}&quot;</li> <li>&quot;/users/{1:user_id}/books/{2}&quot;</li></ul> <p><strong>注意：路径匹配大小写不敏感，参数名字大小写敏感，参数值大小写保持原貌</strong></p> <h3 id="参数映射"><a href="#参数映射" class="header-anchor">#</a> 参数映射</h3> <p>通过前面的叙述我们知道，路径上的参数和问号后面的请求参数都可以映射到处理函数的参数列表里，目标参数的类型需要满足如下条件：</p> <ul><li><p>必须是值类型、常左值引用或非const右值引用中的一种，不能是非const的左值引用，推荐使用右值引用，这样用户可以随意处置它；</p></li> <li><p>int, long, long long, unsigned long, unsigned long long, float, double, long double等基础类型都可以作为参数类型；</p></li> <li><p>std::string类型；</p></li> <li><p>任何可以使用<code>stringstream &gt;&gt;</code>操作符赋值的类型；</p></li></ul> <p><strong>另外，drogon框架还提供了从HttpRequestPtr对象到任意类型的参数的映射机制</strong>，当你的handler参数列表中映射参数的数量多于路径上的参数时，后面多余的参数将由HttpRequestPtr对象转换得到，用户可以定义任意类型的转换，定义这种转换的方式是特化drogon命名空间的fromRequest模板(定义于HttpRequest.h头文件))，比如我们需要做一个创建新用户的RESTful的接口，我们定义用户的结构体如下：</p> <div class="language-c++ extra-class"><pre class="language-text"><code>namespace myapp{
+struct User{
+    std::string userName;
+    std::string email;
+    std::string address;
+};
+}
+namespace drogon
+{
+template &lt;&gt;
+inline myapp::User fromRequest(const HttpRequest &amp;req)
+{
+    auto json = req.getJsonObject();
+    myapp::User user;
+    if(json)
+    {
+        user.userName = (*json)[&quot;name&quot;].asString();
+        user.email = (*json)[&quot;email&quot;].asString();
+        user.address = (*json)[&quot;address&quot;].asString();
+    }
+    return user;
+}
+
+}
+</code></pre></div><p>有了上面的定义和模板特化，我们就可以向下面这样定义路径和handler:</p> <div class="language-c++ extra-class"><pre class="language-text"><code>class UserController:public drogon::HttpController&lt;UserController&gt;
+{
+public:
+    METHOD_LIST_BEGIN
+        //use METHOD_ADD to add your custom processing function here;
+        ADD_METHOD_TO(UserController::newUser,&quot;/users&quot;,Post);
+    METHOD_LIST_END
+    //your declaration of processing function maybe like this:
+    void newUser(const HttpRequestPtr &amp;req,
+                 std::function&lt;void (const HttpResponsePtr &amp;)&gt; &amp;&amp;callback,
+                 myapp::User &amp;&amp;pNewUser) const;
+};
+</code></pre></div><p>可以看到，第三个<code>myapp::User</code>类型的参数在映射路径上没有对应的占位符，框架会将它视为由<code>req</code>对象转换的参数，通过用户特化的函数模板得到这个参数，这都是drogon通过模板推导自动在编译期完成的，为用户的开发提供了极大便利。</p> <p>更进一步，有些用户除了他们自定义类型的数据外，并不需要访问HttpRequestPtr对象，那么他可以把这个自定义的对象放在第一个参数的位置，框架也能正确完成映射，比如上面的例子也可以写成下面这样:</p> <div class="language-c++ extra-class"><pre class="language-text"><code>class UserController:public drogon::HttpController&lt;UserController&gt;
+{
+public:
+    METHOD_LIST_BEGIN
+        //use METHOD_ADD to add your custom processing function here;
+        ADD_METHOD_TO(UserController::newUser,&quot;/users&quot;,Post);
+    METHOD_LIST_END
+    //your declaration of processing function maybe like this:
+    void newUser(myapp::User &amp;&amp;pNewUser,
+                 std::function&lt;void (const HttpResponsePtr &amp;)&gt; &amp;&amp;callback) const;
+};
+</code></pre></div><h3 id="多路径映射"><a href="#多路径映射" class="header-anchor">#</a> 多路径映射</h3> <p>drogon支持在路径映射中使用正则表达式，在<code>{}</code>花括号以外的部分可以有限制的使用，比如</p> <div class="language-c++ extra-class"><pre class="language-text"><code>ADD_METHOD_TO(UserController::handler1,&quot;/users/.*&quot;,Post); /// Match any path prefixed with `/users/`
+ADD_METHOD_TO(UserController::handler2,&quot;/{name}/[0-9]+&quot;,Post); ///Match any path composed with a name string and a number.
+</code></pre></div><p>这种方法不支持子表达式，负向匹配等正则表达式，如果想使用他们，请用如下的方案。</p> <h3 id="正则表达式"><a href="#正则表达式" class="header-anchor">#</a> 正则表达式</h3> <p>上面的方法对正则表达式的支持比较有限，如果用户想自由使用正则表达式，drogon提供了<code>ADD_METHOD_VIA_REGEX</code>宏来实现这一点，比如</p> <div class="language-c++ extra-class"><pre class="language-text"><code>ADD_METHOD_VIA_REGEX(UserController::handler1,&quot;/users/(.*)&quot;,Post); /// Match any path prefixed with `/users/` and map the rest of the path to a parameter of the handler1.
+ADD_METHOD_VIA_REGEX(UserController::handler2,&quot;/.*([0-9]*)&quot;,Post); /// Matche any path that ends in a number and map that number to a parameter of the handler2.
+ADD_METHOD_VIA_REGEX(UserController::handler3,&quot;/(?!data).*&quot;,Post); /// Matches any path that does not start with '/data'
+</code></pre></div><p>可以看到，使用正则表达式也可以完成参数映射，所有子表达式匹配的字符串都会按顺序映射到handler的参数上。</p> <p><strong>需要注意的是，使用正则表达式要注意匹配冲突（多个不同的handler都匹配），当冲突发生在同一个controller内部时，drogon只会执行第一个handler（先注册进框架的那个handler），当冲突发生在不同controller之间时，执行哪个handler是不确定的，因此用户需要避免这种冲突发生。</strong></p> <h1 id="附录"><a href="#附录" class="header-anchor">#</a> 附录</h1> <h2 id="get和post请求的区别"><a href="#get和post请求的区别" class="header-anchor">#</a> get和post请求的区别</h2> <ul><li>get可传的参数少；post可传数据大</li> <li>get只能简单的在url上传参数；post有消息体，可存放大量数据</li></ul></div></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/Agnes001/blog_vuepress/edit/master/docs/30.编程技术/10.CPlusPlus/62.web开发框架--drogon.md" target="_blank" rel="noopener noreferrer">编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="tags"><a href="/tags/?tag=drogon" title="标签">
+      #drogon
+    </a></div> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/technology/c++/libcurl/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">
+        libcurl的使用总结
+      </div></a> <a href="/technology/c++/log4cplus/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">
+        log4cplus使用
+      </div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/technology/c++/libcurl/" class="prev">libcurl的使用总结</a></span> <span class="next"><a href="/technology/c++/log4cplus/">log4cplus使用</a>
+        →
+      </span></p></div></div></div> <!----> </main></div> <div class="footer"><div class="icons"><a href="mailto:17125131@bjtu.edu.cn" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/Agnes001" title="GitHub" target="_blank" class="iconfont icon-github"></a></div> 
+  Theme by <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> <!----></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2df33bbd.js" defer></script><script src="/assets/js/2.f873f4a5.js" defer></script><script src="/assets/js/59.8994ec9e.js" defer></script>
+  </body>
+</html>
